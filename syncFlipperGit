@@ -1,5 +1,13 @@
 #!/bin/sh
 
+### This script works in two steps
+### 1.a. if not exist, cloene reposetory
+### 1.b. keep git repositorys up to date
+### 2. if SD card is mounted -> sync local git repository to SD
+
+### On the bottom is a own function to sync UberGuidoz.
+ 
+
 sdcard=/media/$USER/BENNIE
 gitroot=~/git
 
@@ -12,19 +20,21 @@ checkRequirement git
 
 
 gitSync () {
-	gitpath=$(basename $1)
+	gitpath=$gitroot/$(basename $1)
 	
 	if [ $# -lt 2 ]; then
 		echo "Usage: $(basename $0) <gitURL> <module> [targetPath]"
-		echo "<module>: badusb infrared nfc subghz"
+		echo "<module>: badusb infrared nfc subghz ibutton music_player"
 		exit 1
 	fi
 
+	# check if subpath on SD is okay
 	case $2 in
-		badusb|infrared|nfc|subghz) echo "Module $2 OK";;
-		*) echo "Allowed <module>: badusb infrared nfc subghz" ; exit 1;;
+		badusb|infrared|nfc|subghz|ibutton|music_player) ;;
+		*) echo "Allowed <module>: badusb infrared nfc subghz ibutton music_player" ; exit 1;;
 	esac
 
+	# If no SD subpath target is given, copy to subpath
 	if [ $# -eq 2 ]; then
 		targetPath=$(basename $1)
 	else
@@ -32,14 +42,20 @@ gitSync () {
 	fi
 
 	# If local git repo doesn't exist, clone first.
-	[ ! -d "$gitroot/$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
-	cd $gitroot/$gitpath && git pull
-	du -hs $gitroot/$gitpath
+	[ ! -d "$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
+	cd $gitpath && git pull
 
 	# If SD Card is mounted (mointpoint exist)
-	[ -d "$sdcard" ] && { rsync -rv --checksum --delete $gitroot/$gitpath/ $sdcard/$2/$targetPath/ ; du -hs $sdcard/$2/$targetPath ; }
+	# Some repository are often moving files around. --delete will take care of that.
+	if [ -d "$sdcard" ]; then
+		rsync -rv --checksum --delete $gitpath/ $sdcard/$2/$targetPath/
+		echo "Size on SD: " $(du -hs $sdcard/$2/$targetPath)
+	fi
+
+	echo "Local size:" $(du -hs $gitpath)
 }
 
+## for Information, see https://github.com/djsime1/awesome-flipperzero
 gitSync https://github.com/logickworkshop/Flipper-IRDB infrared
 gitSync https://github.com/Gioman101/FlipperAmiibo nfc
 gitSync https://github.com/tobiabocchi/flipperzero-bruteforce subghz
@@ -47,21 +63,46 @@ gitSync https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb badusb UNC0V3R3D
 gitSync https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB badusb I-Am-Jakoby
 gitSync https://github.com/FalsePhilosopher/badusb badusb FalsePhilosopher
 gitSync https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads badusb hack5_payloads
+#gitSync https://github.com/jimilinuxguy/flipperzero-touchtunes subghz touchtunes
+#gitSync https://github.com/neverfa11ing/FlipperMusicRTTTL music_player rtttl
+#gitsync https://github.com/Tonsil/flipper-music-files music_player fmf
+#gitSync https://github.com/wetox-team/flipperzero-goodies ibutton wetox
+#gitSync https://github.com/xb8/t119bruteforcer subghz t119pager
+#gitsync https://github.com/GlUTEN-BASH/Flipper-Starnew ibutton 
 
-## Large archive of files, dumps, documentation ...
-[ ! -d "$gitroot/Flipper" ] && { cd $gitroot && git clone https://github.com/UberGuidoZ/Flipper; }
-cd $gitroot/Flipper && git pull
 
-if  [ -d "$sdcard" ]; then
-	rsync -rv --checksum --delete $gitroot/Flipper/NFC/ $sdcard/nfc/guidoz/
-	rsync -rv --checksum --delete $gitroot/Flipper/Sub-GHz/ $sdcard/subghz/guidoz/
-	rsync -rv --checksum --delete $gitroot/Flipper/subplaylist/ $sdcard/subplaylist/
-	rsync -rv --checksum --delete $gitroot/Flipper/unirf/ $sdcard/unirf/
-	rsync -rv --checksum --delete $gitroot/Flipper/BadUSB/ $sdcard/badusb/guidoz/
-	rsync -rv --checksum --delete $gitroot/Flipper/picopass/ $sdcard/picopass/
-	rsync -rv --checksum --delete $gitroot/Flipper/Wav_Player/ $sdcard/wav_player/
-	rsync -rv --checksum --delete $gitroot/Flipper/Music_Player/ $sdcard/music_player/
-fi
+#####################################################################
+### The UberGuidoZ is a large collection of 3,5 GB valuable files.
+### Some ressources are redundant to other repositorys.
+### It is harder to navigate on the flipper, so I replaced some dirs.
+### Feel free to comment any path, to reduce the size on SD
+
+guidoSync () {
+	gitpath=$gitroot/$(basename $1)
+	
+	# If local git repo doesn't exist, clone first.
+	[ ! -d "$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
+	cd $gitpath && git pull
+
+	# If SD Card is mounted (mointpoint exist)
+	# Some repository are often moving files around. --delete will take care of that.
+	if [ -d "$sdcard" ]; then
+		rsync -rv --checksum --delete $gitpath/NFC/ $sdcard/nfc/guidoz/
+		rsync -rv --checksum --delete $gitpath/Sub-GHz/ $sdcard/subghz/guidoz/
+		rsync -rv --checksum --delete $gitpath/subplaylist/ $sdcard/subplaylist/
+		rsync -rv --checksum --delete $gitpath/unirf/ $sdcard/unirf/
+		rsync -rv --checksum --delete $gitpath/BadUSB/ $sdcard/badusb/guidoz/
+		rsync -rv --checksum --delete $gitpath/picopass/ $sdcard/picopass/
+		rsync -rv --checksum --delete $gitpath/Wav_Player/ $sdcard/wav_player/
+		rsync -rv --checksum --delete $gitpath/Music_Player/ $sdcard/music_player/guidoz/
+		echo "Size of dumps:" $(du -hs --total $sdcard/nfc/guidoz/ $sdcard/subghz/guidoz/ $sdcard/subplaylist/ $sdcard/unirf/ $sdcard/badusb/guidoz/ $sdcard/picopass/)
+		echo "Size of music:" $(du -hs --total $sdcard/wav_player/ $sdcard/music_player/)
+	fi
+	
+	echo "Local size:" $(du -hs $gitpath)
+}
+
+
+guidoSync https://github.com/UberGuidoZ/Flipper
 
 cd ~
-
