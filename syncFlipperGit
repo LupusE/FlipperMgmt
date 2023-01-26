@@ -1,0 +1,67 @@
+#!/bin/sh
+
+sdcard=/media/$USER/BENNIE
+gitroot=~/git
+
+checkRequirement() {
+	[ ! -x "$(command -v $1)" ] && { echo "$1 is not installed"; exit 1 ; }
+}
+
+checkRequirement rsync
+checkRequirement git
+
+
+gitSync () {
+	gitpath=$(basename $1)
+	
+	if [ $# -lt 2 ]; then
+		echo "Usage: $(basename $0) <gitURL> <module> [targetPath]"
+		echo "<module>: badusb infrared nfc subghz"
+		exit 1
+	fi
+
+	case $2 in
+		badusb|infrared|nfc|subghz) echo "Module $2 OK";;
+		*) echo "Allowed <module>: badusb infrared nfc subghz" ; exit 1;;
+	esac
+
+	if [ $# -eq 2 ]; then
+		targetPath=$(basename $1)
+	else
+		targetPath=$3
+	fi
+
+	# If local git repo doesn't exist, clone first.
+	[ ! -d "$gitroot/$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
+	cd $gitroot/$gitpath && git pull
+	du -hs $gitroot/$gitpath
+
+	# If SD Card is mounted (mointpoint exist)
+	[ -d "$sdcard" ] && { rsync -rv --checksum --delete $gitroot/$gitpath/ $sdcard/$2/$targetPath/ ; du -hs $sdcard/$2/$targetPath ; }
+}
+
+gitSync https://github.com/logickworkshop/Flipper-IRDB infrared
+gitSync https://github.com/Gioman101/FlipperAmiibo nfc
+gitSync https://github.com/tobiabocchi/flipperzero-bruteforce subghz
+gitSync https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb badusb UNC0V3R3D
+gitSync https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB badusb I-Am-Jakoby
+gitSync https://github.com/FalsePhilosopher/badusb badusb FalsePhilosopher
+gitSync https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads badusb hack5_payloads
+
+## Large archive of files, dumps, documentation ...
+[ ! -d "$gitroot/Flipper" ] && { cd $gitroot && git clone https://github.com/UberGuidoZ/Flipper; }
+cd $gitroot/Flipper && git pull
+
+if  [ -d "$sdcard" ]; then
+	rsync -rv --checksum --delete $gitroot/Flipper/NFC/ $sdcard/nfc/guidoz/
+	rsync -rv --checksum --delete $gitroot/Flipper/Sub-GHz/ $sdcard/subghz/guidoz/
+	rsync -rv --checksum --delete $gitroot/Flipper/subplaylist/ $sdcard/subplaylist/
+	rsync -rv --checksum --delete $gitroot/Flipper/unirf/ $sdcard/unirf/
+	rsync -rv --checksum --delete $gitroot/Flipper/BadUSB/ $sdcard/badusb/guidoz/
+	rsync -rv --checksum --delete $gitroot/Flipper/picopass/ $sdcard/picopass/
+	rsync -rv --checksum --delete $gitroot/Flipper/Wav_Player/ $sdcard/wav_player/
+	rsync -rv --checksum --delete $gitroot/Flipper/Music_Player/ $sdcard/music_player/
+fi
+
+cd ~
+
