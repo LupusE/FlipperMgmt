@@ -1,0 +1,30 @@
+#!/bin/sh
+
+## source functions
+. $(dirname $0)/syncFlipperGit
+. $(dirname $0)/syncFlipperApps
+
+## List git repos to sync
+
+## for Information, see https://github.com/djsime1/awesome-flipperzero
+gitSync -g https://github.com/logickworkshop/Flipper-IRDB -m infrared
+gitSync -g https://github.com/Gioman101/FlipperAmiibo -m nfc
+gitSync -g https://github.com/tobiabocchi/flipperzero-bruteforce -m subghz
+gitSync -g https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb -m badusb -t UNC0V3R3D
+gitSync -g https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB -m badusb -t I-Am-Jakoby
+gitSync -g https://github.com/FalsePhilosopher/badusb -m badusb -t FalsePhilosopher
+gitSync -g https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads -m badusb -t hack5_payloads
+#gitSync -g https://github.com/jimilinuxguy/flipperzero-touchtunes -m subghz -t touchtunes
+#gitSync -g https://github.com/neverfa11ing/FlipperMusicRTTTL -m music_player -t rtttl
+#gitsync -g https://github.com/Tonsil/flipper-music-files -m music_player -t fmf
+#gitSync -g https://github.com/wetox-team/flipperzero-goodies -m ibutton -t wetox
+#gitSync -g https://github.com/xb8/t119bruteforcer -m subghz -t t119pager
+
+starnewSync https://github.com/GlUTEN-BASH/Flipper-Starnew
+
+guidoSync https://github.com/UberGuidoZ/Flipper
+
+## syncFlipperApps - Allowed <firmware>: official dev unleashed roughmaster xtreme
+#fwApps unleashed
+
+cd ~

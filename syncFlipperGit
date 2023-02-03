@@ -47,7 +47,7 @@ done
 	gitpath=$gitroot/$(basename $giturl)
 
 	if [ $# -lt 2 ]; then
-		echo "Usage: $(basename $0) <gitURL> <module> [target]"
+		echo "Usage: $(basename $0) -g <gitURL> -m <module> [-t target]"
 		echo "<module>: badusb infrared nfc subghz ibutton music_player"
 		exit 1
 	fi
@@ -75,20 +75,6 @@ done
 
 	echo "Local size: " $(du -hs $gitpath)
 }
-
-## for Information, see https://github.com/djsime1/awesome-flipperzero
-gitSync -g https://github.com/logickworkshop/Flipper-IRDB -m infrared
-gitSync -g https://github.com/Gioman101/FlipperAmiibo -m nfc
-gitSync -g https://github.com/tobiabocchi/flipperzero-bruteforce -m subghz
-gitSync -g https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb -m badusb -t UNC0V3R3D
-gitSync -g https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB -m badusb -t I-Am-Jakoby
-gitSync -g https://github.com/FalsePhilosopher/badusb -m badusb -t FalsePhilosopher
-gitSync -g https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads -m badusb -t hack5_payloads
-#gitSync -g https://github.com/jimilinuxguy/flipperzero-touchtunes -m subghz -t touchtunes
-#gitSync -g https://github.com/neverfa11ing/FlipperMusicRTTTL -m music_player -t rtttl
-#gitsync -g https://github.com/Tonsil/flipper-music-files -m music_player -t fmf
-#gitSync -g https://github.com/wetox-team/flipperzero-goodies -m ibutton -t wetox
-#gitSync -g https://github.com/xb8/t119bruteforcer -m subghz -t t119pager
 
 
 #####################################################################
@@ -122,8 +108,6 @@ guidoSync () {
 	echo "Local size: " $(du -hs $gitpath)
 }
 
-guidoSync https://github.com/UberGuidoZ/Flipper
-
 starnewSync () {
 	gitpath=$gitroot/$(basename $1)
 	
@@ -141,7 +125,5 @@ starnewSync () {
 	
 	echo "Local size: " $(du -hs $gitpath)
 }
-
-starnewSync https://github.com/GlUTEN-BASH/Flipper-Starnew
 
 cd ~
