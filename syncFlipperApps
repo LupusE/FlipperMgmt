@@ -1,0 +1,45 @@
+### Set variables - start 
+## defaults
+giturl=""
+module=""
+target=""
+sdcard=/media/$USER/BENNIE
+gitroot=~/git
+
+## Overwrite defaults by conf file
+confFile=./syncFlipperGit.conf
+[ -f $confFile ] && { . $confFile ; }
+
+## Overwrite defaults and conf file by arguments
+while getopts g:m:t:s:r: flag
+do
+    case "${flag}" in
+        g) giturl=${OPTARG};;  # $giturl
+        m) module=${OPTARG};;  # $module
+        t) target=${OPTARG};;  # $target
+        s) sdcard=${OPTARG};;
+        r) gitroot=${OPTARG};;
+    esac
+done
+### Set variables - stop
+
+
+fwApps () { # Apps
+	case $1 in
+		official) fwPath=Official/STABLE_FW;;
+		dev) fwPath=Official/DEV_FW;;
+		unleashed) fwPath=Custom*/Unleashed*;;
+		roguemaster) fwPath=Custom*/RogueMaster;;
+		xtreme) fwPath=Custom*/Xtreme*;;
+		*) echo "Allowed <firmware>: official dev unleashed roughmaster xtreme" ; exit 1;;
+	esac
+
+	fwAppDir=$gitroot/Flipper/Applications/$fwPath
+	for appDir in $(ls $fwAppDir) ; do
+		appTarget=$sdcard/apps/$firm/$appDir
+		echo "from $fwAppDir/$appDir/*.fap to $appTarget/"
+		#rsync -rv --checksum --delete $fwAppDir/$appDir/ $appTarget/
+	done
+	#rsync -rv --checksum --delete $fwapps $sdcard/apps/
+}
+fwApps unleashed

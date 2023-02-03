@@ -7,9 +7,19 @@
 
 ### On the bottom is a own function to sync UberGuidoz.
  
-
+### Set variables - start 
+## defaults
+giturl=""
+module=""
+target=""
 sdcard=/media/$USER/BENNIE
 gitroot=~/git
+
+## Overwrite defaults by conf file
+confFile=./syncFlipperGit.conf
+[ -f $confFile ] && { . $confFile ; }
+
+### Set variables - stop
 
 checkRequirement() {
 	[ ! -x "$(command -v $1)" ] && { echo "$1 is not installed"; exit 1 ; }
@@ -20,55 +30,65 @@ checkRequirement git
 
 
 gitSync () {
-	gitpath=$gitroot/$(basename $1)
-	
+
+## Overwrite defaults and conf file by arguments
+while getopts g:m:t:s:r: flag
+do
+    case "${flag}" in
+        g) giturl=${OPTARG};;
+        m) module=${OPTARG};;
+        t) target=${OPTARG};;
+        s) sdcard=${OPTARG};;
+        r) gitroot=${OPTARG};;
+    esac
+done
+
+
+	gitpath=$gitroot/$(basename $giturl)
+
 	if [ $# -lt 2 ]; then
-		echo "Usage: $(basename $0) <gitURL> <module> [targetPath]"
+		echo "Usage: $(basename $0) <gitURL> <module> [target]"
 		echo "<module>: badusb infrared nfc subghz ibutton music_player"
 		exit 1
 	fi
 
 	# check if subpath on SD is okay
-	case $2 in
+	case $module in
 		badusb|infrared|nfc|subghz|ibutton|music_player) ;;
 		*) echo "Allowed <module>: badusb infrared nfc subghz ibutton music_player" ; exit 1;;
 	esac
 
 	# If no SD subpath target is given, copy to subpath
-	if [ $# -eq 2 ]; then
-		targetPath=$(basename $1)
-	else
-		targetPath=$3
-	fi
+	
+	[ -z $target ] && { target=$(basename $giturl) ; }
 
 	# If local git repo doesn't exist, clone first.
-	[ ! -d "$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
+	[ ! -d "$gitpath" ] && { cd $gitroot && git clone --recursive $giturl; }
 	cd $gitpath && git pull
 
 	# If SD Card is mounted (mointpoint exist)
 	# Some repository are often moving files around. --delete will take care of that.
 	if [ -d "$sdcard" ]; then
-		rsync -rv --checksum --delete $gitpath/ $sdcard/$2/$targetPath/
-		echo "Size on SD: " $(du -hs $sdcard/$2/$targetPath)
+		rsync -rv --checksum --delete $gitpath/ $sdcard/$module/$target/
+		echo "Size on SD: " $(du -hs $sdcard/$module/$target)
 	fi
 
-	echo "Local size:" $(du -hs $gitpath)
+	echo "Local size: " $(du -hs $gitpath)
 }
 
 ## for Information, see https://github.com/djsime1/awesome-flipperzero
-gitSync https://github.com/logickworkshop/Flipper-IRDB infrared
-gitSync https://github.com/Gioman101/FlipperAmiibo nfc
-gitSync https://github.com/tobiabocchi/flipperzero-bruteforce subghz
-gitSync https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb badusb UNC0V3R3D
-gitSync https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB badusb I-Am-Jakoby
-gitSync https://github.com/FalsePhilosopher/badusb badusb FalsePhilosopher
-gitSync https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads badusb hack5_payloads
-#gitSync https://github.com/jimilinuxguy/flipperzero-touchtunes subghz touchtunes
-#gitSync https://github.com/neverfa11ing/FlipperMusicRTTTL music_player rtttl
-#gitsync https://github.com/Tonsil/flipper-music-files music_player fmf
-#gitSync https://github.com/wetox-team/flipperzero-goodies ibutton wetox
-#gitSync https://github.com/xb8/t119bruteforcer subghz t119pager
-#gitsync https://github.com/GlUTEN-BASH/Flipper-Starnew ibutton 
+gitSync -g https://github.com/logickworkshop/Flipper-IRDB -m infrared
+gitSync -g https://github.com/Gioman101/FlipperAmiibo -m nfc
+gitSync -g https://github.com/tobiabocchi/flipperzero-bruteforce -m subghz
+gitSync -g https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb -m badusb -t UNC0V3R3D
+gitSync -g https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB -m badusb -t I-Am-Jakoby
+gitSync -g https://github.com/FalsePhilosopher/badusb -m badusb -t FalsePhilosopher
+gitSync -g https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads -m badusb -t hack5_payloads
+#gitSync -g https://github.com/jimilinuxguy/flipperzero-touchtunes -m subghz -t touchtunes
+#gitSync -g https://github.com/neverfa11ing/FlipperMusicRTTTL -m music_player -t rtttl
+#gitsync -g https://github.com/Tonsil/flipper-music-files -m music_player -t fmf
+#gitSync -g https://github.com/wetox-team/flipperzero-goodies -m ibutton -t wetox
+#gitSync -g https://github.com/xb8/t119bruteforcer -m subghz -t t119pager
 
 
 #####################################################################
@@ -95,14 +115,33 @@ guidoSync () {
 		rsync -rv --checksum --delete $gitpath/picopass/ $sdcard/picopass/
 		rsync -rv --checksum --delete $gitpath/Wav_Player/ $sdcard/wav_player/
 		rsync -rv --checksum --delete $gitpath/Music_Player/ $sdcard/music_player/guidoz/
-		echo "Size of dumps:" $(du -hs --total $sdcard/nfc/guidoz/ $sdcard/subghz/guidoz/ $sdcard/subplaylist/ $sdcard/unirf/ $sdcard/badusb/guidoz/ $sdcard/picopass/)
-		echo "Size of music:" $(du -hs --total $sdcard/wav_player/ $sdcard/music_player/)
+		echo "Size of dumps on SD: " $(du -hs --total $sdcard/nfc/guidoz/ $sdcard/subghz/guidoz/ $sdcard/subplaylist/ $sdcard/unirf/ $sdcard/badusb/guidoz/ $sdcard/picopass/)
+		echo "Size of music on SD: " $(du -hs --total $sdcard/wav_player/ $sdcard/music_player/)
 	fi
 	
-	echo "Local size:" $(du -hs $gitpath)
+	echo "Local size: " $(du -hs $gitpath)
 }
 
-
 guidoSync https://github.com/UberGuidoZ/Flipper
+
+starnewSync () {
+	gitpath=$gitroot/$(basename $1)
+	
+	# If local git repo doesn't exist, clone first.
+	[ ! -d "$gitpath" ] && { cd $gitroot && git clone --recursive $1; }
+	cd $gitpath && git pull
+
+	# If SD Card is mounted (mointpoint exist)
+	# Some repository are often moving files around. --delete will take care of that.
+	if [ -d "$sdcard" ]; then
+		rsync -rv --checksum --delete $gitpath/StarButton/ $sdcard/ibutton/StarButton/
+		rsync -rv --checksum --delete $gitpath/StarRFID/ $sdcard/rfid/StarRFID/
+		echo "Size of dumps on SD: " $(du -hs --total  $sdcard/ibutton/StarButton/ $sdcard/rfid/StarRFID/)
+	fi
+	
+	echo "Local size: " $(du -hs $gitpath)
+}
+
+starnewSync https://github.com/GlUTEN-BASH/Flipper-Starnew
 
 cd ~
