@@ -7,20 +7,6 @@
 
 ### On the bottom is a own function to sync UberGuidoz.
  
-### Set variables - start 
-## defaults
-giturl=""
-module=""
-target=""
-sdcard=/media/$USER/BENNIE
-gitroot=~/git
-
-## Overwrite defaults by conf file
-confFile=./syncFlipperGit.conf
-[ -f $confFile ] && { . $confFile ; }
-
-### Set variables - stop
-
 checkRequirement() {
 	[ ! -x "$(command -v $1)" ] && { echo "$1 is not installed"; exit 1 ; }
 }

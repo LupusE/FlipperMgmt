@@ -1,8 +1,20 @@
 #!/bin/sh
 
-## source functions
+### Set variables - start 
+## defaults
+giturl=""
+module=""
+target=""
+sdcard=/media/$USER/BENNIE
+gitroot=~/git
+
+## Overwrite defaults by conf file
+conffile=./conf/syncFlipper.conf
+[ -f $conffile ] && . $conffile 
+
+### Set variables - stop
+
 . $(dirname $0)/syncFlipperGit
-. $(dirname $0)/syncFlipperApps
 
 ## List git repos to sync
 
@@ -14,16 +26,17 @@ gitSync -g https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb -m badusb -t UNC0V3R
 gitSync -g https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB -m badusb -t I-Am-Jakoby
 gitSync -g https://github.com/FalsePhilosopher/badusb -m badusb -t FalsePhilosopher
 gitSync -g https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads -m badusb -t hack5_payloads
-#gitSync -g https://github.com/jimilinuxguy/flipperzero-touchtunes -m subghz -t touchtunes
-#gitSync -g https://github.com/neverfa11ing/FlipperMusicRTTTL -m music_player -t rtttl
-#gitsync -g https://github.com/Tonsil/flipper-music-files -m music_player -t fmf
-#gitSync -g https://github.com/wetox-team/flipperzero-goodies -m ibutton -t wetox
-#gitSync -g https://github.com/xb8/t119bruteforcer -m subghz -t t119pager
+gitSync -g https://github.com/jimilinuxguy/flipperzero-touchtunes -m subghz -t touchtunes
+gitSync -g https://github.com/neverfa11ing/FlipperMusicRTTTL -m music_player -t rtttl
+gitSync -g https://github.com/Tonsil/flipper-music-files -m music_player -t fmf
+gitSync -g https://github.com/wetox-team/flipperzero-goodies -m ibutton -t wetox
+gitSync -g https://github.com/xb8/t119bruteforcer -m subghz -t t119pager
 
 starnewSync https://github.com/GlUTEN-BASH/Flipper-Starnew
 
 guidoSync https://github.com/UberGuidoZ/Flipper
 
+. $(dirname $0)/syncFlipperApps
 ## syncFlipperApps - Allowed <firmware>: official dev unleashed roughmaster xtreme
 #fwApps unleashed
 
