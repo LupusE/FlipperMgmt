@@ -1,0 +1,4933 @@
+ID;Button;Translate
+1;POWER;Power
+2;VOL+;Vol_up
+3;VOL-;Vol_dn
+4;MUTE;Mute
+5;Up;Up
+6;Down;Down
+7;Right;Right
+8;Left;Left
+9;1;1
+10;2;2
+11;3;3
+12;4;4
+13;5;5
+14;6;6
+15;8;8
+16;7;7
+17;9;9
+18;CH+;Ch_next
+19;CH-;Ch_prev
+20;0;0
+21;Menu;Menu
+22;Power;Power
+23;Back;Back
+24;Stop;Stop
+25;Home;Home
+26;Play;Play
+27;Source;Source
+28;Ok;Ok
+29;Exit;Exit
+30;Info;Info
+31;Timer;Timer
+32;Pause;Pause
+33;Mute;Mute
+34;Red;RED
+35;Blue;BLUE
+36;Green;GREEN
+37;OK;Ok
+38;Off;Off
+39;Enter;Enter
+40;Input;Input
+41;Yellow;
+42;Sleep;
+43;Rewind;
+44;UP;Up
+45;On;
+46;DOWN;Down
+47;Mode;Mode
+48;Return;
+49;RIGHT;Right
+50;LEFT;Left
+51;Guide;
+52;TEMP-;
+53;TEMP+;
+54;Next;
+55;Auto;
+56;Speed;
+57;Netflix;
+58;Forward;Forward
+59;White;
+60;MENU;Menu
+61;MODE;Mode
+62;Display;
+63;Vol_up;Vol_up
+64;Settings;
+65;Freeze;
+66;Play_pause;Pause
+67;Flash;
+68;Prev;
+69;Play_Pause;Pause
+70;B;
+71;Audio;
+72;Select;
+73;Repeat;Repeat
+74;STOP;Stop
+75;RED;RED
+76;EXIT;Exit
+77;Bluetooth;BLUETOOTH
+78;BLUE;BLUE
+79;USB;
+80;BACK;Back
+81;Strobe;
+82;Fade;
+83;Vol_down;Vol_dn
+84;SOURCE;Source
+85;Record;
+86;Vol-;Vol_dn
+87;Vol+;Vol_up
+88;R;
+89;Music;
+90;Options;
+91;GREEN;GREEN
+92;Previous;
+93;PLAY;Play
+94;INFO;Info
+95;Fan;
+96;Aspect;
+97;YELLOW;
+98;Text;
+99;TV;
+100;Rotate;
+101;OFF;Off
+102;TIMER;Timer
+103;Rec;
+104;PAUSE;Pause
+105;Light;
+106;Subtitle;
+107;Shutter;
+108;Setup;Setup
+109;Orange;
+110;G;
+111;Zoom;
+112;Purple;
+113;Pink;
+114;HOME;Home
+115;EPG;
+116;Clear;
+117;CC;
+118;Smooth;
+119;REWIND;
+120;FastForward;Forward
+121;Cool;
+122;On_off;Power
+123;Eject;
+124;Dimmer;
+125;Aux;
+126;SWING;
+127;Plus;
+128;List;
+129;HDMI;
+130;A;
+131;Reverse;Reverse
+132;Reset;
+133;Play/Pause;
+134;GUIDE;
+135;ENTER;Enter
+136;Clock;
+137;CD;
+138;Volume_up;Vol_up
+139;Sound;
+140;Search;
+141;SLEEP;
+142;Option;
+143;ON;
+144;Minus;
+145;INPUT;Input
+146;Fav;
+147;EQ;
+148;D;
+149;3D;
+150;W;
+151;Volume_down;Vol_dn
+152;Tv;
+153;Picture;
+154;POWERToggle;Power
+155;Game;
+156;Dim;
+157;C;
+158;Brighter;Bright+
+159;Apps;
+160;AUX;
+161;_;
+162;Youtube;
+163;Vol_Up;Vol_up
+164;Skip;
+165;REC;
+166;Oscillate;
+167;Low;
+168;High;
+169;Fast_forward;Forward
+170;FORWARD;Forward
+171;-;
+172;VolumeUp;Vol_up
+173;Time;
+174;Fwd;
+175;Favorite;
+176;BT;
+177;8h;
+178;Vol_dwn;Vol_dn
+179;Vol_Down;Vol_dn
+180;Tuner;
+181;Tools;
+182;Surround;
+183;Star;
+184;Slow;
+185;RETURN;
+186;Quick;
+187;NEXT;
+188;Movie;
+189;Last;
+190;Fan_up;
+191;Fan_down;
+192;FF;
+193;Bright;
+194;BLUETOOTH;BLUETOOTH
+195;6h;
+196;4h;
+197;2h;
+198;10;
+199;TEXT;
+200;Swing;
+201;Standby;
+202;Shuffle;Random
+203;Prog;
+204;Phono;
+205;PLAY_PAUSE;Pause
+206;PIP;
+207;PC;
+208;Optical;
+209;Opt;
+210;On/Off;Power
+211;Night;
+212;Led;
+213;Jump;
+214;Help;
+215;Fast Forward;Forward
+216;Fan_speed;
+217;FM;
+218;FAV;
+219;Eco;
+220;DISPLAY;
+221;Cyan;
+222;Cc;
+223;Brightness;
+224;Bright_up;Bright+
+225;Bass_up;
+226;AV;
+227;+;
+228;Wide;
+229;Vudu;
+230;Video;
+231;Txt;
+232;Temp-;
+233;Temp+;
+234;Teal;
+235;TXT;
+236;Skip_Forward;Skip_Forward
+237;SETTINGS;
+238;Program;
+239;POWER_ON;Power_ON
+240;POWER_OFF;Power_Off
+241;PLAY/PAUSE;Pause
+242;On_Off;Power
+243;Memory;
+244;LED;
+245;Hulu;
+246;Dash;
+247;Darker;
+248;DVD;
+249;Center;
+250;Candle;
+251;Bright_down;Bright-
+252;Blank;
+253;Bass;
+254;Backward;Backward
+255;AUTO;
+256;Zoom_in;
+257;YouTube;
+258;Volume_Up;Vol_up
+259;Volume_Down;Vol_dn
+260;Vol_dn;Vol_dn
+261;Voice;
+262;Violet;
+263;Usb;
+264;Temp;
+265;TOOLS;
+266;Skip_Back;Backward
+267;Size;
+268;SUBTITLE;
+269;SPEED;
+270;Recall;
+271;REPEAT;Repeat
+272;RECORD;
+273;R3;
+274;R2;
+275;R1;
+276;Pwr;
+277;PREV;
+278;Open_Close;
+279;OSC;
+280;OPTION;
+281;Index;
+282;Hold;
+283;Heat_up;
+284;Heat_down;
+285;Hdmi;
+286;Function;
+287;Format;
+288;Fast_Forward;Forward
+289;FREEZE;
+290;FAN-;
+291;FAN+;
+292;Dot;
+293;Cinema;
+294;Ch_list;Ch_list
+295;Cancel;
+296;CLEAR;
+297;B3;
+298;B2;
+299;B1;
+300;Angle;
+301;Y;
+302;VolumeMute;Mute
+303;VolUp;Vol_up
+304;VolDown;Vol_dn
+305;V_down;
+306;VIDEO;
+307;Turquoise;
+308;Tape;
+309;Speed_up;
+310;Speed_down;
+311;Slower;
+312;Skip_fwd;
+313;SOUND;
+314;Rew;
+315;Replay;
+316;Refresh;
+317;R4;
+318;Quiet;
+319;Pre_ch;Ch_prev
+320;P_mode;P_mode
+321;OPT;
+322;NETFLIX;
+323;Light_blue;
+324;I;
+325;Hdmi_2;
+326;Hdmi_1;
+327;HDMI_1;
+328;G4;
+329;G3;
+330;G2;
+331;G1;
+332;Faster;
+333;Fan Speed;
+334;Esc;
+335;EJECT;
+336;E;
+337;Dry;
+338;Computer;
+339;ChannelUp;Ch_next
+340;ChannelDown;Ch_prev
+341;ChList;Ch_list
+342;Brighten;
+343;Bass_down;
+344;Bass_Up;Bass_Up
+345;Bass_Down;
+346;B4;
+347;AUDIO;
+348;ASPECT;
+349;4H;
+350;11;
+351;Zoom_out;
+352;Zoom-;
+353;Zoom+;
+354;Vol -;Vol_dn
+355;Vol +;Vol_up
+356;VOL -;Vol_dn
+357;VOL +;Vol_up
+358;User;
+359;Turbo;
+360;Treble_up;Treble_up
+361;TrebleUp;Treble_up
+362;TrebleDown;
+363;Title;
+364;Timer_off;Timer_Off
+365;Teletext;
+366;TV_Radio;
+367;TV_POWER;Power_TV
+368;Subpage;
+369;Sub_up;
+370;Sub;
+371;Start;
+372;Spot Clean;
+373;Sources;Source
+374;SkipBack;Backward
+375;Shift;
+376;S_mode;S_mode
+377;Rwd;Reverse
+378;Rotation;
+379;Right_Arrow;Right
+380;Reveal;
+381;Random;Random
+382;Radio;
+383;Prime_video;
+384;Prime_Video;
+385;Prime;
+386;Prev_Ch;Ch_prev
+387;PrevTrack;
+388;Power_on;Power_ON
+389;Power_off;Power_Off
+390;Pip;
+391;Pc;
+392;POWER_off;Power_Off
+393;PINK;
+394;Oscillation;
+395;Osc;
+396;Normal;
+397;Network;
+398;Max;
+399;MTS;
+400;M;
+401;Lower;
+402;Lime;
+403;Left_Arrow;Left
+404;Lamp;
+405;LIGHT_BLUE;
+406;Keystone;
+407;Jump7;
+408;Jump3;
+409;InputAux;Input_AUX
+410;Heater;
+411;HDMI_2;
+412;Fw;
+413;Foward;
+414;Fade7;
+415;Fade3;
+416;FAN;
+417;Energy_Saver;
+418;Edge Clean;
+419;Dim -;
+420;Dim +;
+421;Contrast;
+422;Comp;
+423;Carnation;
+424;Bt_pair;
+425;BassUp;Bass_Up
+426;BassDown;
+427;Backwards;Backward
+428;BASS+;
+429;Alarm;
+430;A_B;
+431;>>;
+432;<<;
+433;8H;
+434;|<<;
+435;source;Source
+436;off;Off
+437;input;Input
+438;home;Home
+439;back;Back
+440;ZOOM;
+441;YPbPr;
+442;Warm;
+443;WHITE;
+444;Volume Up;Vol_up
+445;Volume Down;Vol_dn
+446;Vol_plus;Vol_up
+447;V_up;Vol_up
+448;UP_Arrow;Up
+449;Turn;
+450;Treble_down;
+451;Track_fwd;
+452;Track_back;Track_back
+453;Timer Off;Timer_Off
+454;Test;
+455;Temp_up;
+456;Temp_down;
+457;Tab;
+458;TV_Power;Power_TV
+459;TV_Input;Input_TV
+460;TV_AV;
+461;TV/Radio;
+462;TURBO;
+463;TUNER;
+464;TTX/MIX;
+465;TELETEXT;
+466;Sync;
+467;Swap;
+468;Subtitles;
+469;Sub_down;
+470;Status;
+471;Start Stop;
+472;Standard;
+473;Src;
+474;Sports;
+475;Speed -;
+476;Speed +;
+477;Sound_control;
+478;Souce;
+479;Smart Hub;
+480;Skip_forward;Skip_Forward
+481;Skip_back;Track_back
+482;Sea Green;
+483;Scan;
+484;STTL;
+485;STILL;
+486;SRS;
+487;SPEED-;
+488;SPEED+;
+489;SMODE;S_mode
+490;SLEEP MODE;
+491;SETUP;Setup
+492;SAP;
+493;Resolution;
+494;Reboot;
+495;Raise;
+496;ROTATE;
+497;REW;
+498;REVERSE;Reverse
+499;Power_On;Power_ON
+500;Position;
+501;PlayPause;Pause
+502;Play Pause;Pause
+503;Play / Pause;Pause
+504;PgUp;
+505;Pause/Play;Pause
+506;Pair;
+507;Page_up;
+508;P_size;
+509;PREV_CH;Ch_prev
+510;POWER_Off;Power_Off
+511;PMODE;P_mode
+512;Open;
+513;Ocean;
+514;Not Availible;
+515;Nightmode;
+516;Next_track;
+517;News;
+518;Narrow;
+519;NIGHT;
+520;Muting;
+521;Mouse;
+522;Mode_auto;
+523;Mode_1;
+524;Mode2;
+525;Mix;
+526;Mid;
+527;Media;
+528;MAX;
+529;Line2;
+530;Line1;
+531;Light_green;
+532;Last_View;
+533;Language;
+534;LIST;
+535;LANG;
+536;Internet;
+537;Heat;
+538;Hdmi_4;
+539;Hdmi_3;
+540;Func;
+541;Favorites;
+542;Fastforward;Forward
+543;Fast_Fwd;
+544;Fan_Speed;
+545;FWD;
+546;FLASH;
+547;FAN_AUTO;
+548;F1;
+549;F;
+550;Extra;
+551;Eq;
+552;Ent;
+553;Dwn;
+554;Disney+;
+555;Dim_up;
+556;D_Blue;BLUE
+557;DPad_Up;Up
+558;DPad_Right;Right
+559;DPad_Left;Left
+560;DPad_Down;Down
+561;DIY 6;
+562;DIY 5;
+563;DIY 4;
+564;DIY 3;
+565;DIY 2;
+566;DIY 1;
+567;Cold;
+568;Ch_List;Ch_list
+569;Cd;
+570;C_Yellow;
+571;C_F;
+572;CH_List;Ch_list
+573;CH_LIST;Ch_list
+574;Bw;
+575;Bt;
+576;Bright-;Bright-
+577;Bright+;Bright+
+578;B_Green;GREEN
+579;BGM;
+580;BD_DVD;
+581;BASS-;
+582;Aqua;
+583;Analog;
+584;Ambilight;
+585;Amazon;
+586;Adjust;
+587;Ad_subt;
+588;Accessibility Shortcut;
+589;A_Red;
+590;AV_Sync;
+591;AV_Mute;Mute_AV
+592;>>|;
+593;6H;
+594;2H;
+595;21;
+596;20;
+597;1h;
+598;19;
+599;18;
+600;17;
+601;16;
+602;15;
+603;14;
+604;13;
+605;12;
+606;10_0;
+607;100;
+608;*;
+609;|<;
+610;up;Up
+611;stop;Stop
+612;silence;
+613;right;Right
+614;return;
+615;red;RED
+616;rec;
+617;power;Power
+618;play;Play
+619;pause;Pause
+620;on;
+621;ok;Ok
+622;menu;Menu
+623;left;Left
+624;green;GREEN
+625;down;Down
+626;bright_up;Bright+
+627;bright_down;Bright-
+628;_l__;
+629;Zoom_up;
+630;Zoom_Out;
+631;Zoom_In;
+632;ZOOM-;
+633;ZOOM+;
+634;Yes;
+635;Yellow_x;
+636;Yellow_Orange;
+637;Yellow/C;
+638;YELOW;
+639;YELGRN;
+640;YEL;
+641;Xumo;
+642;X;
+643;Woofer;
+644;Wireless;
+645;Warmer;
+646;WIND_TYPE;
+647;WHITISH;
+648;Vup;Vol_up
+649;Vol_minus;Vol_dn
+650;Vol_min;
+651;Vol_UP;Vol_up
+652;Vol_Mute;Mute
+653;Vol_Dwn;Vol_dn
+654;Vol_Dn;Vol_dn
+655;Voice_Up;
+656;Voice_Down;
+657;Virtual Numarical Pad;
+658;Viera_Tools;
+659;Video (MD);
+660;Vertical;
+661;Vdwn;
+662;Vcr;
+663;VIZIO;
+664;VGA;
+665;VCR_TV;
+666;User3;
+667;User2;
+668;User1;
+669;Up_light;
+670;Unknown;
+671;UP_DOWN;
+672;Tv_guide;
+673;Turqouise;
+674;Tuning -;
+675;Tuning +;
+676;Tuner/Band;
+677;Tune_up;
+678;Tune_dwn;
+679;Ttx_mix;
+680;Treble_Up;
+681;Treble_Down;
+682;Top_Menu;
+683;TopMenu;
+684;Tint;
+685;Timer 4h;Timer_4h
+686;Test Tone;
+687;Temp_Up;
+688;Temp_Down;
+689;Tangerine;
+690;TV_Guide;
+691;TV/RADIO;
+692;TV/R;
+693;TV/AV;
+694;TURQ;
+695;TUNE-;
+696;TUNE+;
+697;TTX;
+698;TREBLE-;
+699;TREBLE+;
+700;TIMER_OFF;Timer_Off
+701;TEMP_28;
+702;TEMP_27;
+703;TEMP_26;
+704;TEMP_24;
+705;TEMP_22;
+706;TEMP_20;
+707;TEMP_18;
+708;TEMP_16;
+709;TAPE;
+710;Swing_on;
+711;Swing_off;
+712;Sunset;
+713;Suction Level;
+714;Subt;
+715;Subs;
+716;Sub_reset;
+717;Sttl;
+718;Strength;
+719;Streambox;
+720;Still;
+721;Start/Pause;Pause
+722;Spread;
+723;Spot;
+724;Sport;
+725;Speed-;
+726;Speed+;
+727;SpeakerLevel;
+728;Speaker;
+729;Sound_effect;
+730;SoundEffect;
+731;Sound Effect;
+732;Snooze;
+733;Smart_Hub;
+734;Sling;
+735;Skip_bck;
+736;Skip_Backwards;Backward
+737;SkipForward;Skip_Forward
+738;Sharp;
+739;Set_ok;Ok
+740;Set;
+741;Sensor;
+742;Scroll;
+743;Scene;
+744;SUBPAGE;
+745;SUB-;
+746;SUB+;
+747;SSM;
+748;SPLIT;
+749;SPEED 3;
+750;SPEED 2;
+751;SPEED 1;
+752;SMode;S_mode
+753;SMART_HOME;
+754;SLOW_FADE;
+755;SLOW;
+756;SKIP_FORWARD;Skip_Forward
+757;SKIP_BACK;Track_back
+758;SKIP;
+759;SIZE;
+760;SET;
+761;SELECT;
+762;SEARCH;
+763;SAT_CATV;
+764;S.Mode;S_mode
+765;Royal_Blue;
+766;Right_VolUp;
+767;Rev;
+768;Return/Back;Back
+769;Restart;
+770;Remote;
+771;Ref;
+772;Red_triangle;
+773;Red/A;
+774;Red UP;
+775;Red DOWN;
+776;Rec_Mode;
+777;Rear -;
+778;Rear +;
+779;RG;
+780;REC/*;
+781;R-;
+782;R+;
+783;Quick_menu;
+784;Q-MENU;
+785;Pro Logic;
+786;PrimeVideo;
+787;Previous_track;
+788;Prev_ch;Ch_prev
+789;Presets;
+790;Preset EQ;
+791;Preset -;
+792;Preset +;
+793;PreCh;Ch_prev
+794;Pr_up;
+795;Pr_down;
+796;Powerful;
+797;Power_Off;Power_Off
+798;Power2;Power_2
+799;Pound;
+800;Popup_Menu;Popup_Menu
+801;PopUpMenu;Popup_Menu
+802;Pointer;
+803;Play_Mode;
+804;Photo;
+805;PbyP;
+806;Pandora;
+807;Pan_up;
+808;Pan_right;
+809;Pan_left;
+810;Pan_down;
+811;Page_down;
+812;PageUp;
+813;PageDown;
+814;P_GUIDE;
+815;PVR;
+816;PSM;
+817;PROGRAM;
+818;PRE_CH;Ch_prev
+819;PREVIOUS;
+820;PRESET;
+821;PRE-CH;Ch_prev
+822;POWER_on;Power_ON
+823;POWER_On;Power_ON
+824;POWER OFF;Power_Off
+825;POUND;
+826;PMode;P_mode
+827;PHONO;
+828;P.SIZE;
+829;P.Mode;P_mode
+830;P-;
+831;P+;
+832;P;
+833;Other;
+834;OsdMsg;
+835;Oscy;
+836;Oscx;
+837;Oscilate;
+838;Olympic;
+839;Off?;
+840;ORANGE;
+841;OR;
+842;OPTIONS;
+843;ON_Speed;
+844;Num_9;
+845;Num_8;
+846;Num_7;
+847;Num_6;
+848;Num_5;
+849;Num_4;
+850;Num_3;
+851;Num_2;
+852;Num_1;
+853;Num_0;
+854;Night_Mode;
+855;Night_Light;
+856;NextTrack;
+857;NBA;
+858;Music3;
+859;Music2;
+860;Music1;
+861;Mts;
+862;Movies;
+863;Moon;
+864;MonoStereo;
+865;Mode_Enter;Enter
+866;Mode_8;
+867;Mode_7;
+868;Mode_6;
+869;Mode_5;
+870;Mode_4;
+871;Mode_3;
+872;Mode_2;
+873;Mode4;
+874;Mode3;
+875;Mode1;
+876;Mod;
+877;Menu_Exit;Exit
+878;Med;
+879;Maroon;
+880;MagnifyOn;
+881;MagnifyOff;
+882;Magenta;
+883;MTS_SAP;
+884;MOVIE;
+885;MEMORY;
+886;MAG;
+887;Loop;LOOP
+888;Lock;
+889;LiveTV;
+890;Lighting;
+891;Light_up;Light_up
+892;Light_down;
+893;Light_Blue;
+894;Light UP;Light_up
+895;Light Orange;
+896;Light Green;
+897;Light DOWN;
+898;Light Blue;
+899;Light -;
+900;Light +;
+901;Left_arrow;Left
+902;Lavender;
+903;Lang;
+904;LINE2;
+905;LINE1;
+906;LEFT_RIGHT;BALANCE
+907;LD;
+908;LAN;
+909;Keypad;
+910;JUMP 7;
+911;JUMP 3;
+912;Ionizer;
+913;Invert;
+914;Interactive;
+915;Intensity 3;
+916;Input_TV;Input_TV
+917;Input_AV;Input_AV
+918;InputLine;Input_Line
+919;InputBT;Input_BT
+920;Information;Info
+921;Increase;
+922;Imput;
+923;Image;
+924;IPod;
+925;INDEX;
+926;Humidity;
+927;Horizontal;
+928;Holiday;
+929;Heart;
+930;Hdmi_5;
+931;HELP;
+932;HDMI2;
+933;HDMI1;
+934;HBO_Max;
+935;Groove;
+936;Green_square;
+937;Green/B;
+938;Green UP;
+939;Green DOWN;
+940;Goto;
+941;Geometry;
+942;GRN;
+943;GOTO;
+944;GAME;
+945;Forest;
+946;Focus-;
+947;Focus+;
+948;Focus;
+949;Flat;
+950;Flashback;
+951;Flame;
+952;Fire;
+953;Finetune;
+954;Ffw;
+955;Ff;
+956;Fast_fwd;
+957;Fast_fw;
+958;Fast-forward;Forward
+959;Fan_auto;
+960;Fan_Mode;
+961;Fan_3;
+962;Fan Only;
+963;Fade2;
+964;Fade1;
+965;F_FORWARD;Forward
+966;FUNCTION;
+967;FULL ON;
+968;FORMAT;
+969;FOLDER-;
+970;FOLDER+;
+971;FFWD;
+972;FAST_FORWARD;Forward
+973;FAST FORWARD;Forward
+974;FAN_SPEED;
+975;FAN MODE;
+976;FADE 3;
+977;F9;
+978;F8;
+979;F7;
+980;F6;
+981;F5;
+982;F4;
+983;F3;
+984;F2;
+985;F12;
+986;F11;
+987;F10;
+988;End;
+989;Effect;
+990;Edit;
+991;E_manual;
+992;ESPN;
+993;ESC;
+994;EQ_Music;
+995;EQ_Movie;
+996;E-Manual;
+997;E-MANUAL;
+998;Down_light;
+999;Down_Arrow;
+1000;Dmx;
+1001;Disp;
+1002;Disney;
+1003;Disk;
+1004;Disc -;
+1005;Disc +;
+1006;Direction;
+1007;Direct;
+1008;Dim_plus;
+1009;Dim_minus;
+1010;Dim_down;
+1011;Digital/Analog;
+1012;Digest;
+1013;Dialog;
+1014;Demo;
+1015;Del;
+1016;Default;
+1017;Decrease;
+1018;Decimal;
+1019;Dark_green;
+1020;Dark_blue;
+1021;Dance;
+1022;DIY_2;
+1023;DIY_1;
+1024;DIY6;
+1025;DIY5;
+1026;DIY4;
+1027;DIY3;
+1028;DIY2;
+1029;DIY1;
+1030;DIM;
+1031;D2;
+1032;D1;
+1033;Custom;
+1034;Ctr;
+1035;Crackle;
+1036;Counter_Reset;
+1037;Cooler;
+1038;Comfort;
+1039;Color_Mode;
+1040;Color-;
+1041;Color+;
+1042;Color;
+1043;Coax;
+1044;Circle;
+1045;Chn_up;Ch_next
+1046;ChildLock;
+1047;Check;
+1048;Charge;
+1049;Chanel_up;Ch_next
+1050;Ch_up;Ch_next
+1051;Ch List;
+1052;Center -;
+1053;Center +;
+1054;Cbl_sat;
+1055;COOL MODE;
+1056;CH_NET_TYPE;
+1057;CH LIST;
+1058;CCD;
+1059;CALL;
+1060;Bulb;
+1061;Brightness-;Bright-
+1062;Brightness+;Bright+
+1063;Bookmark;
+1064;Blue_circle;
+1065;Blue/D;
+1066;Blue UP;
+1067;Blue DOWN;
+1068;Bixby;
+1069;Bass_dwn;
+1070;Bass-;
+1071;Bass+;
+1072;Balance Right;BALANCE_R
+1073;Balance Left;
+1074;Backspace;
+1075;Baby Blue;
+1076;B_up;
+1077;B_down;Down
+1078;BT_Pair;
+1079;BT pairing;
+1080;BD;
+1081;B-;
+1082;B+;
+1083;Asyn_fade;
+1084;ArrowUp;Up
+1085;Aquamarine;
+1086;Apricot;
+1087;All;
+1088;Album -;
+1089;Album +;
+1090;Again;
+1091;Add;
+1092;Ad/Subt.;
+1093;Active;
+1094;Action;
+1095;A_b;
+1096;ARC;
+1097;AM;
+1098;ADJ;
+1099;AD;
+1100;A3;
+1101;A2;
+1102;A1;
+1103;>|;
+1104;>10;
+1105;50%;
+1106;5.1 ch;
+1107;3h;
+1108;3H;
+1109;25;
+1110;24;
+1111;23;
+1112;22;
+1113;1ST_CH;
+1114;1H;
+1115;1500W;
+1116;123;
+1117;100%;
+1118;yellow;
+1119;y_sun;
+1120;ww;
+1121;woof_up;
+1122;woof_down;
+1123;wide;
+1124;vol_up;Vol_up
+1125;vol_down;Vol_dn
+1126;txt;
+1127;titlelist;
+1128;timer_4;
+1129;timer_2;
+1130;timer_1;
+1131;temp_30;
+1132;sys;
+1133;still;
+1134;src/USB;
+1135;src/Search;
+1136;src/LAN;
+1137;src/HDMI;
+1138;src/Computer;
+1139;spin;
+1140;speed_5;
+1141;speed_4;
+1142;speed_3;
+1143;speed_2;
+1144;speed_1;
+1145;slower;
+1146;sleep;
+1147;settings;
+1148;screenshot;
+1149;rr;
+1150;rotate;
+1151;rgb_cycle;
+1152;rewind;
+1153;reverse;Reverse
+1154;red_sun;
+1155;power_off;Power_Off
+1156;plusv;
+1157;pause_play;Pause
+1158;on_off;Power
+1159;o;
+1160;nw;
+1161;night;
+1162;mute;Mute
+1163;mode;Mode
+1164;led_toggle;
+1165;led_color;
+1166;led-;
+1167;led+;
+1168;lang;
+1169;info;Info
+1170;iPod;
+1171;i-manual;
+1172;i-Manual;
+1173;i+;
+1174;i(nfo);
+1175;guide;
+1176;fw;
+1177;freeze;
+1178;foto;
+1179;fire_timer;
+1180;fire_power;
+1181;fire_heat;
+1182;fire_flame;
+1183;ffw;
+1184;ff;
+1185;fastforward;Forward
+1186;faster;
+1187;fan_up;
+1188;fan_dwn;
+1189;fan_OFF;
+1190;ez POWER OFF;
+1191;exit;Exit
+1192;eHELP;
+1193;downv;Down
+1194;dimmer;
+1195;dSetup;
+1196;cw;
+1197;ctouch;
+1198;countryfield_lamp_on;
+1199;bw;
+1200;brighter;Bright+
+1201;blackout;
+1202;bbw;
+1203;arrow_up;Up
+1204;arrow_down;Down
+1205;air;
+1206;___;
+1207;__;
+1208;_SETUP_;
+1209;^;
+1210;\/;
+1211;Zoom_out_slow;
+1212;Zoom_out_fast;
+1213;Zoom_in_slw;
+1214;Zoom_in_fast;
+1215;Zoom_dwn;
+1216;Zoom_down;
+1217;Zoom_Plus;
+1218;Zoom_OUT;
+1219;Zoom_Moins;
+1220;Zoom_IN;
+1221;ZoomOUT;
+1222;ZoomIN;
+1223;Zigzag;
+1224;Zig;
+1225;Zero_CA_Skip;
+1226;ZeroSearch;
+1227;ZOOMOUT;
+1228;ZOOMIN;
+1229;YuppTV;
+1230;Yousing1;
+1231;Yellowish Red;
+1232;Yellow_green;
+1233;Yellow_c;
+1234;Yellow_Delete;
+1235;Yellow_C;
+1236;Yellow_Button;
+1237;Yellow/Repeat;
+1238;Yellow(1);
+1239;Yellow Down;
+1240;Yell_play;
+1241;Yawn1;
+1242;Yamaha_POWER;
+1243;YOUTUBE;
+1244;YIT;
+1245;YEL_FD_6;
+1246;YEL_FD_5;
+1247;YEL_FD_4;
+1248;YEL_FD_3;
+1249;YEL_FD_2;
+1250;YEL_FD_1;
+1251;YEL_9;
+1252;YEL_8;
+1253;YEL_7;
+1254;YEL_6;
+1255;YEL_5;
+1256;YEL_4;
+1257;YEL_3;
+1258;YEL_2;
+1259;YELOR_2;
+1260;YELOR_1;
+1261;YELLOW | FAV;
+1262;YELLOW / PLAY-PAUSE;
+1263;YELGRN_FD_6;
+1264;YELGRN_FD_5;
+1265;YELGRN_FD_4;
+1266;YELGRN_FD_3;
+1267;YELGRN_FD_2;
+1268;YELGRN_FD_1;
+1269;YELGRN_3;
+1270;YELGRN_2;
+1271;Xmas;
+1272;Xfinity;
+1273;Xbox_up;
+1274;Xbox_tv_shows;
+1275;Xbox_select;
+1276;Xbox_right;
+1277;Xbox_movies;
+1278;Xbox_left;
+1279;Xbox_down;
+1280;Xbox_back;
+1281;Xbox_POWER;
+1282;Xbox_Button;
+1283;XSTUDIO;
+1284;XBOX;
+1285;X2;
+1286;Ww;
+1287;Working;
+1288;Woofer_level;
+1289;Woofer_Up;
+1290;Woofer_Down;
+1291;Woofer -;
+1292;Woofer +;
+1293;Wind;
+1294;Wide_flow;
+1295;WideSwing;
+1296;WiFi;
+1297;Whoosh;
+1298;White Only;
+1299;White On_Off;
+1300;White 4;
+1301;White 3;
+1302;White 2;
+1303;White 1;
+1304;Whirl;
+1305;Went;
+1306;Weight;
+1307;Webtv;
+1308;Wave_pwr;
+1309;Wave2;
+1310;Wave1;
+1311;Water Level;
+1312;Watch_Free;
+1313;Watch;
+1314;Warm_white;
+1315;Warm_White;
+1316;Warm light;
+1317;Wall_Light;
+1318;Wake_up;
+1319;Wait;
+1320;WWW;
+1321;WRC;
+1322;WINDOWS;
+1323;WIND;
+1324;WIDE;
+1325;WHITISH_LONG_2;
+1326;WHITISH_LONG;
+1327;WHITISH_FD_6;
+1328;WHITISH_FD_5;
+1329;WHITISH_FD_4;
+1330;WHITISH_FD_3;
+1331;WHITISH_FD_2;
+1332;WHITISH_FD_1;
+1333;WHITISH_BLUE;
+1334;WHITISH_7;
+1335;WHITISH_6;
+1336;WHITISH_5;
+1337;WHITISH_4;
+1338;WHITISH_3;
+1339;WHITISH_2;
+1340;WHITE_FLASH;
+1341;WHITE_3;
+1342;WEIRD_93;
+1343;WEIRD_92;
+1344;WEIRD_91;
+1345;WEIRD_90;
+1346;WEIRD_9;
+1347;WEIRD_89;
+1348;WEIRD_88;
+1349;WEIRD_87;
+1350;WEIRD_86;
+1351;WEIRD_85;
+1352;WEIRD_84;
+1353;WEIRD_83;
+1354;WEIRD_82;
+1355;WEIRD_81;
+1356;WEIRD_80;
+1357;WEIRD_8;
+1358;WEIRD_79;
+1359;WEIRD_78;
+1360;WEIRD_77;
+1361;WEIRD_76;
+1362;WEIRD_75;
+1363;WEIRD_74;
+1364;WEIRD_73;
+1365;WEIRD_72;
+1366;WEIRD_71;
+1367;WEIRD_70;
+1368;WEIRD_69;
+1369;WEIRD_68;
+1370;WEIRD_67;
+1371;WEIRD_66;
+1372;WEIRD_65;
+1373;WEIRD_64;
+1374;WEIRD_63;
+1375;WEIRD_62;
+1376;WEIRD_61;
+1377;WEIRD_60;
+1378;WEIRD_59;
+1379;WEIRD_58;
+1380;WEIRD_57;
+1381;WEIRD_56;
+1382;WEIRD_55;
+1383;WEIRD_54;
+1384;WEIRD_53;
+1385;WEIRD_52;
+1386;WEIRD_51;
+1387;WEIRD_50;
+1388;WEIRD_5;
+1389;WEIRD_49;
+1390;WEIRD_48;
+1391;WEIRD_47;
+1392;WEIRD_46;
+1393;WEIRD_45;
+1394;WEIRD_44;
+1395;WEIRD_43;
+1396;WEIRD_42;
+1397;WEIRD_41;
+1398;WEIRD_4;
+1399;WEIRD_39;
+1400;WEIRD_38;
+1401;WEIRD_37;
+1402;WEIRD_36;
+1403;WEIRD_35;
+1404;WEIRD_34;
+1405;WEIRD_33;
+1406;WEIRD_32;
+1407;WEIRD_31;
+1408;WEIRD_30;
+1409;WEIRD_3;
+1410;WEIRD_29;
+1411;WEIRD_28;
+1412;WEIRD_2;
+1413;WEIRD_116;
+1414;WEIRD_115;
+1415;WEIRD_114;
+1416;WEIRD_113;
+1417;WEIRD_112;
+1418;WEIRD_111;
+1419;WEIRD_110;
+1420;WEIRD_100;
+1421;WEIRD_1;
+1422;WARM;
+1423;WALL;
+1424;Vvolup_TV;
+1425;Vuduu;
+1426;Volup_int;
+1427;Volup_ext;
+1428;Volume_p;Vol_up
+1429;Volume_m;
+1430;Volume_UP;Vol_up
+1431;Volume_DOWN;Vol_dn
+1432;VolumeDown;Vol_dn
+1433;VolumeDn;Vol_dn
+1434;Volume UP;Vol_up
+1435;Volume DOWN;Vol_dn
+1436;Volume;
+1437;Voll-;Vol_dn
+1438;Voll+;Vol_up
+1439;Voldown_TV;
+1440;Voldn_int;
+1441;Voldn_ext;
+1442;Vol_u;Vol_up
+1443;Vol_more;Vol_up
+1444;Vol_max;
+1445;Vol_less;
+1446;Vol_extern_up;
+1447;Vol_d;Vol_dn
+1448;Vol_Up_Alt;
+1449;Vol_Dwn_Alt;
+1450;Vol_DWN;Vol_dn
+1451;VolUP;Vol_up
+1452;VolMute;Mute
+1453;Vol-2;
+1454;Vol- R;
+1455;Vol- L;
+1456;Vol+2;
+1457;Vol+ R;
+1458;Vol+ L;
+1459;Vol up;Vol_up
+1460;Vol down;Vol_dn
+1461;Vol UP;Vol_up
+1462;Vol DOWN;Vol_dn
+1463;Voice_switch;
+1464;Vivid_Shift;
+1465;Vitesse;
+1466;Visor;
+1467;Virtual_sound;
+1468;Violett_kill;
+1469;View_LiveTV;
+1470;View;
+1471;Viera_Link;
+1472;Video_Src;
+1473;Video_3;
+1474;Video_2;
+1475;Video_1;
+1476;Video/Aux;
+1477;Video (E2);
+1478;Vidaa TV;
+1479;Vid_Sel;
+1480;Vid_Forward;
+1481;Vid_Back;
+1482;ViX;
+1483;Vertical_move;
+1484;Verti_wind;
+1485;Ventilateur;
+1486;Vent;
+1487;Velocidad;
+1488;Vane_width;
+1489;Vane_oscilate;
+1490;V_pluse;
+1491;V_min;
+1492;V_dwn;
+1493;V_chip;
+1494;V_UP;Vol_up
+1495;V_Down;Vol_dn
+1496;V_AUX;
+1497;VZTVRem_On;
+1498;VZTVRem_Off;
+1499;VOL_up;Vol_up
+1500;VOL_down;Vol_dn
+1501;VOL_UP;Vol_up
+1502;VOL_DOWN;Vol_dn
+1503;VOLUP;Vol_up
+1504;VOLDWN;Vol_dn
+1505;VOL-n;
+1506;VOL-_LeftArrow;Vol_dn
+1507;VOL+_RightArrow;Vol_up
+1508;VOL;
+1509;VOICE VIEW;
+1510;VOD;
+1511;VIDEO_PRESETS;
+1512;VIDEO 4;
+1513;VIDEO 3;
+1514;VIDEO 2;
+1515;VIDEO 1;
+1516;VGA_2;
+1517;VGA_1;
+1518;VGA2;
+1519;VGA1;
+1520;VGA AV;
+1521;VFD-;
+1522;VFD+;
+1523;VF;
+1524;VERY_SLOW_WHITE;
+1525;VERY_SLOW_PINK;
+1526;VELOCIDAD;
+1527;VChip;
+1528;VCR_Power;
+1529;VCR/TV;
+1530;VCR;
+1531;V.Format;
+1532;V-;
+1533;V+;
+1534;V Chip;
+1535;User_3;
+1536;User_2;
+1537;User_1;
+1538;Usb_random;Random_USB
+1539;Usb_cd;
+1540;Update;
+1541;Up_tcl;
+1542;Up_stair;
+1543;Up_pause;
+1544;Up_lux_w;
+1545;Up_lux;
+1546;Up_Trapez;
+1547;Up_Red;
+1548;Up_Plus;
+1549;Up_Green;
+1550;Up_CH+;Ch_next
+1551;Up_Blue;
+1552;Up_Arrow;Up
+1553;Up_2;
+1554;Up_1;
+1555;Up Arrow;Up
+1556;Up +;
+1557;Unpair;
+1558;Unknown_2;
+1559;Unknown_1;
+1560;Unknown Application;
+1561;Units_Toggle;
+1562;Undo;
+1563;UV/P;
+1564;USB_Random;Random_USB
+1565;USBPC;
+1566;USB/SD;
+1567;USB REC;
+1568;USB HOT;
+1569;UP_Volume;Vol_up
+1570;UP_Light;
+1571;UP_DPAD;Up
+1572;UP_DOWN VENT;
+1573;UP_Channel;Ch_next
+1574;UPDATE | TTX;
+1575;UP/CH+;Ch_next
+1576;UP AUTO;
+1577;UNKNOWN;
+1578;Txx_mix;
+1579;Twitch;
+1580;Tvhome;
+1581;Tv_radio;
+1582;Tv_plus;
+1583;Tv_dtv;
+1584;Tv_R;
+1585;Tv_Input;Input_TV
+1586;Tv_ARC;
+1587;TuningUp;
+1588;TuningR;
+1589;TuningL;
+1590;TuningDn;
+1591;Tuner_Up;
+1592;Tuner_Dn;
+1593;Tuner_Band;
+1594;TunerMemory;
+1595;TunerDAB;
+1596;Tuner mode;
+1597;Tuner band;
+1598;Tune_u;
+1599;Tune_d;
+1600;Tune-;
+1601;Tune+;
+1602;Tun_stop;
+1603;Tun_plus;
+1604;Tun_play;
+1605;Tun_minus;
+1606;Tubi;
+1607;TrueVol_On;
+1608;TrueVol_Off;
+1609;Tropic;
+1610;Trk_9;
+1611;Trk_8;
+1612;Trk_7;
+1613;Trk_6;
+1614;Trk_5;
+1615;Trk_4;
+1616;Trk_3;
+1617;Trk_2;
+1618;Trk_1;
+1619;Trk_0;
+1620;Triangle;
+1621;Tremble_Up;
+1622;Tremble_Down;
+1623;Treble_dwn;
+1624;Treble_P;
+1625;Treble_M;
+1626;Treble-;
+1627;Treble+;
+1628;Treble Up;Treb_Up
+1629;Treble Down;
+1630;Trebel;
+1631;Treb_u;
+1632;Treb_plus;
+1633;Treb_min;
+1634;Treb_d;
+1635;Treb_Up;Treb_Up
+1636;Treb_Down;
+1637;Treb-;
+1638;Treb+;
+1639;Trbl_up;Treb_Up
+1640;Trbl_dwn;
+1641;Tracking_Up;
+1642;Tracking_Dwn;
+1643;Track ID;
+1644;Track Fwd;
+1645;Track Bck;
+1646;Touchlock;
+1647;Touch;
+1648;Total;
+1649;Topmenu;
+1650;Top_menu;
+1651;Top_Right;
+1652;Top_Picks;
+1653;Top_Left;
+1654;Top menu_SP-Guide;
+1655;Top Menu;
+1656;Toon_goggles;
+1657;ToonGoggles;
+1658;Tone_plus;
+1659;Tone_minus;
+1660;Toggle_Return;
+1661;Title_popup;
+1662;Title_menu;
+1663;TitlePopup;
+1664;Timerup;Timer+
+1665;Timers;Timer
+1666;Timerdwn;Timer-
+1667;Timer_up;Timer+
+1668;Timer_toggle;
+1669;Timer_set;
+1670;Timer_select;
+1671;Timer_length;
+1672;Timer_down;Timer-
+1673;Timer_Set;
+1674;Timer_On;Timer_ON
+1675;Timer_Off;Timer_Off
+1676;Timer_ON;Timer_ON
+1677;Timer_OFF;Timer_Off
+1678;Timer_8H;Timer_8h
+1679;Timer_6h;Timer_6h
+1680;Timer_6H;Timer_6h
+1681;Timer_4H;Timer_4h
+1682;Timer_4;
+1683;Timer_3;
+1684;Timer_2H;Timer_2h
+1685;Timer_2;
+1686;Timer_1;
+1687;TimerUp;Timer+
+1688;TimerDown;Timer-
+1689;Timer Up;Timer+
+1690;Timer On;Timer_ON
+1691;Timer 8h;Timer_8h
+1692;Timer 2u;
+1693;Timer 2h;Timer_2h
+1694;Timer 2d;Timer_2d
+1695;Timer 1u;
+1696;Timer 1d;Timer_1d
+1697;Timer 0h;Timer_0h
+1698;Timeout;
+1699;Time_up;Timer+
+1700;Time_down;
+1701;Time_Up;Timer+
+1702;Time_Down;
+1703;Time_60;
+1704;Time_30;
+1705;Time_120;
+1706;Time_10;
+1707;Tiempo;
+1708;Thumb_Up;
+1709;Thumb_Down;
+1710;Theatre;
+1711;Theater;
+1712;Text_mix;
+1713;TestTone;
+1714;Tempo_plus;
+1715;Tempo_minus;
+1716;Temperature;
+1717;Tempature_Up;Tempature_Up
+1718;Tempature_PWR;
+1719;Tempature_Down;
+1720;Temp_display;
+1721;Temp_22;
+1722;Temp_17;
+1723;Temp warmer;
+1724;Temp up;Tempature_Up
+1725;Temp down;
+1726;Temp colder;
+1727;Temp Up;Tempature_Up
+1728;Temp Dn;
+1729;Tele;
+1730;Task_mgr;
+1731;TapeSpeed;
+1732;TapeMon;
+1733;Tape9;
+1734;Tape8;
+1735;Tape7;
+1736;Tape6;
+1737;Tape5;
+1738;Tape4;
+1739;Tape3;
+1740;Tape2;
+1741;Tape1;
+1742;Tape0;
+1743;Tape deck;
+1744;Take_photo;
+1745;Take_Temp;
+1746;Tabata Cycle;
+1747;Tabata Alarm;
+1748;T_shift;
+1749;T_on;
+1750;T_off;
+1751;TWINKLE_FLASH;
+1752;TV_input;Input_TV
+1753;TV_Vol_Up;
+1754;TV_Vol_Dn;
+1755;TV_Vol-;
+1756;TV_Vol+;
+1757;TV_VOL-;
+1758;TV_VOL+;
+1759;TV_VID;
+1760;TV_TXT;
+1761;TV_Rad;
+1762;TV_On/Off;
+1763;TV_Magn;
+1764;TV_Exit;Exit
+1765;TV_DTV;
+1766;TV_CH-;Ch_prev
+1767;TV_CH+;Ch_next
+1768;TVPrograms;
+1769;TVOL;
+1770;TVGuide;
+1771;TV/VIDEO;
+1772;TV/RAD;
+1773;TV/FM;
+1774;TV screen;
+1775;TV audio;
+1776;TV Vol_min;
+1777;TV Vol_max;
+1778;TV Vol-;
+1779;TV Vol+;
+1780;TV Source;Source
+1781;TV PreCH;Ch_prev
+1782;TV Power;Power_TV
+1783;TV Muting;
+1784;TV Mute;Mute_TV
+1785;TV Input;Input_TV
+1786;TV Info;Info
+1787;TV Guide;
+1788;TV CH-;Ch_prev
+1789;TV CH+;Ch_next
+1790;TV / RADIO;
+1791;TURQ_FD_5;
+1792;TURQ_FD_4;
+1793;TURQ_FD_3;
+1794;TURQ_FD_2;
+1795;TURQ_FD_1;
+1796;TURQ_3;
+1797;TURQ_2;
+1798;TURN UP;
+1799;TURN RIGHT;
+1800;TURN LEFT;
+1801;TURN DOWN;
+1802;TURBO BOOST;
+1803;TUNING-;
+1804;TUNING+;
+1805;TUNER PRESET-;
+1806;TUNER PRESET+;
+1807;TT_MIX;
+1808;TTX_mix;
+1809;TTX_MIX;
+1810;TShift;
+1811;TSHD;
+1812;TRec;
+1813;TREC;
+1814;TOP_MENU;
+1815;TOGGLE HOME;
+1816;TITLE;
+1817;TIMER_SET;
+1818;TIMER_RESET;
+1819;TIMER_ON;Timer_ON
+1820;TIMER_8H;Timer_8h
+1821;TIMER_6H;Timer_6h
+1822;TIMER_6639H;
+1823;TIMER-;Timer-
+1824;TIMER+;Timer+
+1825;TILT;
+1826;TIEMPO;
+1827;TEST-TV/VCR;
+1828;TEMP_up;Tempature_Up
+1829;TEMP_down;
+1830;TEMP_30;
+1831;TEMP_29;
+1832;TEMP_25;
+1833;TEMP_23;
+1834;TEMP_21;
+1835;TEMP_19;
+1836;TEMP_17;
+1837;TEMP_14;
+1838;TEMP 24;
+1839;TEMP 23;
+1840;TEMP 22;
+1841;TEMP 21;
+1842;TEMP 20;
+1843;TEMP;
+1844;TELEFUNKEN;
+1845;TED;
+1846;TAPE-2;
+1847;TAPE-1;
+1848;TAPE STOP;
+1849;TAPE RWD;
+1850;TAPE PLAY;
+1851;TAPE FFWD;
+1852;TAPE DIR B;
+1853;TAPE DIR A;
+1854;TAPE DECK A/B;
+1855;TAPE - Record/Pause;
+1856;T1;
+1857;T.OPT;
+1858;T Bass;
+1859;T;
+1860;Sync_menu;
+1861;SyncMenu;
+1862;Sync Menu;
+1863;Sync / Menu;
+1864;Swooth;
+1865;Swivel;
+1866;Switch;
+1867;Swing_2;
+1868;SwingWide;
+1869;SwingNarrow;
+1870;Swap_sound;
+1871;Sv_v;
+1872;Surround_up;Surround_up
+1873;Surround_sound;
+1874;Surround_down;
+1875;Surround Mode;
+1876;Surround Level;
+1877;Surr_up;Surround_up
+1878;Surr_mute;
+1879;Surr_down;
+1880;Surr_Vol_Up;Surround_up
+1881;Surr_Vol_Down;
+1882;Surr_POWER;
+1883;Surr_On;
+1884;Surr_Off;
+1885;Surr_Bal_Up;
+1886;Surr_Bal_Down;
+1887;Sunrise;
+1888;Sun Symbol;
+1889;Suction Level More;
+1890;Suction Level Less;
+1891;Suc_power;
+1892;Subwf_Up;
+1893;Subwf_Down;
+1894;Subtitle_menu;
+1895;Submenu;
+1896;Sub_dn;
+1897;SubUp;
+1898;SubDown;
+1899;Sub.Page;
+1900;Style;
+1901;Strobe_mode;
+1902;Strobe Mode;
+1903;StrengthUp;
+1904;StrengthDown;
+1905;Stream;
+1906;Straight;
+1907;Store;
+1908;Stopwatch;
+1909;Stop/Clear;Stop
+1910;Stereo3;
+1911;Stereo2;
+1912;Stereo1;
+1913;Stereo;
+1914;Steralise;
+1915;Step;
+1916;Steady_on;
+1917;Steady;
+1918;Stdby;
+1919;Stb;
+1920;Start_stop;
+1921;Start Up;
+1922;Stars_Right;
+1923;Stars_Left;
+1924;Star_pwr;
+1925;Star2;
+1926;Star1;
+1927;Standard_Mode;
+1928;Stan;
+1929;Src_byp;
+1930;Src_USB;
+1931;Src_Optical;
+1932;Src_HDMI_In;
+1933;Src_Dig_Audio;
+1934;Src_BT;
+1935;Src_Aux;
+1936;Src_ARC;
+1937;Square;
+1938;Spotlight;
+1939;Spotify;
+1940;Spot_clean;
+1941;Sports_mode;
+1942;Splitscreen;
+1943;Split;
+1944;Spkr_Test;
+1945;Spin;
+1946;Speedup;
+1947;Speeddwn;
+1948;Speed_med;
+1949;Speed_low;
+1950;Speed_hi;
+1951;Speed_auto;
+1952;Speed_Up;Speed_UP
+1953;Speed_UP;Speed_UP
+1954;Speed_Step;
+1955;Speed_Down;
+1956;Speed_DOWN;
+1957;Speed_4;
+1958;Speed_3;
+1959;Speed_2;
+1960;Speed_1;
+1961;SpeedUp;Speed_UP
+1962;SpeedStrobe-;
+1963;SpeedStrobe+;
+1964;SpeedSen-;
+1965;SpeedSen+;
+1966;SpeedDown;
+1967;Speed3;
+1968;Speed2;
+1969;Speed1;
+1970;Speed0;
+1971;Speech;
+1972;Speaker_Level;
+1973;SpeakerTest;
+1974;SpeakerAB;
+1975;SpaceBar;
+1976;Source_up;Source+
+1977;Source_down;Source-
+1978;Source_Search;Source
+1979;Source_3;
+1980;Source_2;
+1981;Source_1;
+1982;SourceSearch;Source
+1983;SourceSRC;Source
+1984;Source2;
+1985;Soundcontrols;
+1986;Sound_mode;Sound_Mode
+1987;Sound_efect;
+1988;Sound_adj;
+1989;Sound_Mode;Sound_Mode
+1990;Sound_Effect;
+1991;SoundShare;
+1992;SoundMode;Sound_Mode
+1993;Sound mode;Sound_Mode
+1994;Sound Control;
+1995;Sorce;
+1996;Song_plus;
+1997;Song_minus;
+1998;Song_4;
+1999;Song_3;
+2000;Song_2;
+2001;Song_1;
+2002;Song;
+2003;Sometimes;
+2004;Solo_Sub2;
+2005;Solo_Sub1;
+2006;Solo_Right;
+2007;Solo_Left;
+2008;Solo_LRXtra;
+2009;Solo_Center;
+2010;SoloRightSurr;
+2011;SoloLeftSurr;
+2012;SoloCntrSurr;
+2013;Soft;
+2014;Sofis_aan;
+2015;Soccer_Mode;
+2016;Snd_field;
+2017;Smoth;
+2018;Smooth_mode;Smooth_mode
+2019;Smooth Mode;Smooth_mode
+2020;Smiley;
+2021;Smartykat_mouse_up;
+2022;Smartykat_mouse_down;
+2023;Smarthub;
+2024;Smartcast_Home;
+2025;Smart_hub;
+2026;Smart_heating;
+2027;Smart_Tv;
+2028;SmartTV;
+2029;Smart access;
+2030;Smart Volume;
+2031;Smart;
+2032;Slow_rw;
+2033;Slow_glow;
+2034;Slow_ff;
+2035;Slow_fade;
+2036;Slow_Rwd;
+2037;Slow_Fwd;
+2038;Slim_flow;
+2039;Sliders;
+2040;Sleeping;
+2041;Sleep_on;
+2042;Sleep_off;
+2043;SleepTimer;SleepTimer
+2044;SleepCall;
+2045;Sleep1;
+2046;Sleep Timer;SleepTimer
+2047;Sleep Off;
+2048;Sleep 2h;
+2049;Sleep 1h;
+2050;Skyq_TV;
+2051;Sky blue-;
+2052;Sky blue+;
+2053;Sky blue;
+2054;Skipbackwards;Backward
+2055;Skipback;Track_back
+2056;Skip_right;
+2057;Skip_left;
+2058;Skip_bkwd;
+2059;Skip_bk;
+2060;Skip_backwards;Backward
+2061;Skip_Fwd;
+2062;Skip_FWD;
+2063;Skip_BCK;
+2064;SkipFWD;
+2065;Skip Forward;Skip_Forward
+2066;Skip Backwards;Backward
+2067;Skip Back;Backward
+2068;Single_Rt;
+2069;Single_Lt;
+2070;Single Room;
+2071;Simplink;
+2072;Silent;
+2073;Shyffle;
+2074;Showtime;
+2075;Show;
+2076;ShortSwing;
+2077;Short Cut;
+2078;Setup (18);
+2079;Setting;
+2080;Set_cancel;
+2081;Set init color;
+2082;Set Time;
+2083;Set Limits;
+2084;Set B;
+2085;Set A;
+2086;Set (Clock/Timer);
+2087;Sequential;
+2088;Sensitivity;
+2089;Sense_Temp;
+2090;Sen;
+2091;Select_tcl;
+2092;Select (Clock/Timer);
+2093;Sel;
+2094;Seek_fwd;
+2095;SeekForward;Forward
+2096;SeekBack;Backward
+2097;SeaGreen;
+2098;Screenshot;
+2099;Screenshare;
+2100;Screen_size;
+2101;Screen_settings;
+2102;Screen_Size;
+2103;Screen_Shade;
+2104;Screen_Settings;
+2105;ScreenSize;
+2106;Screen Mode;
+2107;Screen;
+2108;Schedule;
+2109;Sched_on;
+2110;Sched_off;
+2111;Scenery;
+2112;Scene 9;
+2113;Scene 8;
+2114;Scene 7;
+2115;Scene 6;
+2116;Scene 5 (Spacer On);
+2117;Scene 4;
+2118;Scene 3;
+2119;Scene 2;
+2120;Scene 15;
+2121;Scene 14;
+2122;Scene 13;
+2123;Scene 12 (Favorite);
+2124;Scene 11;
+2125;Scene 10;
+2126;Scene 1;
+2127;ScanForward;Forward
+2128;ScanBack;Backward
+2129;Save;
+2130;Sat_catv;
+2131;Sat_Cbl;
+2132;Sap;
+2133;Sand;
+2134;Samsung_TV_plus;
+2135;Sams_0A;
+2136;S_up;
+2137;S__down;
+2138;S_Video;
+2139;S_T;
+2140;S_7;
+2141;SYSTEM;
+2142;SWITCH;
+2143;SWAP;
+2144;SW-;
+2145;SW+;
+2146;SV-;
+2147;SV+;
+2148;SURROUND;
+2149;SUB_TITLE;
+2150;SUBTITLES;
+2151;SUB TITLE;
+2152;ST_MONO;
+2153;STROBE;
+2154;STOP_CDSYNC;
+2155;STOP | REVEAL;
+2156;STEREO;
+2157;STEADY__ON;
+2158;STB_On/Off;
+2159;STARZ;
+2160;START_CDSYNC;
+2161;STANDBY_CDSYNC;
+2162;STA;
+2163;SRC_TV_ARC;
+2164;SRC_OPTICAL;
+2165;SRC_AUX;
+2166;SRC-;
+2167;SRC+;
+2168;SP_LP;
+2169;SPPED;
+2170;SPOT;
+2171;SPLIT SCREEN;
+2172;SPECIAL_RANDOM_SLOW_FADE;
+2173;SPEAK_B;
+2174;SPEAK_A+B;
+2175;SPEAK_A;
+2176;SPACE;
+2177;SOURCES;Source
+2178;SOUND_MODE;Sound_Mode
+2179;SONY;
+2180;SONIC OFF;
+2181;SONIC 3;
+2182;SONIC 2;
+2183;SONIC 1;
+2184;SOMETIMES_RANDOM_COLOR_NEW;
+2185;SNDFLD_ON;
+2186;SNDFLD_OFF;
+2187;SMOOTH;
+2188;SMART HUB;
+2189;SMART;
+2190;SMALL;
+2191;SLO_GO;
+2192;SLOW_YELLOW_2;
+2193;SLOW_YELLOW;
+2194;SLOW_WHITE_2;
+2195;SLOW_WHITE;
+2196;SLOW_TURQUOISE;
+2197;SLOW_ORANGE;
+2198;SLOW_GREEN;
+2199;SLOW_GLOW;
+2200;SKIPFOR_CDPLAYER;
+2201;SKIPFOR;
+2202;SKIPBACK_CDPLAYER;
+2203;SKIPBACK;Track_back
+2204;SKIP FORWARD;Skip_Forward
+2205;SKIP BACKBARDS;Backward
+2206;SKIP BACK;Track_back
+2207;SIRC_3B;
+2208;SIRC_38;
+2209;SIRC_1D;
+2210;SIMPLINK;
+2211;SILENT NIGHT;
+2212;SILENT FAN;
+2213;SIDE B;
+2214;SIDE A;
+2215;SHUTTER;
+2216;SHUFFLE;Random
+2217;SHAPE;
+2218;SHADOW;
+2219;SH-;
+2220;SH+;
+2221;SFX;
+2222;SFI / EPG;
+2223;SFI;
+2224;SET UP;
+2225;SEQUENTEL;
+2226;SELECT/ENTER;
+2227;SEL;
+2228;SD_Card;
+2229;SDB_TONE;
+2230;SCROLL;
+2231;SCREEN;
+2232;SAP_HiFi;
+2233;SAP/*;
+2234;SAMSUNG;
+2235;SACD_CD;
+2236;SA-CD_CD;
+2237;S/W Level Right;
+2238;S/W Level Left;
+2239;S.STD;
+2240;S.MODE (SMART SOUND);
+2241;S-;
+2242;S+;
+2243;S Mode;S_mode
+2244;S;
+2245;Run;
+2246;Rt;
+2247;Rrwd_tune_dwn;
+2248;Rr;
+2249;RoyalBlue;
+2250;Round points;
+2251;Rotate_Up;
+2252;Rotate_Toggle;
+2253;Rotate_Dwn;
+2254;Rose_pink;
+2255;Rose;
+2256;Romance;
+2257;Roll;
+2258;Roku_Channel;
+2259;Roku Channel;
+2260;Right_tcl;
+2261;Right_playlist;
+2262;Right_Vol+;
+2263;Right_Knob_cw;
+2264;Right_Knob_cc;
+2265;Right_Fwd;
+2266;Right_Button;
+2267;Right VolUP;
+2268;Right Arrow;
+2269;Righ;
+2270;Rewind/Down;
+2271;Reverb_plus;
+2272;Reverb_minus;
+2273;Rev_fwd;
+2274;Rev_back;Track_back
+2275;Rev mode;
+2276;Resume;
+2277;Resize;
+2278;Reset/FGB2;
+2279;Reset (12);
+2280;Res;
+2281;Repeat_AB;
+2282;Repeat/FMMode;
+2283;Rep;
+2284;Remain;
+2285;Relaxing;
+2286;Reject;
+2287;Refr;
+2288;Redbox;
+2289;Red_up;
+2290;Red_orange;
+2291;Red_light;
+2292;Red_kill;
+2293;Red_dn;
+2294;Red_dark;
+2295;Red_call;
+2296;Red_a;
+2297;Red_Up;
+2298;Red_UP;
+2299;Red_Dwn;
+2300;Red_DPA_LIST;
+2301;Red_DOWN;
+2302;Red_Button;
+2303;Red_Bull_TV;
+2304;Red_A;
+2305;Red_3;
+2306;Red_2;
+2307;Red_10;
+2308;Red_1;
+2309;Red/Goto;
+2310;Red(1);
+2311;Red Only;
+2312;Red On_Off;
+2313;Red Clock;
+2314;Red 4;
+2315;Red 3;
+2316;Red 2;
+2317;Red 1;
+2318;Red -;
+2319;Red +;
+2320;Record_list;
+2321;Reclist_index;
+2322;Recharge;
+2323;RecList;
+2324;Rec/Time;
+2325;RebeccaPurple;
+2326;Rear-;
+2327;Rear+;
+2328;Reality_creation;
+2329;Reading light;
+2330;ReSync;
+2331;Rdio;
+2332;Rca;
+2333;Rarely;
+2334;Rapid_Play;
+2335;Rand_play;
+2336;Ralenti;
+2337;Rakuter_tv;
+2338;Rakuten_TV;
+2339;RakutenTV;
+2340;Rakuten TV;
+2341;Rainbow;
+2342;Radio_tuner;
+2343;R_up;
+2344;R_down;
+2345;R_W_B;
+2346;R_Click;
+2347;RR;
+2348;ROKU;
+2349;RMT_AH411U_pwr;
+2350;RMC;
+2351;RM;
+2352;RIGHT_LEFT VENT;
+2353;RIGHT_DPAD;Right
+2354;RIGHT_Arrow;Right
+2355;RIGHT/VOL+;
+2356;RIGHT AUTO;
+2357;RGB;
+2358;REVIND | LANGUAGE;
+2359;REVEAL;
+2360;RESYNC;
+2361;RESOLUTION;
+2362;RESET FILTER;
+2363;RESET;
+2364;REPEAT A-B;
+2365;REFRESH;
+2366;REF / EXIT;
+2367;RED_INT_OLD_DIM_1;
+2368;RED_FD_6;
+2369;RED_FD_5;
+2370;RED_FD_4;
+2371;RED_FD_3;
+2372;RED_FD_2;
+2373;RED_FD_1;
+2374;RED_5;
+2375;RED_4;
+2376;RED_3;
+2377;RED_2;
+2378;REDOR_3;
+2379;REDOR_2;
+2380;REDOR;
+2381;RED/DEMO;
+2382;RED / BW;
+2383;RECLIST;
+2384;RECENT APPS;
+2385;RECENT;
+2386;RECALL;
+2387;REBOOT;
+2388;RDS / SET;
+2389;RC5_09;
+2390;RC5_08;
+2391;RC5_07;
+2392;RC5_06;
+2393;RC5_05;
+2394;RC5_04;
+2395;RC5_03;
+2396;RC5_02;
+2397;RC5_01;
+2398;RC5_00;
+2399;RBG;
+2400;RAW_57;
+2401;RAW_55;
+2402;RAW_3;
+2403;RANDOM;
+2404;R.S;
+2405;R-Tune;
+2406;Quik;
+2407;Quick_view;
+2408;Quick Clean;
+2409;Question;
+2410;Q_menu;
+2411;Q_Setup;
+2412;QUIET;
+2413;QUICK_RANDOM_INT;
+2414;QUICK_MENU;
+2415;Q.View;
+2416;Q.VIEW;
+2417;Q.MENU;
+2418;Pwr_level_toggle;
+2419;PwrMop;
+2420;Push2Set;
+2421;Purple(3);
+2422;Purple Only;
+2423;Purple On_Off;
+2424;Purp;
+2425;PureAudio;
+2426;Pumpkin;
+2427;Pulse;
+2428;Psm;
+2429;Prowise;
+2430;Prologic;
+2431;Prolll;
+2432;Programming Mode;
+2433;Prog_up;
+2434;Prog_play;
+2435;Prog_dwn;
+2436;Prog_SetUp;
+2437;Prog_SetDn;
+2438;Prog_Enter;Enter
+2439;Prog R;
+2440;Prog L;
+2441;ProLght-;
+2442;ProLght+;
+2443;Print;
+2444;Prime Video;
+2445;Prgm;
+2446;Previous Display;
+2447;Prev_trck;
+2448;Prev_chapter;
+2449;Prev_channel;Ch_prev
+2450;Prev_chan;Ch_prev
+2451;Prev_Source;Source-
+2452;PrevCh;Ch_prev
+2453;Preset_Warm;
+2454;Preset_Cool;
+2455;Preset_3;
+2456;Preset_2;
+2457;Preset_1;
+2458;PresetUp;
+2459;PresetR;
+2460;PresetL;
+2461;PresetDn;
+2462;Preset R;
+2463;Preset Lock;
+2464;Preset L;
+2465;Preset 3;
+2466;Preset 2;
+2467;Preset 1;
+2468;Present_up;
+2469;Present_down;
+2470;Pre_On;
+2471;Pre_Off;
+2472;Pre_CH;Ch_prev
+2473;Practical_series_2;
+2474;Powerfull;
+2475;Power_seiki;
+2476;Power_on_off;Power
+2477;Power_extern;
+2478;Power_BOX;
+2479;Power tape;Power_Tape
+2480;Power receiver;
+2481;Power On;Power_ON
+2482;Power ON;Power_ON
+2483;Power OFF;Power_Off
+2484;Power CD;Power_CD
+2485;Powa;
+2486;Pound_right;
+2487;Pound_left;
+2488;Portable;
+2489;Pop_upmenu;
+2490;Pop-up Menu;
+2491;Playstation_Vue;
+2492;Playlists;
+2493;PlaylistUp;
+2494;PlaylistDn;
+2495;Player;
+2496;Playback;
+2497;Play_mode;
+2498;Play_menu;
+2499;Play_Resume;
+2500;PlayMode/TuningMode;
+2501;PlayMode;
+2502;Play/Stop;Play
+2503;Play/Preset;
+2504;Play I Pause;Pause
+2505;Plasma;
+2506;Planner;
+2507;Plan;
+2508;PkmnSlvrMystGftLink;
+2509;Pink_Purple;
+2510;Pink2;
+2511;Pink violet;
+2512;Picure;
+2513;Picture_mode;
+2514;Picture_Size;
+2515;Picture_Mode;
+2516;PictureMode;
+2517;Picture Mode;
+2518;Pick_Color;
+2519;Pick song;
+2520;Pic_size;
+2521;Pic_Return;
+2522;PicSize;
+2523;Pic;
+2524;Photo_2s;
+2525;Philips Collection;
+2526;Phase;
+2527;Pg_up;
+2528;Pg_dn;
+2529;Pg_Down;
+2530;PgNum;
+2531;PgDwn;
+2532;PgDown;
+2533;Period;
+2534;PerimiterClean;
+2535;Pc_1_2;
+2536;Pause_mute;
+2537;Pause_Zoom;
+2538;Pause_Step;
+2539;Pause_Play;Pause
+2540;Pause_Continue;Pause
+2541;Pause/Set;
+2542;Pause/Resume;Pause
+2543;Pause/Play/Select;
+2544;Pattern 5;
+2545;Pattern 4;
+2546;Pattern 3;
+2547;Pattern 2;
+2548;Pattern 1;
+2549;Pattern;
+2550;Patrol;
+2551;Pastel_Shift;
+2552;Pastel_Colours;
+2553;Passive;
+2554;Party2;
+2555;Party1;
+2556;Party;
+2557;Part_plus;
+2558;Part_minus;
+2559;Paramount+;
+2560;Paramont;
+2561;Par_rek;
+2562;Pan;
+2563;Pairing;
+2564;Pair Bluetooth;
+2565;Page_right;
+2566;Page_left;
+2567;Page_dn;
+2568;Page_Up;
+2569;Page_NexT;
+2570;Page_Down;
+2571;Page_Back;
+2572;P_up;
+2573;P_n;
+2574;P_min;
+2575;P_max;
+2576;P_down;
+2577;P_Up;
+2578;P_Timer;
+2579;P_Size;
+2580;P_SW_UP;
+2581;P_SW_DN;
+2582;P_ERROR;
+2583;P_Down;
+2584;P_CLICK;
+2585;P_BEEP;
+2586;PWR QUIET;
+2587;PWR ON;
+2588;PWR OFF;Power_Off
+2589;PWR;
+2590;PVR_Recording;
+2591;PVR List;
+2592;PURPLE_FADE;
+2593;PURPLE;
+2594;PURE_DIRECT;
+2595;PUP;
+2596;PTY;
+2597;PSize;
+2598;PROG-;
+2599;PROG+;
+2600;PROG -;
+2601;PROG +;
+2602;PRIME VIDEO;
+2603;PRIME;
+2604;PREW;
+2605;PREVIOUS | HOLD;
+2606;PREV FRAME;
+2607;PREV CHAPTER;
+2608;PRESET_3;
+2609;PRESET_2;
+2610;PRESET_1;
+2611;PPV;
+2612;PPL;
+2613;PP;
+2614;POWER_tcl;
+2615;POWER_Zone2;
+2616;POWER_Toggle;Power
+2617;POWER_TV;Power_TV
+2618;POWER_Source;Power_2
+2619;POWER_Receiver;Power_Receiver
+2620;POWER_ON (3A);Power_ON
+2621;POWER_OFF (3B);Power_Off
+2622;POWER_MUSIC;
+2623;POWER_LED;
+2624;POWER_LASER;
+2625;POWER_Alt;Power_2
+2626;POWER24;
+2627;POWER2;Power_2
+2628;POWER/SPEED;
+2629;POWER POWER;Power
+2630;POWER Off Only;Power_Off
+2631;POWER Off;Power_Off
+2632;POWER FULL;
+2633;POST-RUN;
+2634;PNS;
+2635;PLAY|PAUSE;Pause
+2636;PLAY_MODE;
+2637;PLAY | INDEX;
+2638;PLAY PAUSE;Pause
+2639;PLAY MENU;
+2640;PLAY / PAUSE;Pause
+2641;PLATINUM;
+2642;PLAN;
+2643;PIP_Swap;
+2644;PIP_On_Off;
+2645;PIP_Move;
+2646;PIP_Ch_Up;
+2647;PIP_Ch_Dn;
+2648;PIPAudio;
+2649;PIP-;
+2650;PIP+;
+2651;PIP PR-;
+2652;PIP PR+;
+2653;PIP INPUT;
+2654;PINK_FD_6;
+2655;PINK_FD_5;
+2656;PINK_FD_4;
+2657;PINK_FD_3;
+2658;PINK_FD_2;
+2659;PINK_FD_1;
+2660;PINK_5;
+2661;PINK_4;
+2662;PINK_3;
+2663;PINK_2;
+2664;PIC_MODE;
+2665;PIC_CNTRL;
+2666;PIC;
+2667;PHILLIPS;
+2668;PGUP;
+2669;PGDWN;
+2670;PG-;
+2671;PG+;
+2672;PF -;
+2673;PF +;
+2674;PDOWN;
+2675;PC_ChSwap;
+2676;PC_AUX;
+2677;PC 5;
+2678;PC 4;
+2679;PC 3;
+2680;PC 2;
+2681;PC 1;
+2682;PBC;
+2683;PAUSE_CDPLAYER;Pause_CD
+2684;PAUSE/STEP;
+2685;PAUSE | ZOOM;
+2686;PANASONIC;
+2687;PAIRING;
+2688;PAGE-;
+2689;PAGE+;
+2690;P0wer;
+2691;P.Size;
+2692;P.STD;
+2693;P.MODE (SMART PICTURE);
+2694;P-P;
+2695;P-ONLY;
+2696;P-CHECK;
+2697;P Mode;P_mode
+2698;P -;
+2699;P +;
+2700;Overscan;
+2701;Out;
+2702;Other_Pink;
+2703;Osd;
+2704;Oscilation;
+2705;Osc_Vert;
+2706;Osc_Hor;
+2707;Orange_yellow;
+2708;Orange_Yellow;
+2709;OrangeRed;
+2710;Orange Only;
+2711;Orange On_Off;
+2712;Option_in;
+2713;Optical_TVSound;
+2714;Optical2;
+2715;Optical1;
+2716;Opt2;
+2717;Opt1;
+2718;Openangle;
+2719;Open_close;
+2720;OpenClose;
+2721;Open/Close CD;
+2722;Open/Close;
+2723;Oneguide;
+2724;One_Touch;
+2725;One Touch;
+2726;On_screen;
+2727;On_off_left;
+2728;On_fan;
+2729;On_Demand;
+2730;OnScreen;
+2731;OnDemand;
+2732;On Off;Power
+2733;On / Speed;
+2734;Ok_enter;Ok
+2735;Off_on;Power
+2736;Off_Timer;Timer_Off
+2737;Off_3;
+2738;Ocilate;
+2739;OTR_StartTime;
+2740;OTR_RecTime;
+2741;OTR_Clear;
+2742;OSD;
+2743;OR_FD_6;
+2744;OR_FD_5;
+2745;OR_FD_4;
+2746;OR_FD_3;
+2747;OR_FD_2;
+2748;OR_FD_1;
+2749;OR_3;
+2750;OR_2;
+2751;OPT_COX;
+2752;OPTICAL;
+2753;OPTIC;
+2754;OPPO;
+2755;OPERATE;
+2756;ON/OFF;Power
+2757;ON / OFF;Power
+2758;OLD_YELLOW_THEN_OFF;
+2759;OLD_YELLOW_INT_5;
+2760;OLD_YELLOW_BLINK_2;
+2761;OLD_YELLOW_BLINK;
+2762;OLD_YELLOWGREEN_BLINK;
+2763;OLD_WHITE_THEN_RED;
+2764;OLD_TURQUOISE_THEN_YELLOW;
+2765;OLD_TURQUOISE_THEN_RED;
+2766;OLD_TURQUOISE_THEN_ORANGE;
+2767;OLD_TURQUOISE_MOTION_3;
+2768;OLD_TURQUOISE_MOTION_2;
+2769;OLD_TURQUOISE_MOTION;
+2770;OLD_RED_INT_3;
+2771;OLD_REDORANGE_BLINK;
+2772;OLD_RAINBOW_MOTION;
+2773;OLD_QUICK_TURQUOISE_2;
+2774;OLD_QUICK_TURQUOISE;
+2775;OLD_GREEN_THEN_YELLOW;
+2776;OLD_GREEN_THEN_OFF;
+2777;OLD_GREEN_MOTION;
+2778;OLD_GREEN_INT_5;
+2779;OLD_GREEN_BLINK_7;
+2780;OLD_GREEN_BLINK_6;
+2781;OLD_GREEN_BLINK_5;
+2782;OLD_GREEN_BLINK_4;
+2783;OLD_GREEN_BLINK_3;
+2784;OLD_GREEN_BLINK_2;
+2785;OLD_GREEN_BLINK;
+2786;OLD_DIM_YELLOW_BLINK;
+2787;OLD_DIM_WHITE;
+2788;OLD_DIM_RED_BLINK_3;
+2789;OLD_DIM_RED_BLINK_2;
+2790;OLD_DIM_RED_BLINK;
+2791;OLD_BLUE_BLINK;
+2792;OK_Scan;
+2793;OK_Play;Ok
+2794;OFF TIMER;Timer_Off
+2795;OFF 30 MIN;
+2796;O;
+2797;Numpad;
+2798;Num_input;
+2799;Num9;
+2800;Num8;
+2801;Num7;
+2802;Num6;
+2803;Num5;
+2804;Num4;
+2805;Num3;
+2806;Num2;
+2807;Num1;
+2808;Num0;
+2809;Now;
+2810;Note;
+2811;No_timer;
+2812;No_Show;
+2813;No;
+2814;Nightlight;
+2815;Night_mode_On;
+2816;Night_mode_Off;
+2817;Night_mode;
+2818;Night_light;
+2819;Night_blue;
+2820;Night_On;
+2821;Night_Off;
+2822;Night_Effect;
+2823;NightMode;
+2824;Night ON;
+2825;Night OFF;
+2826;Night Light;
+2827;Nicam_A2;
+2828;Next_trck;
+2829;Next_disk;
+2830;Next_chapter;
+2831;Next_Track;
+2832;Next_Source;Source+
+2833;Next_Ch;
+2834;Newline;
+2835;Neutral_White;
+2836;Neutral;
+2837;Netfix;
+2838;Net;
+2839;Nerf_Red;
+2840;Nerf_Purple;
+2841;Nerf_Blue;
+2842;Neon pink;
+2843;Neo_on;
+2844;Nav_up;
+2845;Nav_setting;
+2846;Nav_rgt;
+2847;Nav_ok;Ok
+2848;Nav_menu;
+2849;Nav_lft;
+2850;Nav_exit;Exit
+2851;Nav_dn;
+2852;Nav_back;Back
+2853;Nav;
+2854;Natural_breeze;
+2855;Natural Breeze;
+2856;NameEdit_Sel;
+2857;NUM;
+2858;NIGHT_MODE;
+2859;NIGHT MODE;
+2860;NICAM;
+2861;NEXT | LIST;
+2862;NEXT FRAME;
+2863;NEXT CHAPTER;
+2864;NEW_YELLOW_INT_MAYBE;
+2865;NEW_YELLOWGREEN_INT_2;
+2866;NEW_YELLOWGREEN_INT;
+2867;NEW_RED_WHITE_RATE_LIMITED;
+2868;NEW_RED_RAND_BLINK_1;
+2869;NEW_RED_INT_2;
+2870;NEW_RANDOM_RED_WHITE;
+2871;NEW_RANDOM_RED_OR_ORANGE_OR_WHITE;
+2872;NEW_RANDOM_FADE;
+2873;NEW_RANDOM_COLOR_SOMETIMES_FADE_NO_TAIL;
+2874;NEW_RANDOM_COLOR_SOMETIMES_8;
+2875;NEW_RANDOM_COLOR_SOMETIMES_7;
+2876;NEW_RANDOM_COLOR_SOMETIMES_6;
+2877;NEW_RANDOM_COLOR_SOMETIMES_5;
+2878;NEW_RANDOM_COLOR_SOMETIMES_4;
+2879;NEW_RANDOM_COLOR_SOMETIMES_3;
+2880;NEW_RANDOM_COLOR_SOMETIMES_2;
+2881;NEW_RANDOM_COLOR_SOMETIMES;
+2882;NEW_RANDOM_COLOR_MAYBE_ONCE;
+2883;NEW_LIGHT_BLUE_3;
+2884;NEW_LIGHT_BLUE_2;
+2885;NEW_GREEN_TO_TURQUOISE_FADE_ONCE;
+2886;NEW_GREEN_INT_3;
+2887;NEW_FADE_PRESET_COLOR;
+2888;NETWORKING;
+2889;NET;
+2890;NEC_09;
+2891;NEC_08;
+2892;NEC_07;
+2893;NEC_06;
+2894;NEC_05;
+2895;NEC_04;
+2896;NEC_03;
+2897;NEC_02;
+2898;NEC_01;
+2899;NEC_00;
+2900;NANO-G;
+2901;NAME;
+2902;N;
+2903;Myapp;
+2904;My_Channels;
+2905;My_Archive;
+2906;MyTempMode;
+2907;MyTemp;
+2908;MyButton2;
+2909;MyButton1;
+2910;MyApp;
+2911;Mute_Unmute;Mute
+2912;Mute_TV;Mute_TV
+2913;Music_mode;
+2914;Music_Port;
+2915;Music_3;
+2916;Music_2;
+2917;Music_1;
+2918;MusicSync;
+2919;MusicSkip_Forwared;
+2920;MusicSkip_Back;
+2921;MusicService;
+2922;Music4;
+2923;Music ON/OFF;
+2924;Music 2;
+2925;Music 1;
+2926;Multimedia;
+2927;Multi_View;
+2928;Multi_2CH;
+2929;MultiColor;
+2930;Movie_tv;
+2931;Movie_mode;
+2932;Move_Light_Up;
+2933;Move_Light_Down;
+2934;Moustic;
+2935;Mouse Mode;
+2936;Motor STOP;
+2937;Motion_flow;
+2938;MotionSense;
+2939;Motion;
+2940;Morning;
+2941;Moon_pwr;
+2942;Moon2;
+2943;Moon1;
+2944;Moon ZZZ;
+2945;Mode_dry;
+2946;Mode_cool;
+2947;Mode_cont;
+2948;Mode_Up;
+2949;Mode_Static;
+2950;Mode_PicSound;
+2951;Mode_Down;
+2952;Mode_Candle;
+2953;Mode5;
+2954;Mode-;
+2955;Mode+;
+2956;Mo_st;
+2957;Mist_settings;
+2958;Mist Output;
+2959;Mist;
+2960;Mirroring;
+2961;Miracast;
+2962;Minus(-);
+2963;MinMax;
+2964;Min/Mid;
+2965;Min;
+2966;Mid_blue;
+2967;Micro;
+2968;Mic;
+2969;Meteor;
+2970;Mesing1;
+2971;Menue;Menu
+2972;Menu_up;
+2973;Menu_right;Right
+2974;Menu_left;
+2975;Menu_home;Home
+2976;Menu_down;
+2977;Menu_back;Back
+2978;Menu_Prev CH;
+2979;Menu_No;
+2980;Menu- (64);
+2981;Menu+ (65);
+2982;Menu Button;
+2983;Memorey_Check;
+2984;Mem_Counter;
+2985;Mem;
+2986;Medium_blue;
+2987;Meditation light;
+2988;Mediabrowser;
+2989;Media_P;
+2990;MediaP;
+2991;Media player;
+2992;Marker;
+2993;Mark_fav;
+2994;Marine blue;
+2995;Manual select;
+2996;Manual mode;
+2997;Manual;
+2998;Main_Up;
+2999;Main_Down;
+3000;Mail;
+3001;Magicinfo;
+3002;MY APPS;
+3003;MUTESRC;
+3004;MUSICSYNC;
+3005;MUSIC;
+3006;MTS_Audio;
+3007;MSCAN;
+3008;MPX;
+3009;MP3;
+3010;MONITOR_TAPE2;
+3011;MONITOR_TAPE1;
+3012;MODE_FAN;
+3013;MODE_DRY;
+3014;MODE_COOL;
+3015;MODE_AUTO;
+3016;MIX_WHITE;
+3017;MIX_COLOR;
+3018;MILD DRY COOL;
+3019;MIC_VOL-;
+3020;MIC_VOL+;
+3021;MHL;
+3022;MHEG CANCEL;
+3023;MENU/EXIT;
+3024;MEGA BASS;
+3025;MEDIUM;
+3026;MEDION;
+3027;MEDIA_BOX;
+3028;MEDIAS;
+3029;MEDIA.P;
+3030;MD;
+3031;MC;
+3032;MAX_Sound;
+3033;MAX ON;
+3034;MAX OFF;
+3035;MALE/AUDIO;
+3036;MAG_FD_6;
+3037;MAG_FD_5;
+3038;MAG_FD_4;
+3039;MAG_FD_3;
+3040;MAG_FD_2;
+3041;MAG_FD_1;
+3042;MAG_4;
+3043;MAG_3;
+3044;MAG_2;
+3045;MAGNIFIER;
+3046;MAGENTA_3;
+3047;MAGENTA_2;
+3048;MAGENTA;
+3049;M4;
+3050;M3;
+3051;M2;
+3052;M1;
+3053;Lum_up;
+3054;Lum_down;
+3055;Low_Blue_Light;
+3056;Loud;
+3057;Loop_shuffle;Random_LOOP
+3058;Logitech_konf;
+3059;Lo_high;
+3060;Lo_Hi;
+3061;Live_TV;
+3062;Live;
+3063;Listen;
+3064;Link_Enable;
+3065;Link;
+3066;Line_in;
+3067;LineIn;
+3068;Line3;
+3069;Lime_Green;
+3070;LimeGreen;
+3071;Lil_up;
+3072;Lil_down;
+3073;Lighter_red;
+3074;Lighter_blue;
+3075;Lighter_Cyan;
+3076;Light_yellow;
+3077;Light_toggle;
+3078;Light_red;
+3079;Light_purple;
+3080;Light_orange;
+3081;Light_mode;Light_mode
+3082;Light_level_toggle;
+3083;Light_Up;
+3084;Light_RED;
+3085;Light_Purple;
+3086;Light_POWER;
+3087;Light_On;
+3088;Light_Mode;Light_mode
+3089;Light_Green;
+3090;Light_Down;
+3091;Light_Blue_Turquoise;
+3092;Light yellow;
+3093;Light red;
+3094;Light orange;
+3095;Light mode;Light_mode
+3096;Light green;
+3097;Light blue;
+3098;Light Red;
+3099;Light On;
+3100;Light Off;
+3101;Light Blue(2);
+3102;Lighhter;
+3103;Lib;
+3104;Lft;
+3105;Level_plus;
+3106;Level_minus;
+3107;LevelUp;
+3108;LevelDn;
+3109;Left_tcl;
+3110;Left_right;BALANCE
+3111;Left_playlist;
+3112;Left_VolDwn;
+3113;Left_VolDown;
+3114;Left_Vol-;
+3115;Left_Rwd;
+3116;Left_Knob_cw;
+3117;Left_Knob_cc;
+3118;Left_Button;Left
+3119;Left VolDwn;
+3120;Left Arrow;Left
+3121;Led_UP;
+3122;Led_DOWN;
+3123;Last_Track;
+3124;Last_CH;
+3125;Lasko_timer;
+3126;Lasko_therm;
+3127;Lasko_speed;
+3128;Lasko_power;
+3129;Lasko_osc;
+3130;Laser_fade;
+3131;Laser ON/OFF;
+3132;Laser Light;
+3133;Laser;
+3134;Lang_Audio;
+3135;Lang(AD);
+3136;Lan;
+3137;Lamp_Control;
+3138;Lake;
+3139;L_Red;
+3140;L_R;
+3141;L_Orange;
+3142;L_Green;
+3143;L_Click;
+3144;L_Blue;
+3145;LUMIEXPERT_BOOST;
+3146;LU-;
+3147;LU+;
+3148;LT_GRN_FD_6;
+3149;LT_GRN_FD_5;
+3150;LT_GRN_FD_4;
+3151;LT_GRN_FD_3;
+3152;LT_GRN_FD_2;
+3153;LT_GRN_FD_1;
+3154;LT_GRN;
+3155;LT_BLUE_FD_6;
+3156;LT_BLUE_FD_5;
+3157;LT_BLUE_FD_4;
+3158;LT_BLUE_FD_3;
+3159;LT_BLUE_FD_2;
+3160;LT_BLUE_FD_1;
+3161;LT_BLUE;
+3162;LOUD;
+3163;LOOP;LOOP
+3164;LIVE_ZOOM;
+3165;LIVE MENU;
+3166;LIST/FLOF;
+3167;LINE_2;
+3168;LINE_1;
+3169;LIGHT_RED;
+3170;LIGHT_ORANGE;
+3171;LIGHT_GRN_2;
+3172;LIGHT_GRN;
+3173;LIGHT_GREEN;
+3174;LIGHT_CYAN;
+3175;LIGHT_BLUE_3;
+3176;LIGHT_BLUE_2;
+3177;LIGHT-;
+3178;LIGHT+;
+3179;LIGHT;
+3180;LG_CHANNELS;
+3181;LG on/off;
+3182;LG input;
+3183;LG TV;
+3184;LG;
+3185;LEFT_DPAD;Left
+3186;LEFT_Arrow;Left
+3187;LEFT/VOL-;
+3188;LEFT/BACK;
+3189;LEFT AUTO;
+3190;LED_On;
+3191;LED_Off;
+3192;LED_Display;
+3193;LED_BRIGHTNESS;
+3194;LED ON/OFF;
+3195;LED Display;
+3196;LED Brightness;
+3197;LASTVIEW;
+3198;LASER_BRIGHTNESS;
+3199;LANGUAGE;
+3200;LAMP;
+3201;L3;
+3202;L2;
+3203;L1;
+3204;L/R;
+3205;L;
+3206;Kodi;
+3207;KiD;
+3208;Keystone_up;
+3209;Keystone_down;
+3210;Keystone UP;
+3211;Keystone DOWN;
+3212;Keyst_up;
+3213;Keyst_d;
+3214;Keyboard;
+3215;Key_lock;
+3216;Kelvin_Three_Steps;
+3217;Kd;
+3218;Kayo;
+3219;Karaoke enter;
+3220;Karaoke;
+3221;KEYSTONE-;
+3222;KEYSTONE+;
+3223;KEYSTONE;
+3224;K-Toggle;
+3225;K;
+3226;Jump_fwd;
+3227;Jump_back;
+3228;Jump 7;
+3229;Jump 3;
+3230;Joystick Fwd;
+3231;Joystick Bwd;
+3232;Joke1;
+3233;J;
+3234;Ir_unset;
+3235;Ir_set;
+3236;Ip_up;
+3237;Ip_down;
+3238;Ip;
+3239;Ionization;
+3240;Ion;
+3241;Invert_flow;
+3242;Intro_Check;
+3243;InternetVideo;
+3244;Internet video;
+3245;Internet radio;
+3246;Internet Browser;
+3247;Intensity 4;
+3248;Intensity 1;
+3249;Instant replay;
+3250;Inst_plus;
+3251;Inst_minus;
+3252;Inputs;Input
+3253;Input_src;Input
+3254;Input_choice;
+3255;Input_Sel;
+3256;Input_Next;Input+
+3257;Input_;
+3258;InputVideo3;Input_Video3
+3259;InputVideo2;Input_Video2
+3260;InputVideo1;Input_Video1
+3261;InputUp;Input+
+3262;InputUSB;Input_USB
+3263;InputTuner;Input_Tuner
+3264;InputTV_Sat;Input_TV
+3265;InputSA_CD;Input_CD
+3266;InputPhono;Input_Phono
+3267;InputOptical;Input_Optical
+3268;InputNext;Input+
+3269;InputMode;Input_Mode
+3270;InputMD_Tape;Input_MD-Tape
+3271;InputFM;Input_FM
+3272;InputDown;Input-
+3273;InputDVD_LD;Input_DVD-LD
+3274;InputBluetooth;Input_BT
+3275;InputAUX;Input_AUX
+3276;InputAM;Input_AM
+3277;Input5;Input_5
+3278;Input4;Input_4
+3279;Input3;Input_3
+3280;Input2;Input_2
+3281;Input1;Input_1
+3282;Input/TV;Input_TV
+3283;Input/AV;Input_AV
+3284;Input-;Input-
+3285;Input+;Input+
+3286;Input source;Source
+3287;Input choice;
+3288;Input USB;Input_USB
+3289;Input TV-CD;Input_TV-CD
+3290;Input TUNER;Input_Tuner
+3291;Input PHONO;Input_Phono
+3292;Input PC;Input_PC
+3293;Input NET;Input_NET
+3294;Input GAME;Input_Game
+3295;Input CBL-SAT;Input_SAT-CBL
+3296;Input BD-DVD;Input_BD-DVD
+3297;Input AUX;Input_AUX
+3298;Input -;Input-
+3299;Input +;Input+
+3300;Infoo;Info
+3301;Info_menu;Info
+3302;Info_(i);Info
+3303;Indigo;
+3304;Indicator;
+3305;India_Red;
+3306;Ind Lvl Adj Mode;
+3307;Inc_Pwr;
+3308;In_waves;
+3309;In_5;
+3310;In_4;
+3311;In_3;
+3312;In_2;
+3313;In_1;
+3314;In Start;
+3315;Id3;
+3316;Ice2;
+3317;Ice;
+3318;IPTV;
+3319;IPOD_MP3;
+3320;IPOD MENU DISPLAY;
+3321;IPOD / USB;
+3322;IONIZER;
+3323;ION;
+3324;IN_WAVE;
+3325;INTRO_SCAN;
+3326;INPUT_TUNER;Input_Tuner
+3327;INPUT_PHONO;Input_Phono
+3328;INPUT_CD;Input_CD
+3329;INPUT_AUX;Input_AUX
+3330;IN STOP;
+3331;IN START;
+3332;III;
+3333;ID;
+3334;Hyperdrive;
+3335;Humidity_lvl;
+3336;Humidistat;
+3337;Humidifier;
+3338;HumiLevel;
+3339;Hum_up;
+3340;Hum_off;
+3341;Hum_down;
+3342;Hotel;
+3343;Hot_pink;
+3344;Horizontal_move;
+3345;Horiz_wind;
+3346;Home_tcl;
+3347;Home_station;
+3348;Home_Audio;
+3349;Highlight;
+3350;Higher;
+3351;High-Low;
+3352;Hide2;
+3353;Hide1;
+3354;HiSmart;
+3355;HiMedia;
+3356;Hello3;
+3357;Hello2;
+3358;Hello1;
+3359;Heat_toggle;
+3360;Heat_option;
+3361;Heat_level;
+3362;Heat_88;
+3363;Heat_86;
+3364;Heat_84;
+3365;Heat_82;
+3366;Heat_80;
+3367;Heat_78;
+3368;Heat_76;
+3369;Heat_74;
+3370;Heat_72;
+3371;Heat_70;
+3372;Heat_68;
+3373;Heat_66;
+3374;Heat_64;
+3375;Heat_62;
+3376;Heat_60;
+3377;HeatUp;
+3378;HeatDown;
+3379;Heat-;
+3380;Heat+;
+3381;Heart_Radio;
+3382;Hdmi_In;
+3383;Hdmi4;
+3384;Hdmi3;
+3385;Hdmi2;
+3386;Hdmi1;
+3387;HappyKids;
+3388;HangUp_Phone;
+3389;Hamberg;
+3390;Halloween;
+3391;HUM_AUTO;
+3392;HUM-;
+3393;HUM+;
+3394;HULU;
+3395;HOLD;
+3396;HISENSE;
+3397;HEAT MODE;
+3398;HD_Channels;
+3399;HDRi;
+3400;HDMI_7;
+3401;HDMI_6;
+3402;HDMI_5;
+3403;HDMI_4;
+3404;HDMI_3;
+3405;HDMI4;
+3406;HDMI3;
+3407;HDMI/ANAL;
+3408;HDMI TV;
+3409;HDMI HOT;
+3410;HDMI 4;
+3411;HDMI 3;
+3412;HDMI 2;
+3413;HDMI 1;
+3414;HDBaseT;
+3415;H;
+3416;Gt10;
+3417;Grp_Skip;
+3418;Grp_OnOff;
+3419;GroupSearch;
+3420;Grenn;
+3421;Green_up;
+3422;Green_stop;
+3423;Green_light;
+3424;Green_dn;
+3425;Green_dark;
+3426;Green_call;
+3427;Green_b;
+3428;Green_Up;
+3429;Green_UP;
+3430;Green_Turquoise;
+3431;Green_MEM;
+3432;Green_Dwn;
+3433;Green_Day;
+3434;Green_DOWN;
+3435;Green_Button;
+3436;Green_B;
+3437;Green_3;
+3438;Green_2;
+3439;Green_11;
+3440;Green_1;
+3441;Green/Angle;
+3442;Green(2);
+3443;Green Up;
+3444;Green Only;
+3445;Green On_Off;
+3446;Green 4;
+3447;Green 3;
+3448;Green 2;
+3449;Green 1;
+3450;Green -;
+3451;Green +;
+3452;Greater10;
+3453;Gp_timer_off;Timer_Off
+3454;Gp_on;
+3455;Gp_off;
+3456;Gp_brightness_up;Bright+
+3457;Gp_brightness_dwn;Bright-
+3458;Gp_9;
+3459;Gp_8h_timer;Timer_8h
+3460;Gp_8;
+3461;Gp_7;
+3462;Gp_6h_timer;Timer_6h
+3463;Gp_6639h_timer;
+3464;Gp_6;
+3465;Gp_5;
+3466;Gp_4;
+3467;Gp_3;
+3468;Gp_2;
+3469;Gp_11;
+3470;Gp_10;
+3471;Gp_1;
+3472;Google Assistant;
+3473;Go_to;
+3474;Get_TV;
+3475;Geq;
+3476;Gen_vii;
+3477;Gamma_correction;
+3478;Gaming;
+3479;Game On/Off;
+3480;G_up;
+3481;G_down;
+3482;GT10;
+3483;GRUNDIG;
+3484;GRN_FD_6;
+3485;GRN_FD_5;
+3486;GRN_FD_4;
+3487;GRN_FD_3;
+3488;GRN_FD_2;
+3489;GRN_FD_1;
+3490;GRN_DIM;
+3491;GRN_9;
+3492;GRN_8;
+3493;GRN_7;
+3494;GRN_6;
+3495;GRN_5;
+3496;GRN_4;
+3497;GRN_3;
+3498;GRN_2;
+3499;GRN_15;
+3500;GRN_14;
+3501;GRN_13;
+3502;GRN_12;
+3503;GRN_11;
+3504;GRN_10;
+3505;GREEN | SUBTITLE;
+3506;GREEN / STOP;
+3507;GLOBAL;
+3508;GEQ;
+3509;GB;
+3510;G-;
+3511;G+;
+3512;Future;
+3513;Full_room;
+3514;Full;
+3515;Frwd;Reverse
+3516;FrontSurround;
+3517;Frio;
+3518;Fresh;
+3519;Freq_up;
+3520;Freq_set;
+3521;Freq_down;
+3522;FreeviewPlay;
+3523;Free;
+3524;Foxtel;
+3525;Forwards;Forward
+3526;Foreward;
+3527;Football;
+3528;Follow_Mode;
+3529;FolderUp;
+3530;FolderDn;
+3531;Folder-;
+3532;Folder+;
+3533;Folder Up;
+3534;Folder Down;
+3535;Fold_10_m_up;
+3536;Fold_10_m_down;
+3537;Focus_up;
+3538;Focus_near;
+3539;Focus_far;
+3540;Focus_dwn;
+3541;Fn_Youtube;
+3542;Fn_Netflix;
+3543;Fn_Menu;
+3544;Fn_Media;
+3545;Flow;
+3546;Flip;
+3547;Flickering;
+3548;Flicker;
+3549;Flash_mode;Flash_mode
+3550;FlashBack;
+3551;Flash Mode;Flash_mode
+3552;Flame_type;
+3553;Flame_speed;
+3554;Flame_height;
+3555;Flag;
+3556;Fireplace;
+3557;Fire_toggle;
+3558;Fire_Up;
+3559;Fire_On;
+3560;Fire_Down;
+3561;Filter;
+3562;Film_2;
+3563;Film_1;
+3564;Ffwd_tune_up;
+3565;Feedback;
+3566;Favourite;
+3567;Fav_List;
+3568;Fav_CH;
+3569;Fav. CH;
+3570;Fast_rewind;
+3571;Fast_reverse;Reverse
+3572;Fast_flash;
+3573;Fast_fast_fwd;
+3574;Fast_Rev;
+3575;Fast_Backwards;Backward
+3576;Fast Rewind;
+3577;Fast Backwards;Backward
+3578;Far_End_Control;
+3579;Fanspeed;
+3580;Fan_slow;
+3581;Fan_power;
+3582;Fan_only;
+3583;Fan_mode;
+3584;Fan_min;
+3585;Fan_max;
+3586;Fan_less;
+3587;Fan_fast;
+3588;Fan_Up;
+3589;Fan_Sp;
+3590;Fan_POWER;
+3591;Fan_Only;
+3592;Fan_Off;
+3593;Fan_Med;
+3594;Fan_Low;
+3595;Fan_High;
+3596;Fan_Down;
+3597;Fan_2;
+3598;Fan_1;
+3599;FanSlower;
+3600;FanPower-;
+3601;FanPower+;
+3602;FanFaster;
+3603;Fan off;
+3604;Fan OFF;
+3605;Fan 3;
+3606;Fan 2;
+3607;Fan 1;
+3608;Fader;
+3609;Fade_mode;Fade_mode
+3610;Fade/Unit;
+3611;Fade Mode;Fade_mode
+3612;Fade 7;
+3613;Fade 3;
+3614;Factory;
+3615;F_or_C;
+3616;F_c;
+3617;F_Ward;
+3618;F_List;
+3619;F_ADD_DEL;
+3620;FX_ON;
+3621;FX_OFF;
+3622;FVD;
+3623;FRONT_SUR;
+3624;FRIO;
+3625;FREZE;
+3626;FREEVIE;
+3627;FPlus Y2;
+3628;FPS (Rate/Quality);
+3629;FOWARD;
+3630;FORWARD | RADIO;
+3631;FOREWARD;
+3632;FOR;
+3633;FN;
+3634;FM_CH;
+3635;FMMode;
+3636;FM/AM;
+3637;FM STEREO;
+3638;FILES;
+3639;FGB1 Up;
+3640;FGB1 Down;
+3641;FFwd;
+3642;FF/Up;
+3643;FETCH;
+3644;FEMALE/SOUND;
+3645;FAVORIS;
+3646;FAV2/SEARCH;
+3647;FAV1;
+3648;FAV-;
+3649;FAV+;
+3650;FAST_WHITE;
+3651;FAST_REWIND;
+3652;FAST_FORWRD;
+3653;FASTFWD;
+3654;FASTFORWARD;Forward
+3655;FARSITE;
+3656;FAN_LOW;
+3657;FAN_HIGH;
+3658;FAN_BACK;
+3659;FAN_5SPEED;
+3660;FAN_4SPEED;
+3661;FAN_3SPEED;
+3662;FAN_2SPEED;
+3663;FAN_1SPEED;
+3664;FAN_0SPEED;
+3665;FAN TURBO;
+3666;FAN SPD;
+3667;FAN MEDIUM SPEED;
+3668;FAN MEDIUM;
+3669;FAN LOW SPEED;
+3670;FAN LOW;
+3671;FAN LEVEL;
+3672;FAN HIGH SPEED;
+3673;FAN HIGH;
+3674;FAN AUTO;
+3675;FADE_2;
+3676;FADE_1;
+3677;FADE;
+3678;FACTORY RESET;
+3679;FACELUMI;
+3680;F7 X2;
+3681;F6 Y1;
+3682;F5 X1;
+3683;F4 Temp;
+3684;F3 Date;
+3685;F2 Time;
+3686;F1 Auto;
+3687;F-FORWARD;Forward
+3688;F-A;
+3689;F Add/Del;
+3690;Ezoom-;
+3691;Ezoom+;
+3692;Expression;
+3693;Exotic;
+3694;Exit/Br/HIIT;
+3695;Exit Application;Exit
+3696;Ex_power;
+3697;Escalade_TV_Power;
+3698;Erase;
+3699;Equipment_link;
+3700;Equalizer;
+3701;Epg;
+3702;Enter_ok;Ok
+3703;Enter/OK;Ok
+3704;Enter/Middle;Enter
+3705;Enter Center;Enter
+3706;Energy_saver;
+3707;EnergySaver;
+3708;Energy;
+3709;Enchancer;
+3710;Emanual;
+3711;Elisa_viihde;
+3712;Eingangsquelle;
+3713;Ein_Klima;
+3714;Ehelp;
+3715;EditTime;
+3716;EditSchedule;
+3717;Edit/Check;
+3718;Edge;
+3719;Econo;
+3720;Eco_toggle;
+3721;Eco_On;
+3722;Eco_Off;
+3723;Eco_Mode;
+3724;Eco_Menu;
+3725;Eco_Blank;
+3726;EcoBlank;
+3727;E_Manual;
+3728;EYE;
+3729;EQ_Tone;
+3730;EQ_Preset;
+3731;EQ_On;
+3732;EQ_News;
+3733;EQ_LFE_Filter;
+3734;EQ_LF;
+3735;EQ_HF;
+3736;EQ_Direct;
+3737;ENTER_DPAD;Enter
+3738;END;
+3739;EManual;
+3740;ELITELUX;
+3741;EJECT IPOD;
+3742;EJECT CD;
+3743;EHP WAAGEN;
+3744;EDIT;
+3745;ECO_BLANK;
+3746;ECONAVI;
+3747;ECO;
+3748;ECHO_VOL-;
+3749;ECHO_VOL+;
+3750;E4 Zone;
+3751;E3 DD_MM;
+3752;E2 C_F;
+3753;E1 12_24;
+3754;Dyson_am06_30;
+3755;Dvd_menu;
+3756;Dvd_card;
+3757;Dvd;
+3758;Dual_i_ii;
+3759;Dual;
+3760;Dtv;
+3761;Dry_88;
+3762;Dry_86;
+3763;Dry_84;
+3764;Dry_82;
+3765;Dry_80;
+3766;Dry_78;
+3767;Dry_76;
+3768;Dry_74;
+3769;Dry_72;
+3770;Dry_70;
+3771;Dry_68;
+3772;Dry_66;
+3773;Dry_64;
+3774;Down_tcl;
+3775;Down_stair;
+3776;Down_lux_w;
+3777;Down_lux;
+3778;Down_Trapez;
+3779;Down_Stop;
+3780;Down_Red;
+3781;Down_Minus;
+3782;Down_Light;
+3783;Down_Green;
+3784;Down_CH-;Ch_prev
+3785;Down Arrow;
+3786;Down -;
+3787;Dow;
+3788;Double_up;
+3789;Double_down;
+3790;Dolby Pro Logic;
+3791;Dock;
+3792;Dn;
+3793;Dmx_up;
+3794;Dmx_down;
+3795;Dmex;
+3796;Dkino;
+3797;Diy6;
+3798;Diy5;
+3799;Diy4;
+3800;Diy3;
+3801;Diy2;
+3802;Diy1;
+3803;Display_off;
+3804;Display_info;Info
+3805;Display_Playlists;
+3806;Display Mode 2;
+3807;Disney_Plus;
+3808;Disk_Menu;
+3809;Discovery+;
+3810;Discover;
+3811;Disc_menu;
+3812;Disc_Skip;
+3813;Disc_Menu;
+3814;DiscMenu;
+3815;Disc5;
+3816;Disc4;
+3817;Disc3;
+3818;Disc2;
+3819;Disc1;
+3820;Dir-;
+3821;Dir+;
+3822;Dimming;
+3823;Dimmer_up;
+3824;Dimmer_down;
+3825;Dim_low;
+3826;Dim_high;
+3827;Dim_d;
+3828;Dim-;
+3829;Dim UP;
+3830;Dim DOWN;
+3831;DigitalAnalog;
+3832;Digital;
+3833;Device;
+3834;Deny_call;
+3835;Delete;
+3836;Delay_on_off;
+3837;Delay_increase;
+3838;Delay_decrease;
+3839;Delay_UP;
+3840;Delay_DOWN;
+3841;Delay;
+3842;Degree F/C;
+3843;Deezer;
+3844;Deck_1_2;
+3845;Dec_Pwr;
+3846;Day_up;
+3847;Day_dn;
+3848;Date;
+3849;Dark_purple;
+3850;Dark_orange;
+3851;Dark_Blue;
+3852;DarkOrange;
+3853;Dark teal;
+3854;Dark purple;
+3855;Dark Orange;
+3856;Dark;
+3857;Darbee;
+3858;Dance2;
+3859;Dance1;
+3860;D_zoom_down;
+3861;D_zoom_Up;
+3862;D_menu;
+3863;D_in;
+3864;D_data;
+3865;D_In;
+3866;D_Dubbing;
+3867;D_Blue_Stereo_Mode;
+3868;D_Bass;
+3869;DYNAMIC_BLACK;
+3870;DYNAMIC;
+3871;DWN;
+3872;DVR_List;
+3873;DVR;
+3874;DVD_menu;
+3875;DVD_CD;
+3876;DUAL I/II;
+3877;DTuning;
+3878;DTV_TV;
+3879;DTV_ATV;
+3880;DTV;
+3881;DTT;
+3882;DSP_7;
+3883;DSP_6;
+3884;DSP_5;
+3885;DSP_4;
+3886;DSP_3;
+3887;DSP_2;
+3888;DRC;
+3889;DOWN_Volume;
+3890;DOWN_DPAD;
+3891;DOWN_Channel;Ch_prev
+3892;DOWN/CH-;Ch_prev
+3893;DMex;
+3894;DMX/%;
+3895;DIY_6;
+3896;DIY_5;
+3897;DIY_4;
+3898;DIY_3;
+3899;DISTANCE;
+3900;DISNEY+;
+3901;DISNEY PLUS;
+3902;DISNEY;
+3903;DIRECTV;
+3904;DIP_1;
+3905;DIM_UP;
+3906;DIM_RED_2;
+3907;DIM_RED;
+3908;DIM_DOWN;
+3909;DIM_BLUE;
+3910;DIMMER;
+3911;DIM-;
+3912;DIM+;
+3913;DIM DISPLAY;
+3914;DIGIT;
+3915;DENVER;
+3916;DELETE;
+3917;DEHUM. MODE;
+3918;DECRESCENDO;
+3919;DB-DVD;
+3920;DB;
+3921;DARK_PURPLE;
+3922;DARK_CYAN;
+3923;D4;
+3924;D3;
+3925;D/BLUE;
+3926;D. STOP;Stop
+3927;D. START;
+3928;D. RIGHT;Right
+3929;D. LEFT;
+3930;D. ENTER;Enter
+3931;D(Blue);
+3932;Cycle Displays;
+3933;Cycle;
+3934;Cw;
+3935;CustomPreset1;
+3936;Ctr/Select;
+3937;Ct_plus;
+3938;Ct_minus;
+3939;Cs;
+3940;Cross;
+3941;Cozy_White;
+3942;Cox;
+3943;Count_Time;
+3944;Count_Days;
+3945;Cool_mode;
+3946;Cool_88;
+3947;Cool_86;
+3948;Cool_84;
+3949;Cool_82;
+3950;Cool_80;
+3951;Cool_78;
+3952;Cool_76;
+3953;Cool_74;
+3954;Cool_72;
+3955;Cool_70;
+3956;Cool_68;
+3957;Cool_66;
+3958;Cool_64;
+3959;Contrast_enhancer;
+3960;Continuous;
+3961;Confirm;
+3962;Condis;
+3963;Concert;
+3964;Compt_Duree rest;
+3965;Combination;
+3966;Colour mode 2;
+3967;Colour Mode 1;
+3968;Colored Buttons;
+3969;Color_yellow;
+3970;Color_up;
+3971;Color_temp;
+3972;Color_space;
+3973;Color_red;
+3974;Color_option;
+3975;Color_green;
+3976;Color_down;
+3977;Color_blue;
+3978;Color_Temp;
+3979;Color_LED;
+3980;Color_Flame;
+3981;Color_7;
+3982;Color_3;
+3983;Color_16;
+3984;ColorTemp;
+3985;ColorMode;
+3986;Colder;
+3987;Cold_white;
+3988;Cold_White;
+3989;Cold light;
+3990;Coaxial;
+3991;Coal_light;
+3992;Co2;
+3993;Co1;
+3994;Clr_12_Sleep;
+3995;Clr;
+3996;Cloud_speed;
+3997;ClosedCaption;
+3998;Closed Cap;
+3999;Close;
+4000;Clock_Eject;
+4001;Climb;
+4002;Clear_audio;
+4003;Clear_Voice;
+4004;Clean;
+4005;Circulate;
+4006;Cinema_Mode;
+4007;Cinema Sound;
+4008;Christmas;
+4009;Chptr_next;
+4010;Chpter_back;Backward
+4011;Choix son;
+4012;Chn_dwn;Ch_prev
+4013;Chn_down;Ch_prev
+4014;Child_lock;
+4015;Child Nightlight;
+4016;Chasing;
+4017;Chase_Rt;
+4018;Chase_Lt;
+4019;Chase;
+4020;Chapter_plus;Ch_next
+4021;Chapter_minus;
+4022;Channnel-;Ch_prev
+4023;Channl_L;
+4024;Channel_up;Ch_next
+4025;Channel_list;Ch_list
+4026;Channel_down;Ch_prev
+4027;Channel_dn;Ch_prev
+4028;Channel_Up;Ch_next
+4029;Channel_R;
+4030;Channel_Down;Ch_prev
+4031;ChannelList;Ch_list
+4032;Channel Prev;Ch_prev
+4033;Channel Next;Ch_next
+4034;Channel 4;
+4035;Channel 3;
+4036;Channel 2;
+4037;Channel 1;
+4038;Channel -;Ch_prev
+4039;Channel +;Ch_next
+4040;Chann_up;Ch_next
+4041;Chann_down;Ch_prev
+4042;Change_color;
+4043;Change;
+4044;Chanel_down;Ch_prev
+4045;Chan_list;Ch_list
+4046;ChanB_light;
+4047;ChanB_horn;
+4048;ChanB_fwd;
+4049;ChanB_bck;
+4050;ChanB_Ffwd;
+4051;ChanA_light;
+4052;ChanA_horn;
+4053;ChanA_fwd;
+4054;ChanA_bck;
+4055;ChanA_Ffwd;
+4056;Ch_plus;Ch_next
+4057;Ch_minus;Ch_prev
+4058;Ch_dwn;Ch_prev
+4059;Ch_down;Ch_prev
+4060;Ch_call;
+4061;Ch_Preset_Down;
+4062;Ch_2_vol_up;
+4063;Ch_2_vol_down;
+4064;Ch_1_vol_up;
+4065;Ch_1_vol_down;
+4066;ChUp_2;
+4067;ChUp;Ch_next
+4068;ChDown_2;
+4069;ChDown;Ch_prev
+4070;Ch4_Vol_Up;
+4071;Ch4_Vol_Dn;
+4072;Ch3_Vol_Up;
+4073;Ch3_Vol_Dn;
+4074;Ch2_off;
+4075;Ch2_Vol_Up;
+4076;Ch2_Vol_Dn;
+4077;Ch1_off;
+4078;Ch1_Vol_Up;
+4079;Ch1_Vol_Dn;
+4080;Ch1_80;
+4081;Ch1_60;
+4082;Ch1_5600k;
+4083;Ch1_4400k;
+4084;Ch1_3200k;
+4085;Ch1_30;
+4086;Ch-_DownArrow;Ch_prev
+4087;Ch-;Ch_prev
+4088;Ch+_UpArrow;Ch_next
+4089;Ch+;Ch_next
+4090;Centre_up;
+4091;Centre_down;Down
+4092;Center_mode;
+4093;Center_Up;
+4094;Center_Down;Down
+4095;Center-;
+4096;Center+;
+4097;Center Select;
+4098;Celsius_farenhait;
+4099;Celsiufarenheight;
+4100;Celcius_farenheit;
+4101;Cd_usb;
+4102;Capture;
+4103;Captions_CC;
+4104;Captions;
+4105;Candycane;
+4106;Candle_mode;Candle_mode
+4107;Candle mode;Candle_mode
+4108;Cancel_track;
+4109;Cancel_timer;
+4110;Cancel_0;
+4111;Canal_up;
+4112;Canal_down;Ch_prev
+4113;Cam;
+4114;Calor;
+4115;Cake_menu;
+4116;Cable;
+4117;C_up;
+4118;C_down;Down
+4119;C_Yellow-Game_Random;
+4120;C_Sense;
+4121;C_STOP;
+4122;C_List;
+4123;C_FWD;
+4124;C_BWD;
+4125;C_4;
+4126;CYAN;
+4127;CV-;
+4128;CV+;
+4129;COX;
+4130;COOLING;
+4131;COOL;
+4132;CONTINUE;
+4133;COMP2;
+4134;COMP1;
+4135;COMP;
+4136;COMBO;
+4137;COMBINATION;
+4138;COLOR_FLASH;
+4139;COLOR;
+4140;COLD;
+4141;COAX;
+4142;CO-;
+4143;CO+;
+4144;CM_Skip;
+4145;CLR;
+4146;CLOCK;
+4147;CLEAR_VOICE;
+4148;CLEAN;
+4149;CLASSIC;
+4150;CH_list;Ch_list
+4151;CH_Up;Ch_next
+4152;CH_Previous;Ch_prev
+4153;CH_Preset_Up;
+4154;CH_Down;Ch_prev
+4155;CHORUS;
+4156;CHECK-S;
+4157;CHASING_FLASH;
+4158;CHAR;
+4159;CHAPTER-;
+4160;CHAPTER+;
+4161;CHANGE TEMP;
+4162;CH-LIST;Ch_list
+4163;CH Set;
+4164;CH List;
+4165;CH -;Ch_prev
+4166;CH +;Ch_next
+4167;CF;
+4168;CD_DVD;
+4169;CDSync_Stop;
+4170;CDSync_Stby;
+4171;CDSync_Start;
+4172;CD/play-pause;
+4173;CD STOP/PAUSE;Pause_CD
+4174;CD REWIND;
+4175;CD PLAY;
+4176;CD FWD;
+4177;CD FFWD;
+4178;CD DISC SKIP;
+4179;CD BACK;
+4180;CD / RADIO;
+4181;CBL/SAT;
+4182;CAP;
+4183;CANCEL;
+4184;C2_on;
+4185;C2_80;
+4186;C2_60;
+4187;C2_5600k;
+4188;C2_4400k;
+4189;C2_3200k;
+4190;C2_30;
+4191;C1_on;
+4192;C/YELLOW;
+4193;C-U;
+4194;C(Yellow);
+4195;C or F;
+4196;Buttspray;
+4197;Buttom_mute;Mute
+4198;Bt_stop;
+4199;Bt_play_pause;Pause
+4200;Bt_next;
+4201;Bt_back;
+4202;Bs;
+4203;BruteForceMode;
+4204;Brumisateur;
+4205;Brt_cine;
+4206;Brt_TV;
+4207;Brown;
+4208;Brightness_Up;Bright+
+4209;Brightness_Down;Bright-
+4210;Brightness -;Bright-
+4211;Brightness +;Bright+
+4212;Bright_orange;
+4213;Bright_dn;Bright-
+4214;Bright_blue;
+4215;Bright_Up;Bright+
+4216;Bright_Down;Bright-
+4217;Bright_2;
+4218;Bright3;
+4219;Bright2;
+4220;Bright1;
+4221;Bright 80%;
+4222;Bright 40%;
+4223;Bright 100%;
+4224;Bright 10%;
+4225;Breeze/Sleep;
+4226;Breeze;
+4227;Breathing;
+4228;Bottom;
+4229;Bot_Right;
+4230;Bot_Mid;
+4231;Bot_Left;Left
+4232;Book;
+4233;Body_sensor;
+4234;Bluray;
+4235;Bluetooth_power;Power_Bluetooth
+4236;BluetoothRXTX;
+4237;Bluetooth POWER;Power_Bluetooth
+4238;Bluethoot;BLUETOOTH
+4239;Blue_up;
+4240;Blue_timer;
+4241;Blue_pause;
+4242;Blue_kill;
+4243;Blue_green;
+4244;Blue_dn;
+4245;Blue_deep;
+4246;Blue_dark;
+4247;Blue_d;
+4248;Blue_Up;
+4249;Blue_UP;
+4250;Blue_Turquoise;
+4251;Blue_RAD;
+4252;Blue_Purple;
+4253;Blue_Dwn;
+4254;Blue_DOWN;
+4255;Blue_D;
+4256;Blue_Button;
+4257;Blue_6;
+4258;Blue_5;
+4259;Blue_4;
+4260;Blue_3;
+4261;Blue_2;
+4262;Blue_12;
+4263;Blue_1;
+4264;Blue/A->B;
+4265;Blue(3);
+4266;Blue violet;
+4267;Blue Stopwatch;
+4268;Blue Only;
+4269;Blue On_Off;
+4270;Blue 4;
+4271;Blue 3;
+4272;Blue 2;
+4273;Blue 1;
+4274;Blue -;
+4275;Blue +;
+4276;Blu-ray;
+4277;Blinker_multi;
+4278;Ble;
+4279;Blast;
+4280;Blank_Circle;
+4281;Black_Out;
+4282;Bisque;
+4283;Binge;
+4284;Bi;
+4285;Bg_play;
+4286;Beep_Level;
+4287;Bd_dvd;
+4288;Bbw;
+4289;Bass_u;
+4290;Bass_plus;
+4291;Bass_min;
+4292;Bass_d;
+4293;Bass_P;
+4294;Bass_Mgmt_Xover;
+4295;Bass_Mgmt_On;
+4296;Bass_M;
+4297;Bass_Level;
+4298;Bass_Boost;
+4299;Bass Up;Bass_Up
+4300;Bass Down;
+4301;Base;
+4302;Bas_Down;
+4303;Bar_select;
+4304;Band__ESC;
+4305;Band;
+4306;Backspace Down;
+4307;Background;
+4308;Back_track;
+4309;Back_tcl;
+4310;Back_exit;Exit
+4311;Back_button;Back
+4312;Back_Recall;
+4313;B_sound;
+4314;B_light;
+4315;B_Ward;
+4316;B_STOP;
+4317;B_Green_Music_Repeat;
+4318;B_FWD;
+4319;B_BWD;
+4320;BVD;
+4321;BT_rx_tx;
+4322;BT_pairing;
+4323;BT_pair;
+4324;BT_USB;
+4325;BT_Aux;
+4326;BT Pair;
+4327;BRIGHTNESS;
+4328;BRIGHTNES-;Bright-
+4329;BRIGHTNES+;Bright+
+4330;BRIGHT UP;Bright+
+4331;BREEZE;
+4332;BREATHING;
+4333;BR;
+4334;BOOST;
+4335;BLUE_FD_6;
+4336;BLUE_FD_5;
+4337;BLUE_FD_4;
+4338;BLUE_FD_3;
+4339;BLUE_FD_2;
+4340;BLUE_FD_1;
+4341;BLUE_3;
+4342;BLUE_2;
+4343;BLUE | EPG;
+4344;BLUE / FF;
+4345;BLANK;
+4346;BBE;
+4347;BASSup;Bass_Up
+4348;BASSdwn;
+4349;BASS_BOOST;
+4350;BASS_;
+4351;BASS;
+4352;BAND;
+4353;BALANCE_RIGHT;
+4354;BALANCE_LEFT;
+4355;BACK_RETURN;
+4356;BACK_Arrow;Back
+4357;BACKWARD;Backward
+4358;B5;
+4359;B/GREEN;
+4360;B-TOOTH;
+4361;B(Green);
+4362;B In 3;
+4363;B In 2;
+4364;B In 1;
+4365;Azure;
+4366;Av_mute;Mute_AV
+4367;Av_mode;
+4368;Av;
+4369;Auxiliary;
+4370;Aux_in;
+4371;Autopower_On;
+4372;Autopower_Off;
+4373;Autofocus;
+4374;Auto_volume;
+4375;Auto_sound;
+4376;Auto_pwr;
+4377;Auto_mode;AUTO Mode
+4378;Auto_image;
+4379;Auto_focus;
+4380;Auto_fan;
+4381;Auto_clean;
+4382;Auto_Vol;
+4383;Auto_Sync;
+4384;Auto_Power;Power_Auto
+4385;Auto_POWER;Power_Auto
+4386;Auto_PC;
+4387;Auto_Off;
+4388;AutoVol;
+4389;Auto mode;AUTO Mode
+4390;Auto Power;Power_Auto
+4391;Auto POWER;Power_Auto
+4392;Auto Mode;AUTO Mode
+4393;Auto Clean;
+4394;Aus_Klima;
+4395;Audio_only;
+4396;Audio_mode;AUTO Mode
+4397;Audio_menu;
+4398;Audio_Setup;
+4399;Audio_I_II;
+4400;Audio_Cenario;
+4401;AudioSplit;
+4402;Audio Sync-;
+4403;Audio Sync+;
+4404;Audio (E1);
+4405;Atv;
+4406;Asyn_jump;
+4407;Asterisk2;
+4408;Asterisk1;
+4409;Asterisk;
+4410;Aspect_size;
+4411;Aspect_Ratio;
+4412;AspectRatio;
+4413;Aspect Ratio;
+4414;Aspect Rat;
+4415;Arrow_up;Up
+4416;Arrow_right;Right
+4417;Arrow_left;Left
+4418;Arrow_down;Down
+4419;Arrow_Up;Up
+4420;Arrow_Right;Right
+4421;Arrow_Left;Left
+4422;Arrow_Down;Down
+4423;ArrowRight;Right
+4424;ArrowLeft;Left
+4425;Arrow Up;Up
+4426;Arrow Right;Right
+4427;Arrow Left;Left
+4428;Arrow Down;Down
+4429;Around;
+4430;AppleTV;
+4431;App;
+4432;Anynet+;
+4433;Anynet;
+4434;Antena;
+4435;Answer_Phone;
+4436;Answer;
+4437;Anion;
+4438;An_Aus;
+4439;Amp_Menu;
+4440;Ami;
+4441;Ambient Mode;
+4442;Amber;
+4443;Ambeo;
+4444;Amazon_Video;
+4445;AmazonPrime;
+4446;Am_fm;
+4447;Always On;
+4448;Alt+Tab;
+4449;Alt+F4;
+4450;Allume;
+4451;All_Ch_Up;
+4452;All_Ch_Down;
+4453;All Off_On;
+4454;Album_prev;
+4455;Album_next;
+4456;Album_Prev;
+4457;Album_Next;
+4458;AlbumUp;
+4459;AlbumDn;
+4460;Alarm 2;
+4461;Alarm 1;
+4462;Aire;
+4463;Air_swing;
+4464;Air Flow;
+4465;Air;
+4466;Affich;
+4467;Aes_ebu;
+4468;Advanced_iris;
+4469;Advance;
+4470;Adv_Surr;
+4471;Add_Stop;
+4472;Add_Rew;
+4473;Add_Rec;
+4474;Add_Play;
+4475;Add_Pause;
+4476;Add_Ffd;Forward
+4477;Add_Erase;
+4478;Add_Del_F;
+4479;Add_DLT;
+4480;Add/Erase;
+4481;Add/DLT;
+4482;Actual_Time;
+4483;Actual_Date;
+4484;ActivePicture;
+4485;Accu_weather;
+4486;AccuWeather;
+4487;Accept_call;
+4488;Abzugsh_Licht;
+4489;Abzugsh_3;
+4490;Abzugsh_2;
+4491;Abzugsh_1;
+4492;A_up;Up
+4493;A_sound;
+4494;A_light;
+4495;A_down;
+4496;A__B;
+4497;A_STOP;
+4498;A_Red_Mode-TV_Search;
+4499;A_FWD;
+4500;A_BWD;
+4501;AV_2;
+4502;AV_1;
+4503;AVMute;Mute_AV
+4504;AVDelay_Up;
+4505;AVDelay_Down;
+4506;AV3;
+4507;AV2;
+4508;AV1;
+4509;AV-;
+4510;AV+;
+4511;AV mute;Mute_AV
+4512;AUX_in;
+4513;AUX_Vol_Up;
+4514;AUX_Vol_Down;
+4515;AUX_Source;Source
+4516;AUX_Power;Power_Aux
+4517;AUX_Mode;
+4518;AUTO_SCAN;
+4519;AUTOFRAME;
+4520;AUTO/COMFORT;
+4521;AUTO MODE;AUTO Mode
+4522;AUDIO_PRESETS;
+4523;ASTERISK;
+4524;ASPACE;
+4525;ASC_Mode;
+4526;ARROW_EARTH;
+4527;ARC_R;
+4528;ARC_L;
+4529;APlus;
+4530;AP_On;
+4531;AP_Off;
+4532;APPS;
+4533;APP/*;
+4534;ANIMATE;
+4535;ANALOG/DIGI;
+4536;ANALOG;
+4537;AMP_MENU;
+4538;AMAZON;
+4539;ALT+TAB;
+4540;ALT+F4;
+4541;ALEXA;
+4542;ALBUM UP;
+4543;ALBUM OK;
+4544;ALBUM DOWN;
+4545;AI_Sound;
+4546;AIRFLOW;
+4547;AIR SWG UP;
+4548;AIR SWG DWN;
+4549;AH-;
+4550;AH+;
+4551;AFD;
+4552;AD_Subt;
+4553;ADD;
+4554;AD/SUBT.;
+4555;AD/SUBT;
+4556;AC;
+4557;ABReplay;
+4558;ABC_STOP;
+4559;ABC iView;
+4560;AB;
+4561;A5;
+4562;A4;
+4563;A/RED;
+4564;A-B;
+4565;A+ / 12-24h;
+4566;A(Red);
+4567;A In 3;
+4568;A In 2;
+4569;A In 1;
+4570;>||;
+4571;>> FF;
+4572;>25;
+4573;>;
+4574;<< RWD;Reverse
+4575;<;
+4576;99;
+4577;98;
+4578;97;
+4579;96;
+4580;95;
+4581;94;
+4582;93;
+4583;92;
+4584;91;
+4585;90;
+4586;9/wxyz;
+4587;9 WXYZ;
+4588;9 / P9;
+4589;8K;
+4590;89;
+4591;88;
+4592;87;
+4593;86;
+4594;85;
+4595;84;
+4596;83;
+4597;82;
+4598;81;
+4599;80;
+4600;8/tuv;
+4601;8 TUV;
+4602;8 Hour;
+4603;8 / P8;
+4604;7_Colors;
+4605;79;
+4606;78;
+4607;77;
+4608;76;
+4609;750W;
+4610;75;
+4611;74;
+4612;73;
+4613;72;
+4614;71;
+4615;70;
+4616;7/pqrs;
+4617;7 PQRS;
+4618;7 / P7;
+4619;6HR;
+4620;69;
+4621;68;
+4622;67;
+4623;6639h;
+4624;6639H;
+4625;66;
+4626;65;
+4627;64;
+4628;63;
+4629;62;
+4630;61;
+4631;60s_off;
+4632;60m;
+4633;60;
+4634;6/mno;
+4635;6 MNO;
+4636;6 Hour;
+4637;6 / P6;
+4638;5h;
+4639;5_1;
+4640;59;
+4641;58;
+4642;57;
+4643;56;
+4644;55;
+4645;54;
+4646;53;
+4647;52;
+4648;51;
+4649;500W;
+4650;5000k;
+4651;50 C;
+4652;50;
+4653;5/jkl;
+4654;5 Min;
+4655;5 JKL;
+4656;5 / P5;
+4657;4_KVM;
+4658;4Circles;
+4659;49;
+4660;48;
+4661;47;
+4662;46;
+4663;45;
+4664;44;
+4665;43;
+4666;42;
+4667;41;
+4668;4000k;
+4669;40;
+4670;4/ghi;
+4671;4 Hour;
+4672;4 GHI;
+4673;4 / P4;
+4674;3digit;
+4675;3d;
+4676;3chologic;
+4677;3_KVM;
+4678;3_Colors;
+4679;3_Audio;
+4680;3HR;
+4681;3D_AUTO;
+4682;3D Sound Plus;
+4683;39;
+4684;38;
+4685;37;
+4686;36;
+4687;35;
+4688;34;
+4689;33;
+4690;32;
+4691;31;
+4692;30m;
+4693;30MIN;
+4694;3000k;
+4695;30;
+4696;3/def;
+4697;3 DEF;
+4698;3 CD;
+4699;3 / P3;
+4700;2sec_Shutter;
+4701;2h_timer;Timer_2h
+4702;2_KVM;
+4703;2_Audio;
+4704;2_0;
+4705;2H_TIMER;Timer_2h
+4706;2CH_Multi;
+4707;2CH_MULTI;
+4708;2CH;
+4709;29;
+4710;28c;
+4711;28;
+4712;27;
+4713;26c;
+4714;26;
+4715;256;
+4716;255;
+4717;254;
+4718;253;
+4719;252;
+4720;251;
+4721;250;
+4722;24c;
+4723;249;
+4724;248;
+4725;247;
+4726;246;
+4727;245;
+4728;244;
+4729;243;
+4730;242;
+4731;241;
+4732;240;
+4733;239;
+4734;238;
+4735;237;
+4736;236;
+4737;235;
+4738;234;
+4739;233;
+4740;232;
+4741;231;
+4742;230;
+4743;22c;
+4744;229;
+4745;228;
+4746;227;
+4747;226;
+4748;225;
+4749;224;
+4750;223;
+4751;222;
+4752;221;
+4753;220 C;
+4754;220;
+4755;219;
+4756;218;
+4757;217;
+4758;216;
+4759;215;
+4760;214;
+4761;213;
+4762;212;
+4763;211;
+4764;210 C;
+4765;210;
+4766;20c;
+4767;209;
+4768;208;
+4769;207;
+4770;206;
+4771;205;
+4772;204;
+4773;203;
+4774;202;
+4775;201;
+4776;200 C;
+4777;200;
+4778;20%;
+4779;2/abc;
+4780;2 Hours;
+4781;2 CD;
+4782;2 ABC;
+4783;2 / P2;
+4784;1l2;
+4785;1h_timer;Timer_1h
+4786;1_KVM;
+4787;1_Audio;
+4788;1H_TIMER;Timer_1h
+4789;1HR;
+4790;199;
+4791;198;
+4792;197;
+4793;196;
+4794;195;
+4795;194;
+4796;193;
+4797;192;
+4798;191;
+4799;190;
+4800;189;
+4801;188;
+4802;187;
+4803;186;
+4804;185;
+4805;184;
+4806;183;
+4807;182;
+4808;181;
+4809;180;
+4810;179;
+4811;178;
+4812;177;
+4813;176;
+4814;175;
+4815;174;
+4816;173;
+4817;172;
+4818;171;
+4819;170;
+4820;16_celcius;
+4821;16_Colors;
+4822;16:9 | WIDE;
+4823;169;
+4824;168;
+4825;167;
+4826;166;
+4827;165;
+4828;164;
+4829;163;
+4830;162;
+4831;161;
+4832;160;
+4833;15m;
+4834;159;
+4835;158;
+4836;157;
+4837;156;
+4838;155;
+4839;154;
+4840;153;
+4841;152;
+4842;151;
+4843;150;
+4844;149;
+4845;148;
+4846;147;
+4847;146;
+4848;145;
+4849;144;
+4850;143;
+4851;142;
+4852;141;
+4853;140;
+4854;139;
+4855;138;
+4856;137;
+4857;136;
+4858;135;
+4859;134;
+4860;133;
+4861;132;
+4862;131;
+4863;1300_2500;
+4864;130;
+4865;12h;
+4866;12_24;
+4867;129;
+4868;128;
+4869;127;
+4870;126;
+4871;125;
+4872;124;
+4873;122;
+4874;121;
+4875;120;
+4876;119;
+4877;118;
+4878;117;
+4879;116;
+4880;115;
+4881;114;
+4882;113;
+4883;112;
+4884;111;
+4885;110;
+4886;109;
+4887;108;
+4888;107;
+4889;106;
+4890;105;
+4891;104;
+4892;103;
+4893;102;
+4894;101;
+4895;1000W;
+4896;100 C;
+4897;10%;
+4898;10 Sec;
+4899;1/.,-;
+4900;1 Min;
+4901;1 CD;
+4902;1 / P1;
+4903;0n;
+4904;0_11;
+4905;1;
+4906;0;
+4907;0/Space;
+4908;0/10;
+4909;0 / P0;
+4910;0 / AV;
+4911;-Sharpness;
+4912;-Contrast;
+4913;-Brightness;Bright-
+4914;-/--;
+4915;--/-;
+4916;- VOL+;Vol_dn
+4917;- Chan;Ch_prev
+4918;- ALBUM;
+4919;+Sharpness;
+4920;+Contrast;
+4921;+Brightness;Bright+
+4922;+10_10_D.Tun Dimmer;
+4923;10;
+4924;+ VOL+;Vol_up
+4925;+ Chan;Ch_next
+4926;+ CH DISC;
+4927;*****;
+4928;****;
+4929;***;
+4930;**;
+4931;(blank);
+4932;#;

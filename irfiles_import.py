@@ -6,6 +6,7 @@ from os import walk
 from os import path
 import hashlib
 import sqlite3
+import csv
 
 search_dir = path.dirname('../Flipper-IRDB/')
 sqlite_db = '../flipper_irdb.db'
@@ -32,6 +33,13 @@ btn_pattern = re.compile(r"""
 
 def get_irfiles():
 
+    con = sqlite3.connect(sqlite_db)
+    cur = con.cursor()
+    cur.execute("DROP TABLE IF EXISTS irfile")
+    cur.execute("DROP TABLE IF EXISTS irbutton")
+    con.commit()
+    con.close()
+
     for root, dir, files in walk(search_dir, topdown=True):
         for irfile in files:
             full_irpath = path.normpath(str(root) + '/' + str(irfile))
@@ -40,8 +48,8 @@ def get_irfiles():
 
                     con = sqlite3.connect(sqlite_db)
                     cur = con.cursor()
-                    cur.execute("CREATE TABLE IF NOT EXISTS irfile(category,brand,file,md5hash)")
-                    cur.execute("CREATE TABLE IF NOT EXISTS irbutton(name,type,protocol,address,command,md5hash)")
+                    cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash)")
+                    cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash)")
 
                     ircat = get_irfileheader(full_irpath)[0]
                     irbrand = get_irfileheader(full_irpath)[1]
@@ -50,9 +58,10 @@ def get_irfiles():
                     
                     cur.execute("INSERT INTO irfile VALUES ('"+ircat+"', '"+irbrand+"', '"+irfname+"', '"+irfhash+"')")
                     con.commit()
+                    con.close()
 
                     get_irbutton(full_irpath)
-                    
+
                 else:
                     pass
                 pass
@@ -105,8 +114,30 @@ def get_irbutton(full_irpath):
         cur.execute("INSERT INTO irbutton VALUES ('"+btnname+"', '"+btntype+"', '"+btnprot+"', '"+btnaddr+"', '"+btncomm+"', '"+filehash+"')")
         
     con.commit()
+    con.close()
+
+## Add button translation
+######################################
+def translate_buttons():
+    con = sqlite3.connect(sqlite_db)
+    cur = con.cursor()
+    cur.execute("DROP TABLE IF EXISTS btntrans;")
+    cur.execute("CREATE TABLE IF NOT EXISTS btntrans ('id', 'name','button');")
+
+    with open('db/Flipper-IRDB2SQLite_btn-transl.csv','r') as translate:
+        translate_dr = csv.DictReader(translate, delimiter=';')
+        toSQLitedb = [(i['ID'], i['Button'], i['Translate']) for i in translate_dr]
+
+    cur.executemany("INSERT INTO btntrans VALUES (?, ?, ?);", toSQLitedb)
+    con.commit()
+    con.close()
+
+
+
 
 if __name__ == '__main__':
     get_irfiles()
     print("Find your database at:", sqlite_db)
+    translate_buttons()
+    print("Buttons translation table created")
     
