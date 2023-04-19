@@ -6,47 +6,21 @@ Here I plan to release some of my helper for daily handling the FlipperZero
 
 ## irfiles-import.py - Flipper-IRDB to sqlite.db
 
-This tool is converting a local git clone from any [Flipper-IRDB](https://github.com/logickworkshop/Flipper-IRDB) to a SQLite3 Database.
+This is a tool to convert a local git repository of a [Flipper-IRDB](https://github.com/logickworkshop/Flipper-IRDB) to a SQLite3 Database.
 
-Why? Good question.
-
-At one hand, there are a lot of inconsistencies in the files. On the other side, in a database you can perform much better analysis.
-For example, If I want to create a effective 'Universal Remote', I need to know what are the most kommon POWER Button codes:
-```
-SELECT name,address,command, COUNT(name)
-FROM irbutton
-WHERE name like 'Power' AND Type like 'parsed'
-GROUP BY address,command
-ORDER BY COUNT(name) DESC
-```
-
-I have taken the MD5sum of the irfile as primary key. So, just for TVs:
-
-```
-SELECT name,address,command, COUNT(name)
-FROM irbutton
-	LEFT JOIN irfile ON irbutton.md5hash = irfile.md5hash
-	
-WHERE name like 'power' AND category = 'TVs' AND Type like 'parsed'
-GROUP BY address,command
-ORDER BY COUNT(name) DESC
-```
-
-Only 16 codes greater than 10 - In the right order to get the fastest match!
-... Okay, to be fair I haven't written an experter by now. But it is fun to play.
-... Connect the DB to a plotter.
-... feel free to experiment, as well.
+Documentation: [https://github.com/LupusE/FlipperMgmt/blob/main/docs/irfiles2sqlite.md](https://github.com/LupusE/FlipperMgmt/blob/main/docs/irfiles2sqlite.md)
 
 ### Todo:
 - Write a File Exporter
   - Write a Android Tool to generate Files
   - Or a Webfrontend?
-- Write a documentation
+- Write a documentation - [Ongoing](https://github.com/LupusE/FlipperMgmt/blob/main/docs/irfiles2sqlite.md)
 - normalize the data
+  - ~~Write a Button translation table~~
+  - analyze the file hierachy more
 - Write a check (based on MD5) to update the db
   - Write an output to MySQL/MariaDB/MS SQL/Postgress/...
 - Cleanup the code
-
 
 
 ## syncFlipper
