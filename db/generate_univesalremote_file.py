@@ -3,14 +3,31 @@
 import sqlite3
 from contextlib import redirect_stdout
 
-target_file = '../../tv.ir'
-sqlite_db = '../../flipper_irdb.db'
+target_dir = 'assets'
+sqlite_db = '../flipper_irdb.db'
 
-def get_buttons():
+def get_buttons(ircategory):
     con = sqlite3.connect(sqlite_db)
     cur = con.cursor()
     
-    buttons = cur.execute("""
+    match ircategory:
+        case 'TVs':
+            where_clause = "irfile.category = 'TVs' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute','Ch_next','Ch_prev')"
+            target_file = 'tv.ir'
+        case 'Audio':
+            where_clause = "irfile.category = 'Audio_Receivers' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute')"
+            target_file = 'audio.ir'
+        case 'Projectors':
+            where_clause = "irfile.category = 'Projectors' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute')"
+            target_file = 'projectros.ir'
+        case 'Fans':
+            where_clause = "irfile.category = 'Fans' AND btntrans.button IN ('Power','Mode','Speed_dn','Speed_up','Rotate','Timer')"
+            target_file = 'fans'
+        case default:
+           where_clause = "irfile.category = 'TVs' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute','Ch_next','Ch_prev')"
+           target_file = 'tv.ir'
+
+    sql = ("""
                 SELECT btntrans.button
 	            ,irbutton.type
                 ,irbutton.protocol
@@ -20,11 +37,14 @@ def get_buttons():
 	    FROM irbutton
 		    JOIN irfile ON (irbutton.md5hash = irfile.md5hash)
 			LEFT JOIN btntrans ON (irbutton.name = btntrans.name)
-	    WHERE irbutton.Type LIKE 'parsed' AND irfile.category = 'TVs' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute','Ch_next','Ch_prev')
+        WHERE %s
 	    GROUP BY irbutton.protocol,irbutton.address,irbutton.command
-	    ORDER BY COUNT(irbutton.name) DESC; """)
-    
-    with open(target_file, 'w') as tfile:
+	    ORDER BY COUNT(irbutton.name) DESC; """) % where_clause
+    print(sql)
+
+    buttons = cur.execute(sql)
+	
+    with open(target_dir+target_file, 'w') as tfile:
         with redirect_stdout(tfile):
             print("Filetype: IR library file")
             print("Version: 1")
@@ -50,5 +70,9 @@ def get_buttons():
                 print("#")
 
 if __name__ == '__main__':
-    get_buttons()
-    print("Find your assets file at:", target_file)
+    get_buttons('TVs')
+    #get_buttons('Audio')
+    #get_buttons('Projectors')
+    #get_buttons('Fans')
+    
+    print("Find your assets file at:", target_dir)
