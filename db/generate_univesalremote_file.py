@@ -4,7 +4,7 @@ import sqlite3
 from contextlib import redirect_stdout
 
 target_dir = 'assets'
-sqlite_db = '../flipper_irdb.db'
+sqlite_db = os.path.normpath(os.getcwd()+'/../flipper_irdblite.db')
 
 def get_buttons(ircategory):
     con = sqlite3.connect(sqlite_db)
