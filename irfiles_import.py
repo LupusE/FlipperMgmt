@@ -11,6 +11,8 @@ import csv
 dir_fzirdb = os.path.normpath(os.getcwd()+'/../Flipper-IRDB')
 db_fzirdb = os.path.normpath(os.getcwd()+'/../flipper_irdblite.db')
 
+category_fzirdb = next(os.walk(dir_fzirdb))[1]
+
 ext_irdb_include = (['.ir'])
 dir_irdb_exclude = set([
                     os.path.normpath(dir_fzirdb+'/_Converted_'),
@@ -46,13 +48,17 @@ def get_irfiles(dir_fzirdb):
 ######################################
 
 def get_irfileheader(full_irpath):
-    cat_fzirdb = next(os.walk(dir_fzirdb))[1]
-
+    
     splitcategory = os.path.normpath(full_irpath).split(os.sep)[-3]
-    ## correct category for console/Nintendo/Gameboy/ and similar
-    if splitcategory not in cat_fzirdb:
-        splitcategory = os.path.normpath(full_irpath).split(os.sep)[-4]
     splitbrand = os.path.normpath(full_irpath).split(os.sep)[-2]
+    ## correct category for console/Nintendo/Gameboy/ and similar
+    if splitcategory not in category_fzirdb:
+        splitcategory = os.path.normpath(full_irpath).split(os.sep)[-4]
+        splitbrand = os.path.normpath(full_irpath).split(os.sep)[-3]
+    if splitcategory in ['git']:
+        splitcategory = os.path.normpath(full_irpath).split(os.sep)[-2]
+        splitbrand = 'NULL'
+    
     splitfile = os.path.normpath(full_irpath).split(os.sep)[-1]
     ## create hash for identify changes
     with open(str(full_irpath), 'rb') as md5file:
@@ -106,16 +112,15 @@ def translate_buttons():
 
 def write_sqlite():
     try:
-        con = sqlite3.connect(db_fzirdb)
-    except Error as e:
+        con = sqlite3.connect(db_fzirdb)    
+        cur = con.cursor()
+        cur.execute("DROP TABLE IF EXISTS irfile;")
+        cur.execute("DROP TABLE IF EXISTS irbutton;")
+        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash);")
+        cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
+    except OSError as e:
         print(e)
 
-    cur = con.cursor()
-    cur.execute("DROP TABLE IF EXISTS irfile;")
-    cur.execute("DROP TABLE IF EXISTS irbutton;")
-    cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash);")
-    cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")
-    
     print("Getting header and buttons for database",db_fzirdb)
     for irfile in get_irfiles(dir_fzirdb):
         irheader = get_irfileheader(irfile)

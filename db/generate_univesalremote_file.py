@@ -11,9 +11,6 @@ def get_buttons(ircategory):
     cur = con.cursor()
     
     match ircategory:
-        case 'TVs':
-            where_clause = "irfile.category = 'TVs' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute','Ch_next','Ch_prev')"
-            target_file = 'tv.ir'
         case 'Audio':
             where_clause = "irfile.category = 'Audio_Receivers' AND btntrans.button IN ('Power','Vol_up','Vol_dn','Mute')"
             target_file = 'audio.ir'
@@ -36,11 +33,11 @@ def get_buttons(ircategory):
 	            ,'# ' || COUNT(irbutton.name)
 	    FROM irbutton
 		    JOIN irfile ON (irbutton.md5hash = irfile.md5hash)
-			LEFT JOIN btntrans ON (irbutton.name = btntrans.name)
+		    LEFT JOIN btntrans ON (irbutton.name = btntrans.name)
         WHERE %s
 	    GROUP BY irbutton.protocol,irbutton.address,irbutton.command
 	    ORDER BY COUNT(irbutton.name) DESC; """) % where_clause
-    print(sql)
+    #print(sql)
 
     buttons = cur.execute(sql)
 	

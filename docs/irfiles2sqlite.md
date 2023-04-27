@@ -1,6 +1,6 @@
 # irfiles-import.py - Flipper-IRDB to sqlite.db
 
-## HowTo
+## HowTo init
 
 At this time it is Linux specific. Later I will make it more portable. It is my first 100% Python project, so maybe this can take a while.
 
@@ -17,6 +17,13 @@ Now you'll have the file `flipper_irdb.db` in `~/git/`. Just open it with your f
 
 I am using [Flipper-IRDB](https://github.com/logickworkshop/Flipper-IRDB) as source, right now it is the best maintained DB. But every fork will work, as long as it has not more than 3 subfolders in the hierachy and contains flipper.ir files.
 
+## Create own .ir library files.
+
+My first goal is to analyze and understand the fileformat better. But on the other hand, I was half way to create my own 'Universal Remote' IR library files. I wrote [https://github.com/LupusE/FlipperMgmt/blob/main/db/generate_univesalremote_file.py](https://github.com/LupusE/FlipperMgmt/blob/main/db/generate_univesalremote_file.py).
+
+At first it should generate a `tv.ir`, but now it is able to generate almost any universal remote file. No AC at the moment.
+
+------
 
 ## Why? Good question.
 
@@ -57,8 +64,10 @@ Result:
 |Power|	RC6	|00 00 00 00|	0C 00 00 00|	# 11|
 |...|...|...|...|...|
 
-This can be the base create a new `assets/infrared/tv.ir` [file](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/resources/infrared/assets).
+This can be the base to create a new `assets/infrared/tv.ir` [file](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/resources/infrared/assets).
 Be aware, that the first line for a universal remote is `Filetype: IR library file` instead of `Filetype: IR signals file`.
+
+------
 
 ## About the SQLite database
 
@@ -101,4 +110,13 @@ command - data
 | data       | raw    | uint32 | Raw signal timings, in microseconds between logic level changes. Individual elements must be space-separated. Maximum timings amount is 1024. |
 
 Source of the Table: https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/file_formats/InfraredFileFormats.md
+
+------
+
+Next steps:
+- Analyze `type: raw`
+  - write a plotter/compare the signals
+- Write a UI
+  - More dynamic Universal Remote .ir generation
+- ... Think about more 'next steps'
 
