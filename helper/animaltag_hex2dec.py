@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ## Based on https://forum.flipperzero.one/t/how-to-emulate-fdx-b-cat-tag-hex/13050/10
 ## Purpose is to convert Flipper Zero 125 kHz Dumps [FDX-B] from hex to dec and back.
 ## Generate Flipper Zero .rfid file, if filename is given.
