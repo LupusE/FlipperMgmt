@@ -97,7 +97,7 @@ def translate_buttons():
     cur.execute("DROP TABLE IF EXISTS btntrans;")
     cur.execute("CREATE TABLE IF NOT EXISTS btntrans ('id', 'name','button');")
 
-    with open('db/Flipper-IRDB2SQLite_btn-transl.csv','r') as translate:
+    with open('db/csv/Flipper-IRDB2SQLite_btn-transl.csv','r') as translate:
         translate_dr = csv.DictReader(translate, delimiter=';')
         toSQLitedb = [(i['ID'], i['Button'], i['Translate']) for i in translate_dr]
 

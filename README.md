@@ -53,3 +53,25 @@ Before the scripting, I always wondered why some flipper directorys are 3 to 4 t
 The **Flipper-IRDB** files for example are under heavy development. Sometimes a whole directory is renamed. At first I only copied the new files, the size increased. So I switched to rsync.
 First advantage: The files are checked by checksum. This reduces write cycles on sd card.
 Second advantage: The --delete option deletes files in the target, that are not at the source.
+
+
+## Subfolder /helper
+
+Some helper for the helper
+
+### animaltag_hex2dec.py
+
+Two functions.
+- One converts the 15 digit animal tag to 22 character hex code.
+- The other conversts the 22 hex character to a 15 digit code.
+
+The main function calls asks for a filename (export) to create a Flipper Zero .rfid file.
+With 'Enter' no file will be generated, it will just convert from one to another.
+
+The script is based on [@cbytes work](https://forum.flipperzero.one/t/how-to-emulate-fdx-b-cat-tag-hex/13050/10) in the Flipper Zero forum.
+I just added some checks and the file output. Also I reduced the lines for the math part.
+
+### generate_universalremote_file.py
+
+Just take the result from ../irfiles_import.py from flipper_irdblite.db and generate files
+for the Flipper Zero universal remote. No fancy UI at the moment.
