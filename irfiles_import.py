@@ -15,7 +15,7 @@ category_fzirdb = next(os.walk(dir_fzirdb))[1]
 
 ext_irdb_include = (['.ir'])
 dir_irdb_exclude = set([
-                    os.path.normpath(dir_fzirdb+'/_Converted_'),
+                    #os.path.normpath(dir_fzirdb+'/_Converted_'),
                     os.path.normpath(dir_fzirdb+'/.git*')
                     ])
 
@@ -48,23 +48,45 @@ def get_irfiles(dir_fzirdb):
 ######################################
 
 def get_irfileheader(full_irpath):
-    
-    splitcategory = os.path.normpath(full_irpath).split(os.sep)[-3]
-    splitbrand = os.path.normpath(full_irpath).split(os.sep)[-2]
-    ## correct category for console/Nintendo/Gameboy/ and similar
-    if splitcategory not in category_fzirdb:
-        splitcategory = os.path.normpath(full_irpath).split(os.sep)[-4]
+
+    splitcategory = ''
+    splitbrand = ''
+    splitsource = ''
+
+    if (full_irpath.find(os.path.join('_Converted_','CSV'))) >= 0:
         splitbrand = os.path.normpath(full_irpath).split(os.sep)[-3]
-    if splitcategory in ['git']:
         splitcategory = os.path.normpath(full_irpath).split(os.sep)[-2]
-        splitbrand = 'NULL'
+        splitsource = 'CSV'
+    elif (full_irpath.find(os.path.join('_Converted_','Pronto'))) >= 0:
+        splitbrand = os.path.normpath(full_irpath).split(os.sep)[-2]
+        splitcategory = 'NULL'
+        splitsource = 'Pronto'
+    elif (full_irpath.find(os.path.join('_Converted_','IR_Plus'))) >= 0:
+        splitbrand = os.path.normpath(full_irpath).split(os.sep)[-2]
+        splitcategory = 'NULL'
+        splitsource = 'IR_Plus'
+    #elif (full_irpath.find(os.path.join('_Converted_'))) >= 0:
+    #    return('')
+ 
+    else:
+        splitcategory = os.path.normpath(full_irpath).split(os.sep)[-3]
+        splitbrand = os.path.normpath(full_irpath).split(os.sep)[-2]
+        splitsource = 'IRDB'
+        ## correct category for console/Nintendo/Gameboy/ and similar
+        if splitcategory not in category_fzirdb:
+            splitcategory = os.path.normpath(full_irpath).split(os.sep)[-4]
+            splitbrand = os.path.normpath(full_irpath).split(os.sep)[-3]
+        if splitcategory in ['git']:
+            splitcategory = os.path.normpath(full_irpath).split(os.sep)[-2]
+            splitbrand = 'NULL'
     
-    splitfile = os.path.normpath(full_irpath).split(os.sep)[-1]
+    splitfile = os.path.normpath(full_irpath).split(os.sep)[-1].replace("'","")
     ## create hash for identify changes
     with open(str(full_irpath), 'rb') as md5file:
         digest = hashlib.file_digest(md5file, 'md5')
 
-    return(splitcategory, splitbrand, splitfile, digest.hexdigest())
+    return(splitcategory, splitbrand, splitfile, digest.hexdigest(), splitsource)
+
 
 ## Get file header (comments, MD5)
 ######################################
@@ -94,7 +116,7 @@ def get_irbutton(full_irpath):
 
     buttons = []
     for match in btn_pattern.finditer(irbuff):
-        btnname = match.group(1).strip()
+        btnname = match.group(1).strip().replace("'","")
         btntype = match.group(2).strip()
         btnprot = match.group(4).strip()
         btnaddr = match.group(6).strip()
@@ -103,6 +125,7 @@ def get_irbutton(full_irpath):
         buttons.append(btnname+","+btntype+","+btnprot+","+btnaddr+","+btncomm)
 
     return(buttons)
+
 
 ## Add extra tables (button translation)
 ######################################
@@ -123,6 +146,7 @@ def translate_buttons():
 
     print("Buttons translation table (btntrans) created in",db_fzirdb)
 
+
 ## Write parsed items to database
 ######################################
 
@@ -133,7 +157,7 @@ def write_sqlite():
         cur.execute("DROP TABLE IF EXISTS irfile;")
         cur.execute("DROP TABLE IF EXISTS irbutton;")
         cur.execute("DROP TABLE IF EXISTS ircomment;")
-        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash);")
+        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash,source);")
         cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
         cur.execute("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
 
@@ -143,8 +167,8 @@ def write_sqlite():
     print("Getting header and buttons for database",db_fzirdb)
     for irfile in get_irfiles(dir_fzirdb):
         irheader = get_irfileheader(irfile)
-        #print(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3]))
-        cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3]))
+        #print(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3]),irheader[4])
+        cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3],irheader[4]))
 
         ircomments = get_irfilecomments(irfile)
         if (len(ircomments)) != 0:
