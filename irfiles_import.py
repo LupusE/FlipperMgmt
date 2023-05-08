@@ -66,6 +66,22 @@ def get_irfileheader(full_irpath):
 
     return(splitcategory, splitbrand, splitfile, digest.hexdigest())
 
+## Get file header (comments, MD5)
+######################################
+
+def get_irfilecomments(irfile):
+    comments = []
+    commentstr = ""
+
+    with open(irfile, 'r') as filecomments:
+        for line in filecomments:
+            if line.startswith("#") and (len(line.strip())) > 1:
+                comments.append(line)
+
+    commentstr = "".join(comments)
+    #print(commentstr)
+    return(commentstr)
+
 
 ## Parse buttons (name, type, protcol/frequncy, address/duty_cycle, command/data)
 ######################################
@@ -116,8 +132,11 @@ def write_sqlite():
         cur = con.cursor()
         cur.execute("DROP TABLE IF EXISTS irfile;")
         cur.execute("DROP TABLE IF EXISTS irbutton;")
+        cur.execute("DROP TABLE IF EXISTS ircomment;")
         cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash);")
         cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
+        cur.execute("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
+
     except OSError as e:
         print(e)
 
@@ -126,6 +145,12 @@ def write_sqlite():
         irheader = get_irfileheader(irfile)
         #print(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3]))
         cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}')").format(irheader[0],irheader[1],irheader[2],get_irfileheader(irfile)[3]))
+
+        ircomments = get_irfilecomments(irfile)
+        if (len(ircomments)) != 0:
+            ircomments = ircomments.replace("'","")
+            cur.execute(("INSERT INTO ircomment VALUES ('{}', '{}')").format(ircomments,get_irfileheader(irfile)[3]))
+
         for irbutton in get_irbutton(irfile):
             irbuttons = (irbutton.split(','))
             #print(("INSERT INTO irbutton VALUES ('{}', '{}','{}','{}','{}','{}')").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],get_irfileheader(irfile)[3]))
