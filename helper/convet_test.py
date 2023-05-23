@@ -11,8 +11,8 @@ import csv
 rawanalysis = 1
 ext_converted = 1
 
-dir_fzirdb = os.path.normpath(os.getcwd()+'/../Flipper-IRDB')
-db_fzirdb = os.path.normpath(os.getcwd()+'/../flipper_irdblite.db')
+dir_fzirdb = os.path.normpath(os.getcwd()+'/helper/Flipper-IRDB')
+db_fzirdb = os.path.normpath(os.getcwd()+'/flipper_irdblite.db')
 
 category_fzirdb = next(os.walk(dir_fzirdb))[1]
 
@@ -136,8 +136,8 @@ def get_irbutton(full_irpath):
 def translate_buttons():
     con = sqlite3.connect(db_fzirdb)
     cur = con.cursor()
-    cur.execute("DROP TABLE IF EXISTS btntrans;")
-    cur.execute("CREATE TABLE IF NOT EXISTS btntrans ('id', 'name','button');")
+    print("DROP TABLE IF EXISTS btntrans;")
+    print("CREATE TABLE IF NOT EXISTS btntrans ('id', 'name','button');")
 
     with open('db/csv/Flipper-IRDB2SQLite_btn-transl.csv','r') as translate:
         translate_dr = csv.DictReader(translate, delimiter=';')
@@ -195,23 +195,25 @@ def convert_raw(btndata,btnname,md5hash):
     convsplit = []
     convseq = 0
     convrepeat = 0
-    splitvalue = 0
+#    print(converted)
     for splitvalue in splitlist:
+        print("Rpt", convrepeat, "Rest", convrest[:convrest.index(splitvalue)], "ConvSpl:", sum(convsplit[-1:], []))
+
         if sum(convsplit[-1:], []) == convrest[:convrest.index(splitvalue)]:
             convrepeat = convrepeat + 1
-        
+            print("Repeat", convrepeat)
         else:
             convsplit.append(convrest[:convrest.index(splitvalue)])
-            cur_execute.append(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest[:convrest.index(splitvalue)],convseq,convrepeat,md5hash))
+            print(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest[:convrest.index(splitvalue)],convseq,convrepeat,md5hash))
             convrepeat = 0
 
         convrest = convrest[convrest.index(splitvalue)+1:] # (splitvalue)+1 for cut splitvalue
         convseq = convseq + 1
 
     convsplit.append(convrest)
-    cur_execute.append(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest,convseq,convrepeat,md5hash))
-    cur_execute.append(("INSERT INTO rawheader VALUES ('{}', '{}', '{}');").format(divisor,maxdivident,md5hash))
-    cur_execute.append(("INSERT INTO rawmeta VALUES ('{}', '{}', '{}');").format(btnname,splitlist,md5hash))
+    print(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest,convseq,convrepeat,md5hash))
+    print(("INSERT INTO rawheader VALUES ('{}', '{}', '{}');").format(divisor,maxdivident,md5hash))
+    print(("INSERT INTO rawmeta VALUES ('{}', '{}', '{}');").format(btnname,splitlist,md5hash))
 
 
     return(cur_execute)
@@ -223,19 +225,19 @@ def write_sqlite():
     try:
         con = sqlite3.connect(db_fzirdb)    
         cur = con.cursor()
-        cur.execute("DROP TABLE IF EXISTS irfile;")
-        cur.execute("DROP TABLE IF EXISTS irbutton;")
-        cur.execute("DROP TABLE IF EXISTS ircomment;")
-        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash,source);")
-        cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
-        cur.execute("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
-        cur.execute("DROP TABLE IF EXISTS rawdata;")
-        cur.execute("DROP TABLE IF EXISTS rawheader;")
-        cur.execute("DROP TABLE IF EXISTS rawmeta;")
+        print("DROP TABLE IF EXISTS irfile;")
+        print("DROP TABLE IF EXISTS irbutton;")
+        print("DROP TABLE IF EXISTS ircomment;")
+        print("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash,source);")
+        print("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
+        print("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
+        print("DROP TABLE IF EXISTS rawdata;")
+        print("DROP TABLE IF EXISTS rawheader;")
+        print("DROP TABLE IF EXISTS rawmeta;")
         if rawanalysis == 1:
-            cur.execute("CREATE TABLE IF NOT EXISTS rawdata (btnname,splitvalue,cmdpart,cmdsequence,cmdrepeat,md5hash);")
-            cur.execute("CREATE TABLE IF NOT EXISTS rawheader (divisor,maxdivident,md5hash);")
-            cur.execute("CREATE TABLE IF NOT EXISTS rawmeta (btnname,splitvalues,md5hash);")
+            print("CREATE TABLE IF NOT EXISTS rawdata (btnname,splitvalue,cmdpart,cmdsequence,cmdrepeat,md5hash);")
+            print("CREATE TABLE IF NOT EXISTS rawheader (divisor,maxdivident,md5hash);")
+            print("CREATE TABLE IF NOT EXISTS rawmeta (btnname,splitvalues,md5hash);")
                 
 
     except OSError as e:
@@ -244,21 +246,21 @@ def write_sqlite():
     print("Getting header and buttons for database",db_fzirdb)
     for irfile in get_irfiles(dir_fzirdb):
         irheader = get_irfileheader(irfile)
-        cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}','{}');").format(irheader[0],irheader[1],irheader[2],irheader[3],irheader[4]))
+        #print(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}','{}');").format(irheader[0],irheader[1],irheader[2],irheader[3],irheader[4]))
 
         ircomments = get_irfilecomments(irfile)
         if (len(ircomments)) != 0:
             # dirty hack, because sqlite using ' itself
             ircomments = ircomments.replace("'","")
-            cur.execute(("INSERT INTO ircomment VALUES ('{}', '{}');").format(ircomments,irheader[3]))
+            #print(("INSERT INTO ircomment VALUES ('{}', '{}');").format(ircomments,irheader[3]))
 
         for irbutton in get_irbutton(irfile):
             irbuttons = (irbutton.split(','))
-            cur.execute(("INSERT INTO irbutton VALUES ('{}', '{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
+            #print(("INSERT INTO irbutton VALUES ('{}', '{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
             if irbuttons[1] == 'raw' and rawanalysis == 1:
                 for item in convert_raw(irbuttons[4],irbuttons[0],irheader[3]):
                     if item.startswith("INSERT INTO"):
-                        cur.execute(item)
+                        print(item)
                     else:
                         print("Error:", item)
                     
@@ -273,5 +275,5 @@ def write_sqlite():
 if __name__ == '__main__':
     write_sqlite()
     print("Find your database at:", db_fzirdb)
-    translate_buttons()
+#    translate_buttons()
     
