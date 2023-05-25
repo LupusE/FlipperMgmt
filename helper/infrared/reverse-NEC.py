@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import re
 
 full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/HDMI_Switch.ir'
