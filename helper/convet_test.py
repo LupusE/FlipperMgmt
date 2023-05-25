@@ -161,7 +161,7 @@ def translate_buttons():
 #
 # Need to analyze if duty_cycle affect the result. Ignored right now.
 
-def convert_raw(btndata,btnname,md5hash): 
+def convert_raw(btndata,btnname,md5hash,md5count): 
     btndata = btndata.split(' ')
     try:
         btndint = [int(numeric_string) for numeric_string in btndata]
@@ -197,7 +197,7 @@ def convert_raw(btndata,btnname,md5hash):
     convrepeat = 0
 #    print(converted)
     for splitvalue in splitlist:
-        print("Rpt", convrepeat, "Rest", convrest[:convrest.index(splitvalue)], "ConvSpl:", sum(convsplit[-1:], []))
+        #print("Rpt", convrepeat, "Rest", convrest[:convrest.index(splitvalue)], "ConvSpl:", sum(convsplit[-1:], []))
 
         if sum(convsplit[-1:], []) == convrest[:convrest.index(splitvalue)]:
             convrepeat = convrepeat + 1
@@ -212,8 +212,9 @@ def convert_raw(btndata,btnname,md5hash):
 
     convsplit.append(convrest)
     print(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest,convseq,convrepeat,md5hash))
-    print(("INSERT INTO rawheader VALUES ('{}', '{}', '{}');").format(divisor,maxdivident,md5hash))
-    print(("INSERT INTO rawmeta VALUES ('{}', '{}', '{}');").format(btnname,splitlist,md5hash))
+    if md5count == 0:
+        print(("INSERT INTO rawheader VALUES ('{}', '{}', '{}');").format(divisor,maxdivident,md5hash))
+        print(("INSERT INTO rawmeta VALUES ('{}', '{}', '{}');").format(btnname,splitlist,md5hash))
 
 
     return(cur_execute)
@@ -254,16 +255,18 @@ def write_sqlite():
             ircomments = ircomments.replace("'","")
             #print(("INSERT INTO ircomment VALUES ('{}', '{}');").format(ircomments,irheader[3]))
 
+        md5count = 0
         for irbutton in get_irbutton(irfile):
             irbuttons = (irbutton.split(','))
             #print(("INSERT INTO irbutton VALUES ('{}', '{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
             if irbuttons[1] == 'raw' and rawanalysis == 1:
-                for item in convert_raw(irbuttons[4],irbuttons[0],irheader[3]):
+                for item in convert_raw(irbuttons[4],irbuttons[0],irheader[3],md5count):
                     if item.startswith("INSERT INTO"):
                         print(item)
                     else:
                         print("Error:", item)
-                    
+        md5count += 1
+
     con.commit()
     con.close()
     print("Header and buttons written in database",db_fzirdb)
