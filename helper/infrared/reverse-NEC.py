@@ -2,6 +2,7 @@
 
 import re
 
+#full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/HDMI_Switch.ir'
 full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/HDMI_Switch.ir'
 
 

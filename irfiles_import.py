@@ -161,60 +161,76 @@ def translate_buttons():
 #
 # Need to analyze if duty_cycle affect the result. Ignored right now.
 
-def convert_raw(btndata,btnname,md5hash,md5count): 
-    btndata = btndata.split(' ')
+def button_raw2binary(btn_data):
+
+    # The recorded pulse is alternate on/off
+    ### Header 
+    # Significant longer than data.
+    # At least one long on to calibrate the AGC, oftern followed by a shorter off
+    ### Data
+    ## Manchester encoding, signal 1ms:
+    # - 0 -> Off 0,5ms/On  0,5ms (signal 1ms) - 1:1
+    # - 1 -> On  0,5ms/Off 0,5ms (signal 1ms) - 1:1
+    ## Pulse distance control:
+    # - 0 -> On 0,1ms/Off 0,9ms (signal 1ms) - 1:9
+    # - 1 -> On 0,1ms/Off 1,9ms (signal 2ms) - 1:19
+    ## Pulse length control:
+    # - 0 -> On 0,5ms/Off 0,5ms (signal 1ms) - 1:1
+    # - 1 -> On 0,5ms/Off 1,5ms (signal 2ms) - 1:3
+
     try:
-        btndint = [int(numeric_string) for numeric_string in btndata]
+        data_raw = [int(numeric_string) for numeric_string in btn_data.split(" ")]
     except:
-        cur_execute = ["Nonnumeric value. No import for {} {}".format(md5hash,btnname)]
-        return(cur_execute)
+        #print("Nonnumeric value. No import for {}".format(btn_data))
+        return()
 
-    divisor = min(btndint)
+    divisor = min(data_raw)
     if divisor == 0:
-        cur_execute = ["Prevent dividing by zero. No import for {} {}".format(md5hash, btnname)]
-        return(cur_execute)
-    
-    maxdivident = 15000/divisor
-    converted = []
-    splitlist = []
-    cur_execute = []
+        #print("Prevent dividing by zero. No import for {}".format(btn_data))
+        return()
 
-    # convert values into int by deviding throug smallest value.
-    for dividend in btndata:
-        factor = int(int(dividend)/int(divisor))
-        if factor > maxdivident:
-            splitlist.append(factor)
-        converted.append(factor)
+    data_normalized = []
+    for data_value in data_raw:
+        data_normalized.append(int(data_value/divisor))
 
-
-    # take the converted string, split at huge values (splitlist)
-    # not sure now, if the huge values (splitvalue) are important.
-    # if the block between the values repeats, count to save storage
-    # add sequence for later reassambly
-    convrest = converted
-    convsplit = []
-    convseq = 0
-    convrepeat = 0
-    splitvalue = 0
-    for splitvalue in splitlist:
-        if sum(convsplit[-1:], []) == convrest[:convrest.index(splitvalue)]:
-            convrepeat = convrepeat + 1
-        
+    data_headdatatail = []
+    chunk_size = 2
+    loopcnt = 0
+    bitcnt = 0
+    for chunk in [data_normalized[i:i + chunk_size] for i in range(0, len(data_normalized), chunk_size)]:
+        if loopcnt == 0: # handle header data
+            data_headdatatail.append(chunk)
         else:
-            convsplit.append(convrest[:convrest.index(splitvalue)])
-            cur_execute.append(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest[:convrest.index(splitvalue)],convseq,convrepeat,md5hash))
-            convrepeat = 0
+            if len(chunk) == 2: # errorhandling, if last chunk is cut
+                match chunk[0]*chunk[1]:
+                    case 1:
+                        data_headdatatail.append(1)
+                        bitcnt += 1
+                    case 2: # 3 is correct, but there is a tolerance
+                        data_headdatatail.append(0)
+                        bitcnt += 1
+                    case 3:
+                        data_headdatatail.append(0)
+                        bitcnt += 1
+                    case _:
+                        data_headdatatail.append(chunk) # just add tail
+            else:
+                continue # skip smaller chunks
+        loopcnt += 1
+    #print(data_headdatatail, bitcnt, "bit")
 
-        convrest = convrest[convrest.index(splitvalue)+1:] # (splitvalue)+1 for cut splitvalue
-        convseq = convseq + 1
+    data_binary = []
+    irdata = 1
+    step = 8
+    for x in range(irdata, bitcnt, step):
+        data_binary.append(''.join(map(str,data_headdatatail[x:x+step])))
+ 
+    data_head = data_headdatatail[0]
+    data_tail = data_headdatatail[bitcnt+1:]
 
-    convsplit.append(convrest)
-    cur_execute.append(("INSERT INTO rawdata VALUES ('{}', '{}', '{}', '{}', '{}', '{}');").format(btnname,splitvalue,convrest,convseq,convrepeat,md5hash))
-    if md5count == 0:
-        cur_execute.append(("INSERT INTO rawheader VALUES ('{}', '{}', '{}');").format(divisor,maxdivident,md5hash))
-        cur_execute.append(("INSERT INTO rawmeta VALUES ('{}', '{}', '{}');").format(btnname,splitlist,md5hash))
+    return(data_head, data_binary, data_tail, bitcnt, divisor)
 
-    return(cur_execute)
+
 
 ## Write parsed items to database
 ######################################
@@ -232,11 +248,12 @@ def write_sqlite():
         cur.execute("DROP TABLE IF EXISTS rawdata;")
         cur.execute("DROP TABLE IF EXISTS rawheader;")
         cur.execute("DROP TABLE IF EXISTS rawmeta;")
+        cur.execute("DROP TABLE IF EXISTS rawbutton;")        
         if rawanalysis == 1:
             cur.execute("CREATE TABLE IF NOT EXISTS rawdata (btnname,splitvalue,cmdpart,cmdsequence,cmdrepeat,md5hash);")
             cur.execute("CREATE TABLE IF NOT EXISTS rawheader (divisor,maxdivident,md5hash);")
             cur.execute("CREATE TABLE IF NOT EXISTS rawmeta (btnname,splitvalues,md5hash);")
-                
+            cur.execute("CREATE TABLE IF NOT EXISTS rawbutton (name,header,binarydata,tail,bit,divident,md5hash);")
 
     except OSError as e:
         print(e)
@@ -248,20 +265,20 @@ def write_sqlite():
 
         ircomments = get_irfilecomments(irfile)
         if (len(ircomments)) != 0:
-            # dirty hack, because sqlite using ' itself
-            ircomments = ircomments.replace("'","")
-            cur.execute(("INSERT INTO ircomment VALUES ('{}', '{}');").format(ircomments,irheader[3]))
+            ircomments = ircomments.replace("'","") # dirty hack, because sqlite using ' itself
+            cur.execute(("INSERT INTO ircomment VALUES ('{}','{}');").format(ircomments,irheader[3]))
 
         md5count = 0
         for irbutton in get_irbutton(irfile):
             irbuttons = (irbutton.split(','))
-            cur.execute(("INSERT INTO irbutton VALUES ('{}', '{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
+            cur.execute(("INSERT INTO irbutton VALUES ('{}','{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
             if irbuttons[1] == 'raw' and rawanalysis == 1:
-                for item in convert_raw(irbuttons[4],irbuttons[0],irheader[3],md5count):
-                    if item.startswith("INSERT INTO"):
-                        cur.execute(item)
-                    else:
-                        print("Error:", item)
+                binary_button = button_raw2binary(irbuttons[4])
+                if len(binary_button) > 1:
+                    raw_header = ' '.join(binary_button[1])
+                    #print(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3])
+                    cur.execute(("INSERT INTO rawbutton VALUES ('{}','{}','{}','{}','{}','{}','{}');").format(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3]))
+
             md5count += 1
                     
     con.commit()
