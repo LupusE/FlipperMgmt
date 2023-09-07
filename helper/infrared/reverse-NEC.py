@@ -3,8 +3,8 @@
 import re
 
 #full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/HDMI_Switch.ir'
-full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/HDMI_Switch.ir'
-
+#full_irpath = 'helper/Flipper-IRDB/Miscellanous/Brand_Unknown/bd_regionfree.ir'
+full_irpath = '/home/lupus/Downloads/flipper/iranalysis/230817_IRCodes.ir'
 
 btn_pattern = re.compile(r"""
                 name: (.*)\n
@@ -31,8 +31,12 @@ def get_irbutton(full_irpath):
         btnaddr_arr = btnaddr.split(" ")
         btncomm_arr = btncomm.split(" ")
 
-        sserdda = format(int(((bin(int('1'+btnaddr_arr[0], 16))[3:])[::-1]), 2),'X').zfill(2)
-        dnammoc = format(int(((bin(int('1'+btncomm_arr[0], 16))[3:])[::-1]), 2),'X').zfill(2)
+        #sserdda = format(int(((bin(int('1'+btnaddr_arr[0], 16))[3:])[::-1]), 2),'X').zfill(2)
+        #dnammoc = format(int(((bin(int('1'+btncomm_arr[0], 16))[3:])[::-1]), 2),'X').zfill(2)
+        sserdda_bin = ''.join(['1' if i == '0' else '0' for i in bin(int(btnaddr_arr[0], 16))[2:].zfill(8)])
+        sserdda = hex(int(sserdda_bin,2))[2:]
+        dnammoc_bin = ''.join(['1' if i == '0' else '0' for i in bin(int(btncomm_arr[0], 16))[2:].zfill(8)])
+        dnammoc = hex(int(dnammoc_bin,2))[2:]
 
         buttons.append(btnname+","+btntype+","+btnprot+","+btnaddr.replace(btnaddr_arr[0],sserdda)+","+btncomm.replace(btncomm_arr[0],dnammoc))
 

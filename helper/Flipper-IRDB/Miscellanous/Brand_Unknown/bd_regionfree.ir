@@ -1,0 +1,33 @@
+Filetype: IR library file
+Version: 1
+# 
+name: POWER
+type: parsed
+protocol: SIRC20
+address: 5A 1C 00 00
+command: BA 00 00 00
+# 
+name: POWER
+type: parsed
+protocol: SIRC20
+address: 5A 1C 00 00
+command: FF 00 00 00
+# 
+name: POWER
+type: parsed
+protocol: SIRC20
+address: 5A 1C 00 00
+command: 5F 00 00 00
+# 
+name: POWER
+type: parsed
+protocol: SIRC20
+address: 5A 1C 00 00
+command: D3 00 00 00
+# 
+name: POWER
+type: parsed
+protocol: SIRC20
+address: 5A 1C 00 00
+command: 4F 00 00 00
+# 

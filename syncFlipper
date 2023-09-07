@@ -6,6 +6,7 @@ giturl=""
 module=""
 target=""
 sdcard=/media/$USER/BENNIE
+#sdcard=/mnt/tmp
 gitroot=~/git
 
 ## Overwrite defaults by conf file

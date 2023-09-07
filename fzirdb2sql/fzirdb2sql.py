@@ -2,27 +2,32 @@
 
 import re
 import os
-from os import walk
-from os import path
 import hashlib
 import sqlite3
 import csv
+import sys
 
+## Try to parse raw data to compareable format
 rawanalysis = 1
-ext_converted = 1
+if sys.version_info <= (3,9):
+    print("No RAW Analysis possible. Function match() available from Python 3.10")
+    print("Python version found:", sys.version)
+    rawanalysis = 0
 
-dir_fzirdb = os.path.normpath(os.getcwd()+'/../Flipper-IRDB')
-db_fzirdb = os.path.normpath(os.getcwd()+'/../flipper_irdblite.db')
+## add _CONVERTED_ directory = 1
+exclude_converted = 1
+
+dir_fzirdb = os.path.join(os.getcwd(), '..', 'Flipper-IRDB')
+db_fzirdb = os.path.join(os.getcwd(), '..', 'flipper_irdblite.db')
 
 category_fzirdb = next(os.walk(dir_fzirdb))[1]
 
 ext_irdb_include = (['.ir'])
-dir_irdb_exclude = set([
-                    os.path.normpath(dir_fzirdb+'/.git*')
-                    ])
-if ext_converted == 0:
-    dir_irdb_exclude.append(os.path.normpath(dir_fzirdb+'/_Converted_'))
+dir_irdb_exclude = set([ os.path.join(dir_fzirdb, '.git*') ])
+if exclude_converted == 0:
+    dir_irdb_exclude.append(os.path.join(dir_fzirdb,'_Converted_'))
 
+## IR file pattern for one button in regex
 btn_pattern = re.compile(r"""
                 name: (.*)\n
                 type: (.*)\n
@@ -32,25 +37,29 @@ btn_pattern = re.compile(r"""
                 """, re.VERBOSE | re.MULTILINE)
 
 
-## Get filtered 'folder/files' as list
+## Get filtered [folder/files, md5hash] as list
 ######################################
 
 def get_irfiles(dir_fzirdb):
-    list_irpath = []
-    for root, dir, files in walk(dir_fzirdb, topdown=True):
+    irpath_list = []
+    for root, dir, files in os.walk(dir_fzirdb, topdown=True):
         for irfile in files:
             if (not root.startswith(tuple(dir_irdb_exclude)) and (irfile.endswith(tuple(ext_irdb_include)))):
-                    list_irpath.append(root+'/'+irfile)
+                    irfilepath = os.path.join(root, irfile)
+                    with open(str(irfilepath), 'rb') as md5file:
+                        digest = hashlib.file_digest(md5file, 'md5')
+                    irpath_list.append([irfilepath, digest.hexdigest()])
             else:
                 pass
-    print("Count of files to process: ", len(list_irpath))
-    return(list_irpath)
+    print(("{} IR files from {} to process").format(len(irpath_list),dir_fzirdb))
+    
+    return(irpath_list)
 
     
 ## Get file header (category, brand, filename, MD5)
 ######################################
 
-def get_irfileheader(full_irpath):
+def get_irdbattibutes(full_irpath):
 
     splitcategory = ''
     splitbrand = ''
@@ -84,17 +93,17 @@ def get_irfileheader(full_irpath):
             splitbrand = 'NULL'
     
     splitfile = os.path.normpath(full_irpath).split(os.sep)[-1].replace("'","")
-    ## create hash for identify changes
+    ## create hash as PK for SQL
     with open(str(full_irpath), 'rb') as md5file:
         digest = hashlib.file_digest(md5file, 'md5')
 
     return(splitcategory, splitbrand, splitfile, digest.hexdigest(), splitsource)
 
 
-## Get file header (comments, MD5)
+## Get file header (comments)
 ######################################
 
-def get_irfilecomments(irfile):
+def get_irdbcomments(irfile):
     comments = []
     commentstr = ""
 
@@ -108,10 +117,10 @@ def get_irfilecomments(irfile):
     return(commentstr)
 
 
-## Parse buttons (name, type, protcol/frequncy, address/duty_cycle, command/data)
+## Parse buttons (name, type, protcol/frequency, address/duty_cycle, command/data)
 ######################################
 
-def get_irbutton(full_irpath):
+def get_irbuttons(full_irpath):
     # read file to buffer, to find multiline regex
     readfile = open(full_irpath,'r')
     irbuff = readfile.read()
@@ -127,8 +136,62 @@ def get_irbutton(full_irpath):
 
         buttons.append(btnname+","+btntype+","+btnprot+","+btnaddr+","+btncomm)
 
+    # if 'type = raw' then 'proto = frequency', 'address = dutycycle', 'command = data'
+    # Frequency is technically fixed at 38MHz for the Flipper Zero
+    #   but due to tollerance 40/36 are possible
+    # Dutycycle: % of time on (bursts) to be one signal.
+    #   To be interpreted as on, the signal must be on 33% of 562,2 us
+    # Data is a string of the captued values.
+    #   Each value represents alternating length in ms of on/off
+
     return(buttons)
 
+## Write parsed items to database
+######################################
+
+def write2sqlite():
+    try:
+        con = sqlite3.connect(db_fzirdb)    
+        cur = con.cursor()
+        cur.execute("DROP TABLE IF EXISTS irfile;")
+        cur.execute("DROP TABLE IF EXISTS irbutton;")
+        cur.execute("DROP TABLE IF EXISTS ircomment;")
+        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash,source);")
+        cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
+        cur.execute("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
+        #cur.execute("DROP TABLE IF EXISTS rawdata;") # old
+        #cur.execute("DROP TABLE IF EXISTS rawheader;") # old
+        #cur.execute("DROP TABLE IF EXISTS rawmeta;") # old
+        cur.execute("DROP TABLE IF EXISTS rawbutton;")        
+        if rawanalysis == 1:
+            cur.execute("CREATE TABLE IF NOT EXISTS rawbutton (name,header,binarydata,tail,bit,divident,md5hash);")
+
+    except OSError as e:
+        print(e)
+
+    print("Getting header and buttons for database",db_fzirdb)
+    for irfile in get_irfiles(dir_fzirdb):
+        irheader = get_irdbattibutes(irfile)
+        cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}','{}');").format(irheader[0],irheader[1],irheader[2],irheader[3],irheader[4]))
+
+        ircomments = get_irdbcomments(irfile)
+        if (len(ircomments)) != 0:
+            ircomments = ircomments.replace("'","") # dirty hack, because sqlite using ' itself
+            cur.execute(("INSERT INTO ircomment VALUES ('{}','{}');").format(ircomments,irheader[3]))
+
+        for irbutton in get_irbuttons(irfile):
+            irbuttons = (irbutton.split(','))
+            cur.execute(("INSERT INTO irbutton VALUES ('{}','{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
+            if irbuttons[1] == 'raw' and rawanalysis == 1:
+                binary_button = button_raw2binary(irbuttons[4])
+                if len(binary_button) > 1:
+                    raw_header = ' '.join(binary_button[1])
+                    #print(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3])
+                    cur.execute(("INSERT INTO rawbutton VALUES ('{}','{}','{}','{}','{}','{}','{}');").format(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3]))
+                    
+    con.commit()
+    con.close()
+    print("Header and buttons written in database",db_fzirdb)
 
 ## Add extra tables (button translation)
 ######################################
@@ -152,23 +215,23 @@ def translate_buttons():
 ## convert type = 'raw' for analysis
 ######################################
 
+# -- Old ----------
 # Get min value from array. Devide all values though and convert to INT
 # Assume 15000 is the absolute maximum of transmitted mark or space
 # Split array by gaps greater than maximum
+# -- Old ----------
 #
 # The goal is to convert from ...912 840 2829... to ...1 3 1... to
 # compare with other signals in the database, regardless of repeats.
-#
-# Need to analyze if duty_cycle affect the result. Ignored right now.
 
 def button_raw2binary(btn_data):
 
     # The recorded pulse is alternate on/off
     ### Header 
     # Significant longer than data.
-    # At least one long on to calibrate the AGC, oftern followed by a shorter off
+    # At least one long on to calibrate the AGC, followed by a an even or shorter off
     ### Data
-    ## Manchester encoding, signal 1ms:
+    ## Manchester encoding, signal 1ms: (Bi-phase coding)
     # - 0 -> Off 0,5ms/On  0,5ms (signal 1ms) - 1:1
     # - 1 -> On  0,5ms/Off 0,5ms (signal 1ms) - 1:1
     ## Pulse distance control:
@@ -184,7 +247,7 @@ def button_raw2binary(btn_data):
         #print("Nonnumeric value. No import for {}".format(btn_data))
         return()
 
-    divisor = min(data_raw)
+    divisor = 562.2 #min(data_raw) # old
     if divisor == 0:
         #print("Prevent dividing by zero. No import for {}".format(btn_data))
         return()
@@ -202,6 +265,7 @@ def button_raw2binary(btn_data):
             data_headdatatail.append(chunk)
         else:
             if len(chunk) == 2: # errorhandling, if last chunk is cut
+                                # could be valid! Regarding some protcol
                 match chunk[0]*chunk[1]:
                     case 1:
                         data_headdatatail.append(1)
@@ -231,66 +295,12 @@ def button_raw2binary(btn_data):
     return(data_head, data_binary, data_tail, bitcnt, divisor)
 
 
-
-## Write parsed items to database
-######################################
-
-def write_sqlite():
-    try:
-        con = sqlite3.connect(db_fzirdb)    
-        cur = con.cursor()
-        cur.execute("DROP TABLE IF EXISTS irfile;")
-        cur.execute("DROP TABLE IF EXISTS irbutton;")
-        cur.execute("DROP TABLE IF EXISTS ircomment;")
-        cur.execute("CREATE TABLE IF NOT EXISTS irfile (category,brand,file,md5hash,source);")
-        cur.execute("CREATE TABLE IF NOT EXISTS irbutton (name,type,protocol,address,command,md5hash);")    
-        cur.execute("CREATE TABLE IF NOT EXISTS ircomment (comment,md5hash);")
-        cur.execute("DROP TABLE IF EXISTS rawdata;")
-        cur.execute("DROP TABLE IF EXISTS rawheader;")
-        cur.execute("DROP TABLE IF EXISTS rawmeta;")
-        cur.execute("DROP TABLE IF EXISTS rawbutton;")        
-        if rawanalysis == 1:
-            cur.execute("CREATE TABLE IF NOT EXISTS rawdata (btnname,splitvalue,cmdpart,cmdsequence,cmdrepeat,md5hash);")
-            cur.execute("CREATE TABLE IF NOT EXISTS rawheader (divisor,maxdivident,md5hash);")
-            cur.execute("CREATE TABLE IF NOT EXISTS rawmeta (btnname,splitvalues,md5hash);")
-            cur.execute("CREATE TABLE IF NOT EXISTS rawbutton (name,header,binarydata,tail,bit,divident,md5hash);")
-
-    except OSError as e:
-        print(e)
-
-    print("Getting header and buttons for database",db_fzirdb)
-    for irfile in get_irfiles(dir_fzirdb):
-        irheader = get_irfileheader(irfile)
-        cur.execute(("INSERT INTO irfile VALUES ('{}', '{}','{}','{}','{}');").format(irheader[0],irheader[1],irheader[2],irheader[3],irheader[4]))
-
-        ircomments = get_irfilecomments(irfile)
-        if (len(ircomments)) != 0:
-            ircomments = ircomments.replace("'","") # dirty hack, because sqlite using ' itself
-            cur.execute(("INSERT INTO ircomment VALUES ('{}','{}');").format(ircomments,irheader[3]))
-
-        md5count = 0
-        for irbutton in get_irbutton(irfile):
-            irbuttons = (irbutton.split(','))
-            cur.execute(("INSERT INTO irbutton VALUES ('{}','{}','{}','{}','{}','{}');").format(irbuttons[0],irbuttons[1],irbuttons[2],irbuttons[3],irbuttons[4],irheader[3]))
-            if irbuttons[1] == 'raw' and rawanalysis == 1:
-                binary_button = button_raw2binary(irbuttons[4])
-                if len(binary_button) > 1:
-                    raw_header = ' '.join(binary_button[1])
-                    #print(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3])
-                    cur.execute(("INSERT INTO rawbutton VALUES ('{}','{}','{}','{}','{}','{}','{}');").format(irbuttons[0],binary_button[0],raw_header,binary_button[2],binary_button[3],binary_button[4],irheader[3]))
-
-            md5count += 1
-                    
-    con.commit()
-    con.close()
-    print("Header and buttons written in database",db_fzirdb)
-
-
 ## Execute program
 ######################################
 
 if __name__ == '__main__':
-    write_sqlite()
+    
+    write2sqlite()
     print("Find your database at:", db_fzirdb)
     translate_buttons()
     
