@@ -28,6 +28,7 @@ checkRequirement() {
 checkRequirement rsync
 checkRequirement git
 
+[ ! -d $gitroot ] && { echo "Target directory $gitroot does not exist.\nPlease create directory or change variable gitroot in config" ; exit 1; }
 
 gitSync () {
 
